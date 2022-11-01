@@ -6,3 +6,5 @@ Charlie ist auch Git-Profii
 
 Rollen
 UX-Managerin: Franziska Schicks
+
+INtegration: Jonas Just
