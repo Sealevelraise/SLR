@@ -5,4 +5,4 @@ Web3 BUI Master prototype project
 * UX-Managerin: Franziska Schicks
 * Integration: Jonas Just
 * Architekt: Josua Benz
-* Developer: Charlotte Lau
+* Developerin & Assistenin PM: Charlotte Lau
