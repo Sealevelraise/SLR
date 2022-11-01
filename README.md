@@ -4,5 +4,6 @@ Web3 BUI Master prototype project
 ## Rollen
 * UX-Managerin: Franziska Schicks
 * Integration: Jonas Just
-* Architekt: Josua Benz
+* Architekt und Integration: Josua Benz
 * Developerin & Assistenin PM: Charlotte Lau
+* Developer: Benjamin Loncarevic
