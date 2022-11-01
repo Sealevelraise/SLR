@@ -7,3 +7,4 @@ Web3 BUI Master prototype project
 * Architekt und Integration: Josua Benz
 * Developerin & Assistenin PM: Charlotte Lau
 * Developer: Benjamin Loncarevic
+* Developer: Nicolas von der Ahe
