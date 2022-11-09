@@ -10,3 +10,4 @@ Web3 BUI Master prototype project
 * Developer: Nicolas von der Ahe
 * Tester: Fardin Khan
 * Projektmanagerin und Developerin: Laura Schoenherr
+* Trainer: Frank
