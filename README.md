@@ -8,6 +8,6 @@ Web3 BUI Master prototype project
 * Developerin & Assistentin PM: Charlotte Lau
 * Developer: Benjamin Loncarevic
 * Developer: Nicolas von der Ahe
-* Tester: Fardin Khan
+* Tester: Fardin Khan, Saskia Heller
 * Projektmanagerin und Developerin: Laura Schoenherr
 * Trainer: Frank
