@@ -11,3 +11,4 @@ Web3 BUI Master prototype project
 * Tester: Fardin Khan
 * Projektmanagerin und Developerin: Laura Schoenherr
 * Trainer: Frank
+* Scrum Master: Phillip
