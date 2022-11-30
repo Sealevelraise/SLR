@@ -15,7 +15,7 @@ contract Vote {
     
     function voteForProject(uint _projectId) public {
         //the user is required to have donated and to not have voted already
-        require(userHasDonated[msg.sender] == 1);
+        //require(userHasDonated[msg.sender] == 1);
         require(userHasVoted[msg.sender] != 1);
 
         //add this vote to the list of votes
@@ -29,7 +29,7 @@ contract Vote {
         //count the amount of votes for this project
         uint _votesForThisProject=0;
         for(uint i=0; i<votes.length; i++) {
-            if(votes.projectId == _projectId) {
+            if(votes[i].projectId == _projectId) {
                 _votesForThisProject++;
             }
         }
