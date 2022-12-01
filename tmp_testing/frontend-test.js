@@ -11,7 +11,7 @@ getBlockNumber();
 
 // Here's how we would access our contract:
 var abi = [
-  {
+{
     "anonymous": false,
     "inputs": [
       {
