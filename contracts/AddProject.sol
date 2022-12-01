@@ -30,4 +30,8 @@ contract AddProject {
         emit ProjectAdded(projects.length-1, _name, _state, _amount, startDate, endDate);
     } 
 
+    function getNumberOfProjects() public view returns(uint) {
+        return projects.length;
+    }
+
 }
