@@ -3,14 +3,14 @@ pragma solidity >=0.4.22 <0.9.0;
 
 import "./Donate.sol";
 contract Vote {
-    //mapping if a user has voted for a project, safed  on the blockchain
+    //mapping if a user has voted for a project, saved  on the blockchain
     mapping(address => uint) public userHasVoted;
 
     struct VoteForProject {
         address user;
         uint projectId;
     }
-    //list with all the votes, safed  on the blockchain
+    //list with all the votes, saved  on the blockchain
     VoteForProject[] public votes;
     
     function voteForProject(uint _projectId) public {

@@ -13,9 +13,9 @@ contract AddProject {
         uint startDate;
         uint endDate;
     }
-    //Array which contains all projects, safed on the blockchain
+    //Array which contains all projects, saved on the blockchain
     Project[] public projects;
-    //Mapping a project to the wallet of the person which added this project, safed on the blockchain
+    //Mapping a project to the wallet of the person which added this project, saved on the blockchain
     mapping (uint => address) public projectToOwner;
 
     function addProject(string memory _name, string memory _state, uint _amount) public {
