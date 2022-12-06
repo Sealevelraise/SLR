@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'RobotoSlab';
+    font-weight: 200;
+    src: url('~/assets/fonts/static/RobotoSlab-Regular.ttf') format('truetype');
+}
+
+
+
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: url('~/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+}
