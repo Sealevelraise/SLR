@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="">Aktuelle Projekte</h1>
-    <div class="bg-slr-blue flex content-box">
+    <div class="bg-slr-blue-box flex content-box">
       <div class="px-8 w-2/3 pt-4">
         <h3>Kiribati, Malediven</h3>
         <p class="pb-4">
@@ -14,14 +14,14 @@
           durch Landaufschüttung und Steinmauern verbessern. Somit können wir
           einen großen Teil zur Rettung der Inseln beitragen.
         </p>
-        <div class="flex justify-between">
+        <div class="flex justify-between pb-4">
           <div class="font-bold">Spendenziel</div>
           <div>10.000X</div>
         </div>
       </div>
-      <div class="w-1/3 h-full rounded-t-[24px]">
+      <div class="w-1/3 h-full rounded-[24px]">
         <img
-          class="object-cover w-100 h-100"
+          class="object-cover h-full rounded-[24px]"
           src="../assets/images/kiribati.jpg"
           alt="project-image"
         />

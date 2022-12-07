@@ -27,7 +27,6 @@ h3 {
 }
 
 .content-box {
-  opacity: .69; /* TODO: make opacity only for background!*/
   width: 75%;
   border-radius: 24px;
   color: white;
