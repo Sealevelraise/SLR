@@ -2,17 +2,13 @@
     
     <div class="flex flex-col gap-20  py-12">
       <h1 class="text-3xl uppercase text-center">Herzlich Willkommen <br> bei Sea Level R(a)ise</h1>
-
      
-        <div class="w-3/4 mx-auto bg-slr-blue opacity-[.69] py-12 px-32 rounded-[24px]   text-white">
+        <div class="w-3/4 mx-auto bg-slr-blue-box py-12 px-32 rounded-[24px]   text-white">
           <h2 class="text-2xl text-center pb-12">Was ist Sea Level R(a)ise</h2>
           <p class="text-justify">Was ist SLR? ... Whereas disregard and contempt for human rights have resulted Everyone has the right to freedom of thought, conscience and religion; this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance. Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay.</p>
         </div>
      
-
-
-     
-        <div class="w-3/4 mx-auto bg-slr-blue opacity-[.69] pb-12 rounded-[24px] text-white">
+        <div class="w-3/4 mx-auto bg-slr-blue-box pb-12 rounded-[24px] text-white">
           <img class="pb-12 rounded-t-[24px]" src="../assets/images/tuvalu.jpeg" alt="Minister of Tuvalu gives COP26 speech from the sea">
           <h2 class="text-2xl text-center px-32 pb-12">"Wir gehen unter..."</h2>
           <p class="text-justify px-32">...sind die ersten Worte des Außenministers des Inselstaats Tuvalu bei seiner Rede zur Klimakonferenz 2021. Um den Ernst der Lage deutlich zu machen, hält Simon Kofe seine Videoansprache aus dem Wasser. Sein eindringlicher Appel:
@@ -21,44 +17,62 @@
           Um Ihnen die Hilfe zur Verfügung zu stellen, die sie benötigen, beschäftigt sich das Projekt "Sea Level R(a)ise" mit einer Blockchain-basierten Spendengeldsammlung und -verteilung, die sich durch Transparenz, globale Unabhängigkeit und Dezentralität auszeichnet.
           </p>
         </div>
-      
 
-
-        <div class="w-3/4 mx-auto bg-slr-blue opacity-[.69] py-12 px-32 rounded-[24px]  text-white">
+        <div class="w-3/4 mx-auto bg-slr-blue-box py-12 px-32 rounded-[24px]  text-white">
           <h2 class="text-2xl text-center pb-8">Werde Teil von SLR!</h2>
-          <p class="text-center pb-12">Ich möchte...</p>
-          <div class="flex flex-row">
-          <div class="basis-1/2 ">
-            <button class="bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md">
-                    Spenden und abstimmen
-                </button>
-          </div>
-          <div class="basis-1/2">
-            <button class="bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md">
-                    Spenden erhalten
-                </button>
+          <p class="text-center pb-8">Ich möchte...</p>
+
+          <div class="flex flex-row place-content-between">
+            <button class="w-2/5 bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md">
+              Spenden und abstimmen
+            </button>
+            <button class="w-2/5 bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md">
+               Spenden erhalten
+            </button>
           </div>
         </div>
 
-        </div>
-        <!--
-
-       <div class="flex flex-row justify-center">
-          <div class="">
-            <button class="bg-red text-white hover:bg-blue-200 duration-500 py-2 px-6 rounded-md">
-                    Spenden und abstimmen
-                </button>
+        <div class="w-3/4 mx-auto text-white flex flex-row gap-8">
+          <div class="basis-1/3 text-center bg-slr-blue-box py-4 px-8 rounded-[24px]">
+            <h2 class="pb-6 text-xl">Wer sind wir?</h2>
+            <img class="pb-8 rounded-md object-scale-down h-56 mx-auto" src="../assets/images/slrLogo.jpg" alt="Minister of Tuvalu gives COP26 speech from the sea">
+            <p class="text-justify pb-8">
+              Im Zuge der Klimaerwärmung steigt der Meeresspiegel kontinuierlich an. 
+              Das Projekt Sea Level R(a)ise nimmt es sich deshalb zur Aufgabe den sogenannten 
+              "Small States" - kleine, hilfebedürftige Inselstaaten - Unter-stützung zu bieten. 
+              Wer wir sind und was es sonst noch über das Projekt zu sagen gibt....
+            </p>
           </div>
-          <div class="">
-            <button class="bg-red text-white hover:bg-blue-200 duration-500 py-2 px-6 rounded-md">
-                    Spenden erhalten
-                </button>
+
+          <div class="basis-1/3  text-center bg-slr-blue-box py-4 px-8 rounded-[24px]">
+            <h2 class="pb-6 text-xl">Aktuelle Projekte?</h2>
+            <img class="pb-8 rounded-md object-contain h-56 mx-auto" src="../assets/images/demo_project_1.jpg" alt="Minister of Tuvalu gives COP26 speech from the sea">
+            <p class="text-justify pb-8">
+              Sei es die Küstenbefestigung der Insel Kiribati durch das Aufschütten von Landmasse, 
+              das Errichten von Steinmauern oder die Unterstützung der Philippinen beim Ausbau der Windenergie. 
+              Sea Level R(a)ise unterstützt viele Projekte. Hier sehen sie eine Übersicht über aktuell laufende, 
+              umgesetzte und zur Ab-stimmung freigegebene Projekte...
+            </p>
           </div>
+
+          <div class="basis-1/3 text-center bg-slr-blue-box py-4 px-8 rounded-[24px]">
+            <h2 class="pb-6 text-xl">DAO Voting Prinzip?</h2>
+            <img class="pb-8 rounded-md object-cover h-56 mx-auto" src="../assets/images/DAO_voting_principle.jpg" alt="Minister of Tuvalu gives COP26 speech from the sea">
+            <p class="text-justify pb-8">
+              Wir bieten Ihnen die Möglichkeit, direkt an der Entscheidung mitzuwirken. 
+              Mit einer Spende erhalten Sie eine Stimme in jedem Abstimmungszyklus (quartalsweise) 
+              für die DAO Abstimmung. Diese bietet eine faire Möglichkeit über die umzusetzenden 
+              Projekte zu bestimmen. Weitere Informationen darüber, wie das genau funktioniert, 
+              finden sich hier...
+
+            </p>
+          </div>
+
+
         </div>
 
-        -->
- 
-      
+
+
 
 
     </div>

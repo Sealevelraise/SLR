@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         'slr-blue': '#0051A0',
         'slr-page-bg': '#FDF5E0',
+        'slr-blue-box': '#4e84b4',
       },
       fontFamily: {
         robotoSlab: ['RobotoSlab'],
