@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-20 py-12">
+  <div class="flex flex-col gap-10">
     <h1 class="text-3xl uppercase text-center">
       Herzlich Willkommen <br />
       bei Sea Level R(a)ise

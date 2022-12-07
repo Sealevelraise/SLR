@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col gap-10">
     <h1 class="">Aktuelle Projekte</h1>
     <div class="bg-slr-blue-box flex content-box">
       <div class="px-8 w-2/3 pt-4">
