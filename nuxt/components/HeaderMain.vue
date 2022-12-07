@@ -2,7 +2,7 @@
     <div>
         <nav class="bg-slr-blue shadow md:flex md:items-center md:justify-between font-roboto px-4 text-blue-200">
             <div class="items-center "> <!-- flex justify-between  -->
-                <span class="text-2xl pr-5 hover:text-blue-400 duration-500 cursor-pointer md:items-center  border-2 border-orange-600">
+                <span class="text-2xl pr-5 hover:text-blue-400 duration-500 cursor-pointer md:items-center shrink-0 ">
                     <img class="object-cover h-28 inline" src="../assets/images/slrLogo.jpg" alt="logo">
                     <NuxtLink to="/">
                             SEA LEVEL R(A)ISE
@@ -18,7 +18,7 @@
                 -->
             </div>
             <!---->
-            <ul class="text-xl hidden md:flex lg:opacity-100 opacity-0 space-x-8 pl-10 md:items-center border-2 border-yellow-400
+            <ul class="text-xl hidden md:flex lg:opacity-100 opacity-0 space-x-8 pl-10 md:items-center 
             ">
             <!--   my-6 md:my-0 z-[-1] 
             md:z-auto md:static absolute bg-slr-blue w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7
