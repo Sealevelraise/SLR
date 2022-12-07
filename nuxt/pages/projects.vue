@@ -15,13 +15,13 @@
           einen großen Teil zur Rettung der Inseln beitragen.
         </p>
         <div class="flex justify-between pb-4">
-          <div class="font-bold">Spendenziel</div>
+          <div class="font-bold">Spendenziel:</div>
           <div>10.000X</div>
         </div>
       </div>
-      <div class="w-1/3 h-full rounded-[24px]">
+      <div class="w-1/3 rounded-[24px]">
         <img
-          class="object-cover h-full rounded-[24px]"
+          class="object-cover w-auto h-full rounded-[24px]"
           src="../assets/images/kiribati.jpg"
           alt="project-image"
         />

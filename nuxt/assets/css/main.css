@@ -19,7 +19,7 @@
 
 h1 {
   color: #003162;
-  @apply text-3xl uppercase text-center py-2;
+  @apply text-3xl uppercase text-center py-8;
 }
 
 h3 {
