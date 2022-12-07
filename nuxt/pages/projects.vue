@@ -8,7 +8,7 @@
 <script>
   
     export default {
-        name: 'projects',
+        name: 'default',
     
     }
 </script>
