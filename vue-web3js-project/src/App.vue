@@ -12,6 +12,9 @@
 
 <script>
 import Web3 from 'web3'
+//import DonateJsonFile from './Donate.json'
+import AddProjectJson from './AddProject.json'
+//import VoteJsonFile from './Vote.json'
 
 export default {
   name: 'App',
@@ -30,159 +33,17 @@ export default {
         window.ethereum.request({method: 'eth_requestAccounts'})
             .then(() => {
               this.connected = true; // If users successfully connected their wallet
+              //TODO erfolgreich verbunden ausgeben
             });
       }
     },
     callContract: function () {
       // method for calling the contract method
       let web3 = new Web3(window.ethereum);
-      let contractAddress = '0xC30B3b3A267FDA8Ab36a1c1C521C4A10631d3f47';
+      let contractAddress = '0x9d01fE4313C9ef0D0B3BAb5fCf14d6548f5E4a18';
 
-      let abi = JSON.parse(`[
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "id",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "name",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "state",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "amount",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "startDate",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "endDate",
-          "type": "uint256"
-        }
-      ],
-      "name": "ProjectAdded",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "projectToOwner",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "projects",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "name",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "state",
-          "type": "string"
-        },
-        {
-          "internalType": "uint256",
-          "name": "amount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "startDate",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "endDate",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_name",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_state",
-          "type": "string"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "addProject",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "getNumberOfProjects",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    }
-  ]`);
-
-
-      let contract = new web3.eth.Contract(abi, contractAddress);
+      //let abi = JSON.parse(AddProjectJsonFile);
+      let contract = new web3.eth.Contract(AddProjectJson.abi, contractAddress);
 
       contract.methods.getNumberOfProjects().call()
           .then(result => this.contractResult = result);
@@ -190,153 +51,10 @@ export default {
     createNewProject: function () {
       // method for calling the contract method
       let web3 = new Web3(window.ethereum);
-      let contractAddress = '0xC30B3b3A267FDA8Ab36a1c1C521C4A10631d3f47';
-
-      let abi = JSON.parse(`[
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "id",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "name",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "state",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "amount",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "startDate",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "endDate",
-          "type": "uint256"
-        }
-      ],
-      "name": "ProjectAdded",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "projectToOwner",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "projects",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "name",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "state",
-          "type": "string"
-        },
-        {
-          "internalType": "uint256",
-          "name": "amount",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "startDate",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "endDate",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_name",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_state",
-          "type": "string"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "addProject",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "getNumberOfProjects",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    }
-  ]`);
-
-
-      let contract = new web3.eth.Contract(abi, contractAddress);
+      let contractAddress = '0x9d01fE4313C9ef0D0B3BAb5fCf14d6548f5E4a18cd';
+      
+      //let abi = JSON.parse(AddProjectJsonFile);
+      let contract = new web3.eth.Contract(AddProjectJson.abi, contractAddress);
 
       contract.methods.addProject('HilfeFuerCharlie', 'Berlin', 10).send({from: '0x3feed9809DffbbAc15adF4C57bD8A12cc0599aaB', gas: 6721975})
           .then(result => this.contractResult = result);
