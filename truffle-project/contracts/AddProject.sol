@@ -10,18 +10,19 @@ contract AddProject {
     //definition of event, will be triggered when new project is added
     event ProjectAdded(uint id, string name, string state, uint amount, uint startDate, uint endDate);
 
+    // in order to dave on gas inside struct uints are minimized
     struct Project {
         string name;
         string state;
-        uint amount;
-        uint startDate;
-        uint endDate;
+        uint32 amount;
+        uint8 startDate;
+        uint8 endDate;
     }
     //Array which contains all projects, saved on the blockchain
     Project[] public projects;
     //Mapping a project to the wallet of the person which added this project, saved on the blockchain
     mapping (uint => address) public projectToOwner;
-    //MApping of the count of how many project the person already has created
+    //Mapping of the count of how many project the person already has created
     mapping (address => uint) ownerProjectCount;
 
     /// @notice Add new project to SeaLevelRaise. The sender is not allowed to add more than one project.
