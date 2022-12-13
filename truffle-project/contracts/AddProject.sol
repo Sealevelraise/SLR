@@ -10,13 +10,13 @@ contract AddProject {
     //definition of event, will be triggered when new project is added
     event ProjectAdded(uint id, string name, string state, uint amount, uint startDate, uint endDate);
 
-    // in order to dave on gas inside struct uints are minimized
+    // timestamps have to be uint256, not able to safe gas in struct
     struct Project {
         string name;
         string state;
         uint32 amount;
-        uint8 startDate;
-        uint8 endDate;
+        uint256 startDate;
+        uint256 endDate;
     }
     //Array which contains all projects, saved on the blockchain
     Project[] public projects;
@@ -30,13 +30,13 @@ contract AddProject {
     /// @param _name The name of the Ppoject.
     /// @param _state The state in which the project is located. Check if this state is a small state has to be implemented in the front-end.
     /// @param _amount The amount of Ether the project wants to raise.
-    function addProject(string memory _name, string memory _state, uint _amount) public {
+    function addProject(string memory _name, string memory _state, uint32 _amount) public {
         //check whether user(address) has already created a project, if zero, then user can
         //create a new project, otherwise user cannot create new project
         require(ownerProjectCount[msg.sender] == 0);
         //current timestamp as startDate
-        uint startDate = block.timestamp;
-        uint endDate = startDate + 12 weeks;
+        uint256 startDate = block.timestamp;
+        uint256 endDate = startDate + 12 weeks;
         //add new project to array
         projects.push(Project(_name, _state, _amount, startDate, endDate));
         //add mapping between project and wallet
@@ -50,6 +50,18 @@ contract AddProject {
     /// @return length the number of projects
     function getNumberOfProjects() public view returns(uint) {
         return projects.length;
+    }
+
+    /// @notice get the details of a project
+    /// @param _id ID of the project
+    /// @return Project the number of projects
+    function getProjectDetails(uint _id) public view returns(Project memory) {
+        if( _id < projects.length){
+            return projects[_id];
+        }
+        else {
+            revert('project id does not exist');
+        }
     }
 
 }

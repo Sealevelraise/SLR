@@ -3,7 +3,7 @@ pragma solidity >=0.4.22 <0.9.0;
 
 /// @title Donate Ether to SeaLevelRaise
 /// @author Josua Benz
-/// @notice With this contract, you spend money to SeaLevelRaise.
+/// @notice With this contract, you donate money to SeaLevelRaise.
 contract Donate {
     //mapping if user has donated money
     mapping(address => uint) public userHasDonated;
