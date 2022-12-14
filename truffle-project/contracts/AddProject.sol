@@ -15,8 +15,8 @@ contract AddProject {
         string name;
         string state;
         uint32 amount;
-        uint256 startDate;
-        uint256 endDate;
+        uint8 startDate;
+        uint8 endDate;
     }
     //Array which contains all projects, saved on the blockchain
     Project[] public projects;
