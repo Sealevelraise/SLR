@@ -1,5 +1,32 @@
 # sea-level-raise
 
+## How to start the nuxt project on your localhost
+* open project
+* go to the console in the ``nuxt`` directory
+* run ``npm install``
+* run [Dev Setup](#dev-setup)
+* run ``npm run dev``
+
+Project should be running at http://localhost:3000
+
+
+## Required
+node version 19.2
+
+## Dev Setup
+#### Linux and macOS (Windows Git Bash)
+```` bash
+export NODE_OPTIONS=--openssl-legacy-provider
+`````
+#### Windows command prompt
+```bash
+set NODE_OPTIONS=--openssl-legacy-provider
+```
+#### Windows PowerShell
+```bash
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
+
 ## Build Setup
 
 ```bash
