@@ -1,5 +1,19 @@
 # sea-level-raise
 
+## Dev Setup
+#### Linux and macOS (Windows Git Bash)
+```` bash
+export NODE_OPTIONS=--openssl-legacy-provider
+`````
+#### Windows command prompt
+```bash
+set NODE_OPTIONS=--openssl-legacy-provider
+```
+#### Windows PowerShell
+```bash
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
+
 ## Build Setup
 
 ```bash
