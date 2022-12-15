@@ -1,5 +1,8 @@
 # sea-level-raise
 
+## Required
+node version 19.2
+
 ## Dev Setup
 #### Linux and macOS (Windows Git Bash)
 ```` bash
