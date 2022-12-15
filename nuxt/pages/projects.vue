@@ -27,11 +27,52 @@
         />
       </div>
     </div>
+    <span v-for="(project, i) in projectInfos" :key="i">
+      <!-- Render all project properties -->
+      <h2 >{{ project.name }}</h2>
+      <p>State: {{ project.state }}</p>
+      <p>Amount: {{ project.amount }}</p>
+      <p>Start: {{ new Date(parseInt(project.startDate * 1000)) }}</p>
+      <p>End: {{ new Date(parseInt(project.endDate * 1000)) }}</p>
+    </span>
   </div>
 </template>
 
 <script>
+import Web3 from 'web3'
+// import abi for contracts
+import AddProjectJson from '../abi/AddProject.json'
+
 export default {
   name: 'default',
+
+  data() {
+    return {
+      AddProjectAddr: '0x15B4D7135Fa9f60a54c40Fd47a151db037601351',
+      projectInfos: [],
+    }
+  },
+
+  created() {
+    this.getProjectInformation();
+  },
+
+  methods: {
+    
+    getProjectInformation: async function() {
+      // methode for getting infos of all the projects currently saved on the blockchain
+      const web3 = new Web3(window.ethereum);
+      const contract = new web3.eth.Contract(AddProjectJson.abi, this.AddProjectAddr);
+      // get the number of projects to iterate over every project in the next step
+      const numberOfProjects = await contract.methods.getNumberOfProjects().call();
+
+      this.projectInfos = [];
+      for(let i=0; i<numberOfProjects; i++){
+        this.projectInfos.push(await contract.methods.getProjectDetails(i).call());
+      }
+    },
+  },
 }
+
+
 </script>
