@@ -44,7 +44,7 @@ import Web3 from 'web3'
 import AddProjectJson from '../abi/AddProject.json'
 
 export default {
-  name: 'default',
+  name: 'Projects',
 
   data() {
     return {
