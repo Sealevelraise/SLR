@@ -30,9 +30,9 @@
       "payable": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"donateEther\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"userHasDonated\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Josua Benz\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Donate Ether to SeaLevelRaise\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"donateEther()\":{\"notice\":\"Donate Ether to SeaLevelRaise\"}},\"notice\":\"With this contract, you spend money to SeaLevelRaise.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Donate.sol\":\"Donate\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Donate.sol\":{\"keccak256\":\"0x7398c3ae0b939a4c3ca680aa76c95e18b8b9c307e11406376977ddc1307e1b6c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0703d499090e1f25665401c59ac8467146701f1c85525fc59695544ddd324e6b\",\"dweb:/ipfs/QmRT33JmFXyW8f2W11LNMZpQ2fN1epFCWUsnN6qfpsetZU\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506101cd806100206000396000f3fe6080604052600436106100295760003560e01c8063364cbfff1461002e578063863451dd1461006b575b600080fd5b34801561003a57600080fd5b5061005560048036038101906100509190610136565b610075565b604051610062919061017c565b60405180910390f35b61007361008d565b005b60006020528060005260406000206000915090505481565b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610103826100d8565b9050919050565b610113816100f8565b811461011e57600080fd5b50565b6000813590506101308161010a565b92915050565b60006020828403121561014c5761014b6100d3565b5b600061015a84828501610121565b91505092915050565b6000819050919050565b61017681610163565b82525050565b6000602082019050610191600083018461016d565b9291505056fea264697066735822122047bd75b2e9b939e6c7756e1569b87de78ac461de12e5fe23933ea47f13dcb5e664736f6c63430008110033",
-  "deployedBytecode": "0x6080604052600436106100295760003560e01c8063364cbfff1461002e578063863451dd1461006b575b600080fd5b34801561003a57600080fd5b5061005560048036038101906100509190610136565b610075565b604051610062919061017c565b60405180910390f35b61007361008d565b005b60006020528060005260406000206000915090505481565b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610103826100d8565b9050919050565b610113816100f8565b811461011e57600080fd5b50565b6000813590506101308161010a565b92915050565b60006020828403121561014c5761014b6100d3565b5b600061015a84828501610121565b91505092915050565b6000819050919050565b61017681610163565b82525050565b6000602082019050610191600083018461016d565b9291505056fea264697066735822122047bd75b2e9b939e6c7756e1569b87de78ac461de12e5fe23933ea47f13dcb5e664736f6c63430008110033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"donateEther\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"userHasDonated\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Josua Benz\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Donate Ether to SeaLevelRaise\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"donateEther()\":{\"notice\":\"Donate Ether to SeaLevelRaise\"}},\"notice\":\"With this contract, you donate money to SeaLevelRaise.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Donate.sol\":\"Donate\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Donate.sol\":{\"keccak256\":\"0xd42c36061087640db6cff618205b8ee59b78db7d4576ed884974d66b7e0a5fb9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0ed65812f7a636b6eac47a4ccb1baf2dad819321ea298e69f26555c36c8c4e4c\",\"dweb:/ipfs/QmT8xnSz9kFZAZmivapXJnJU6f7mMSkaMypPXdk7pC8Gi3\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101cd806100206000396000f3fe6080604052600436106100295760003560e01c8063364cbfff1461002e578063863451dd1461006b575b600080fd5b34801561003a57600080fd5b5061005560048036038101906100509190610136565b610075565b604051610062919061017c565b60405180910390f35b61007361008d565b005b60006020528060005260406000206000915090505481565b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610103826100d8565b9050919050565b610113816100f8565b811461011e57600080fd5b50565b6000813590506101308161010a565b92915050565b60006020828403121561014c5761014b6100d3565b5b600061015a84828501610121565b91505092915050565b6000819050919050565b61017681610163565b82525050565b6000602082019050610191600083018461016d565b9291505056fea264697066735822122066933abc48677bb62f8cfc0c2af4926d6b797f80fc43a9ff7bcaad787f02a80364736f6c63430008110033",
+  "deployedBytecode": "0x6080604052600436106100295760003560e01c8063364cbfff1461002e578063863451dd1461006b575b600080fd5b34801561003a57600080fd5b5061005560048036038101906100509190610136565b610075565b604051610062919061017c565b60405180910390f35b61007361008d565b005b60006020528060005260406000206000915090505481565b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610103826100d8565b9050919050565b610113816100f8565b811461011e57600080fd5b50565b6000813590506101308161010a565b92915050565b60006020828403121561014c5761014b6100d3565b5b600061015a84828501610121565b91505092915050565b6000819050919050565b61017681610163565b82525050565b6000602082019050610191600083018461016d565b9291505056fea264697066735822122066933abc48677bb62f8cfc0c2af4926d6b797f80fc43a9ff7bcaad787f02a80364736f6c63430008110033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [
@@ -856,23 +856,23 @@
       "name": "#utility.yul"
     }
   ],
-  "sourceMap": "202:374:1:-:0;;;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "202:374:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;266:46;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;368:205;;;:::i;:::-;;266:46;;;;;;;;;;;;;;;;;:::o;368:205::-;564:1;535:14;:26;550:10;535:26;;;;;;;;;;;;;;;:30;;;;368:205::o;88:117:3:-;197:1;194;187:12;334:126;371:7;411:42;404:5;400:54;389:65;;334:126;;;:::o;466:96::-;503:7;532:24;550:5;532:24;:::i;:::-;521:35;;466:96;;;:::o;568:122::-;641:24;659:5;641:24;:::i;:::-;634:5;631:35;621:63;;680:1;677;670:12;621:63;568:122;:::o;696:139::-;742:5;780:6;767:20;758:29;;796:33;823:5;796:33;:::i;:::-;696:139;;;;:::o;841:329::-;900:6;949:2;937:9;928:7;924:23;920:32;917:119;;;955:79;;:::i;:::-;917:119;1075:1;1100:53;1145:7;1136:6;1125:9;1121:22;1100:53;:::i;:::-;1090:63;;1046:117;841:329;;;;:::o;1176:77::-;1213:7;1242:5;1231:16;;1176:77;;;:::o;1259:118::-;1346:24;1364:5;1346:24;:::i;:::-;1341:3;1334:37;1259:118;;:::o;1383:222::-;1476:4;1514:2;1503:9;1499:18;1491:26;;1527:71;1595:1;1584:9;1580:17;1571:6;1527:71;:::i;:::-;1383:222;;;;:::o",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\n/// @title Donate Ether to SeaLevelRaise\r\n/// @author Josua Benz\r\n/// @notice With this contract, you spend money to SeaLevelRaise.\r\ncontract Donate {\r\n    //mapping if user has donated money\r\n    mapping(address => uint) public userHasDonated;\r\n\r\n    /// @notice Donate Ether to SeaLevelRaise\r\n    function donateEther() public payable{\r\n        //TODO hier muss der Bazahlvorgang noch erfolgen\r\n\r\n        //mapping that this user has donated money to SLR\r\n        userHasDonated[msg.sender] = 1;\r\n    }\r\n}\r\n",
+  "sourceMap": "203:374:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "203:374:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;267:46;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;369:205;;;:::i;:::-;;267:46;;;;;;;;;;;;;;;;;:::o;369:205::-;565:1;536:14;:26;551:10;536:26;;;;;;;;;;;;;;;:30;;;;369:205::o;88:117:3:-;197:1;194;187:12;334:126;371:7;411:42;404:5;400:54;389:65;;334:126;;;:::o;466:96::-;503:7;532:24;550:5;532:24;:::i;:::-;521:35;;466:96;;;:::o;568:122::-;641:24;659:5;641:24;:::i;:::-;634:5;631:35;621:63;;680:1;677;670:12;621:63;568:122;:::o;696:139::-;742:5;780:6;767:20;758:29;;796:33;823:5;796:33;:::i;:::-;696:139;;;;:::o;841:329::-;900:6;949:2;937:9;928:7;924:23;920:32;917:119;;;955:79;;:::i;:::-;917:119;1075:1;1100:53;1145:7;1136:6;1125:9;1121:22;1100:53;:::i;:::-;1090:63;;1046:117;841:329;;;;:::o;1176:77::-;1213:7;1242:5;1231:16;;1176:77;;;:::o;1259:118::-;1346:24;1364:5;1346:24;:::i;:::-;1341:3;1334:37;1259:118;;:::o;1383:222::-;1476:4;1514:2;1503:9;1499:18;1491:26;;1527:71;1595:1;1584:9;1580:17;1571:6;1527:71;:::i;:::-;1383:222;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\n/// @title Donate Ether to SeaLevelRaise\r\n/// @author Josua Benz\r\n/// @notice With this contract, you donate money to SeaLevelRaise.\r\ncontract Donate {\r\n    //mapping if user has donated money\r\n    mapping(address => uint) public userHasDonated;\r\n\r\n    /// @notice Donate Ether to SeaLevelRaise\r\n    function donateEther() public payable{\r\n        //TODO hier muss der Bazahlvorgang noch erfolgen\r\n\r\n        //mapping that this user has donated money to SLR\r\n        userHasDonated[msg.sender] = 1;\r\n    }\r\n}\r\n",
   "sourcePath": "C:\\Users\\jomib\\Documents\\SLR\\truffle-project\\contracts\\Donate.sol",
   "ast": {
     "absolutePath": "project:/contracts/Donate.sol",
     "exportedSymbols": {
       "Donate": [
-        141
+        166
       ]
     },
-    "id": 142,
+    "id": 167,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 123,
+        "id": 148,
         "literals": [
           "solidity",
           ">=",
@@ -892,30 +892,30 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 124,
+          "id": 149,
           "nodeType": "StructuredDocumentation",
-          "src": "69:133:1",
-          "text": "@title Donate Ether to SeaLevelRaise\n @author Josua Benz\n @notice With this contract, you spend money to SeaLevelRaise."
+          "src": "69:134:1",
+          "text": "@title Donate Ether to SeaLevelRaise\n @author Josua Benz\n @notice With this contract, you donate money to SeaLevelRaise."
         },
         "fullyImplemented": true,
-        "id": 141,
+        "id": 166,
         "linearizedBaseContracts": [
-          141
+          166
         ],
         "name": "Donate",
-        "nameLocation": "211:6:1",
+        "nameLocation": "212:6:1",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
             "functionSelector": "364cbfff",
-            "id": 128,
+            "id": 153,
             "mutability": "mutable",
             "name": "userHasDonated",
-            "nameLocation": "298:14:1",
+            "nameLocation": "299:14:1",
             "nodeType": "VariableDeclaration",
-            "scope": 141,
-            "src": "266:46:1",
+            "scope": 166,
+            "src": "267:46:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -923,28 +923,28 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 127,
+              "id": 152,
               "keyType": {
-                "id": 125,
+                "id": 150,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "274:7:1",
+                "src": "275:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "266:24:1",
+              "src": "267:24:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 126,
+                "id": 151,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "285:4:1",
+                "src": "286:4:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
@@ -955,53 +955,53 @@
           },
           {
             "body": {
-              "id": 139,
+              "id": 164,
               "nodeType": "Block",
-              "src": "405:168:1",
+              "src": "406:168:1",
               "statements": [
                 {
                   "expression": {
-                    "id": 137,
+                    "id": 162,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 132,
+                        "id": 157,
                         "name": "userHasDonated",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 128,
-                        "src": "535:14:1",
+                        "referencedDeclaration": 153,
+                        "src": "536:14:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 135,
+                      "id": 160,
                       "indexExpression": {
                         "expression": {
-                          "id": 133,
+                          "id": 158,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 4294967281,
-                          "src": "550:3:1",
+                          "src": "551:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 134,
+                        "id": 159,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "554:6:1",
+                        "memberLocation": "555:6:1",
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
-                        "src": "550:10:1",
+                        "src": "551:10:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1012,7 +1012,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "535:26:1",
+                      "src": "536:26:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1022,71 +1022,71 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "31",
-                      "id": 136,
+                      "id": 161,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "564:1:1",
+                      "src": "565:1:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_1_by_1",
                         "typeString": "int_const 1"
                       },
                       "value": "1"
                     },
-                    "src": "535:30:1",
+                    "src": "536:30:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 138,
+                  "id": 163,
                   "nodeType": "ExpressionStatement",
-                  "src": "535:30:1"
+                  "src": "536:30:1"
                 }
               ]
             },
             "documentation": {
-              "id": 129,
+              "id": 154,
               "nodeType": "StructuredDocumentation",
-              "src": "321:41:1",
+              "src": "322:41:1",
               "text": "@notice Donate Ether to SeaLevelRaise"
             },
             "functionSelector": "863451dd",
-            "id": 140,
+            "id": 165,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "donateEther",
-            "nameLocation": "377:11:1",
+            "nameLocation": "378:11:1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 130,
+              "id": 155,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "388:2:1"
+              "src": "389:2:1"
             },
             "returnParameters": {
-              "id": 131,
+              "id": 156,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "405:0:1"
+              "src": "406:0:1"
             },
-            "scope": 141,
-            "src": "368:205:1",
+            "scope": 166,
+            "src": "369:205:1",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 142,
-        "src": "202:374:1",
+        "scope": 167,
+        "src": "203:374:1",
         "usedErrors": []
       }
     ],
-    "src": "33:545:1"
+    "src": "33:546:1"
   },
   "compiler": {
     "name": "solc",
@@ -1096,12 +1096,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x5a2b07D8cBF5687B2cA8E09429771e992211A6e2",
-      "transactionHash": "0x0bc41bc83a0ffb2c8eba22e96293f3cf433753a861ed59020150aa1f367cd2ca"
+      "address": "0x14Ad1d0B54E2408b6Fb1Efd500E1D190FCcD35Cc",
+      "transactionHash": "0x40306bc48deaf5c06d489533cd062e6fff2e6680172d36510a544c4c2ff71fe8"
     }
   },
   "schemaVersion": "3.4.11",
-  "updatedAt": "2022-12-07T12:35:45.867Z",
+  "updatedAt": "2022-12-13T20:08:06.154Z",
   "networkType": "ethereum",
   "devdoc": {
     "author": "Josua Benz",
@@ -1117,7 +1117,7 @@
         "notice": "Donate Ether to SeaLevelRaise"
       }
     },
-    "notice": "With this contract, you spend money to SeaLevelRaise.",
+    "notice": "With this contract, you donate money to SeaLevelRaise.",
     "version": 1
   }
 }
