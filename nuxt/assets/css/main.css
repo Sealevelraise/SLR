@@ -16,3 +16,19 @@
     font-weight: 700;
     src: url('~/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 }
+
+h1 {
+  color: #003162;
+  @apply text-3xl uppercase text-center pt-8;
+}
+
+h3 {
+  @apply text-xl pb-4;
+}
+
+.content-box {
+  width: 75%;
+  border-radius: 24px;
+  color: white;
+  @apply mx-auto;
+}
