@@ -1,0 +1,23 @@
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - test
+
+build-nuxt:       # This job runs in the build stage, which runs first.
+  stage: build
+  script:
+    - cd nuxt
+    - npm install
+    - export NODE_OPTIONS=--openssl-legacy-provide
+    - npm run build
+
+build-truffle:       # This job runs in the build stage, which runs first.
+  stage: build
+  script:
+    - cd truffle-project
+    - npm install truffle
+    - truffle compile
+
+unit-test-job:   # This job runs in the test stage.
+  stage: test    # It only starts when the job in the build stage completes successfully.
+  script:
+    - echo "Hier werden spaeter die Tests ausgefuehrt"
