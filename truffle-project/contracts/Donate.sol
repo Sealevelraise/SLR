@@ -10,8 +10,10 @@ contract Donate {
 
     /// @notice Donate Ether to SeaLevelRaise
     function donateEther() public payable{
-        //TODO hier muss der Bezahlvorgang noch erfolgen
-
+        //donations of less than 1 finney will be rejected 
+        if(msg.value < 1e15) {
+            revert();
+        }
 
         //mapping that this user has donated money to SLR
         userHasDonated[msg.sender] = 1;
