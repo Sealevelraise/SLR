@@ -4,6 +4,7 @@ stages:          # List of stages for jobs, and their order of execution
 
 build-nuxt:       # This job runs in the build stage, which runs first.
   stage: build
+  image: node:16.19.0-bullseye
   script:
     - cd nuxt
     - npm install
