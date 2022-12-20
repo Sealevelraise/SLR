@@ -31,7 +31,7 @@
         alt="Minister of Tuvalu gives COP26 speech from the sea"
       />
       <h2 class="text-2xl text-center px-32 pb-12">"Wir gehen unter..."</h2>
-      <p class="text-justify px-32">
+      <p id="roleAnchor" class="text-justify px-32">
         ...sind die ersten Worte des Außenministers des Inselstaats Tuvalu bei
         seiner Rede zur Klimakonferenz 2021. Um den Ernst der Lage deutlich zu
         machen, hält Simon Kofe seine Videoansprache aus dem Wasser. Sein
@@ -56,11 +56,13 @@
       <div class="flex flex-row place-content-between">
         <button
           class="w-2/5 bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
+          @click="selectRole('spender')"
         >
           Spenden und abstimmen
         </button>
         <button
           class="w-2/5 bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
+          @click="selectRole('projektinhaber')"
         >
           Spenden erhalten
         </button>
@@ -129,5 +131,25 @@
 <script>
 export default {
   name: 'default',
+  methods: {
+    selectRole(role) {
+      const auswahlButton = document.getElementById('auswahlButton')
+      const spendenButton = document.getElementById('spendenButton')
+      const projektButton = document.getElementById('projektButton')
+
+      auswahlButton.classList.add('hidden')
+      if (role === 'spender') {
+        spendenButton.classList.remove('hidden')
+        if (!projektButton.classList.contains('hidden')) {
+          projektButton.classList.add('hidden')
+        }
+      } else if (role === 'projektinhaber') {
+        projektButton.classList.remove('hidden')
+        if (!spendenButton.classList.contains('hidden')) {
+          spendenButton.classList.add('hidden')
+        }
+      }
+    },
+  },
 }
 </script>
