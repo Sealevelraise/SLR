@@ -1,21 +1,14 @@
 <template>
-  <div>
-    <nav
-      class="bg-slr-blue h-28 shadow md:flex md:items-center md:justify-between font-roboto px-4 text-blue-200"
-    >
-      <div class="items-center shrink-0">
-        <!-- flex justify-between  -->
-        <span
-          class="text-2xl pr-5 hover:text-blue-400 duration-500 cursor-pointer md:items-center"
-        >
-          <img
-            class="object-cover h-28 inline"
-            src="../assets/images/slrLogo.jpg"
-            alt="logo"
-          />
-          <NuxtLink to="/"> SEA LEVEL R(A)ISE </NuxtLink>
-        </span>
-        <!----
+    <div>
+        <nav class="bg-slr-blue h-28 shadow md:flex md:items-center md:justify-between font-roboto px-4 text-blue-200">
+            <div class="items-center shrink-0 "> <!-- flex justify-between  -->
+                <span class="text-xl md:text-2xl pr-5 hover:text-blue-400 duration-500 cursor-pointer md:items-center ">
+                    <img class="object-cover h-28 inline" src="../assets/images/slrLogo.jpg" alt="logo">
+                    <NuxtLink to="/">
+                            SEA LEVEL R(A)ISE
+                    </NuxtLink>
+                </span>
+                <!----
                                 <span class="cursor-pointer text-3xl mx-2 md:hidden block">
                     <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Menu</title><path fill="none"
                         stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48" d="M88 152h336M88 256h336M88 360h336"

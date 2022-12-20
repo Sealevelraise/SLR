@@ -1,14 +1,14 @@
 <template>
   <div class="flex flex-col gap-10">
-    <h1 class="text-3xl uppercase text-center">
+    <h1 class="text-2xl md:text-3xl uppercase text-center">
       Herzlich Willkommen <br />
       bei Sea Level R(a)ise
     </h1>
 
     <div
-      class="w-3/4 mx-auto bg-slr-blue-box py-12 px-32 rounded-[24px] text-white"
+      class="w-11/12 md:w-3/4 mx-auto bg-slr-blue-box py-10 md:py-12 px-6 md:px-32 rounded-[24px] text-white"
     >
-      <h2 class="text-2xl text-center pb-12">Was ist Sea Level R(a)ise</h2>
+      <h2 class="text-2xl text-center pb-8 md:pb-12">Was ist Sea Level R(a)ise</h2>
       <p class="text-justify">
         Was ist SLR? ... Whereas disregard and contempt for human rights have
         resulted Everyone has the right to freedom of thought, conscience and
@@ -24,14 +24,14 @@
       </p>
     </div>
 
-    <div class="w-3/4 mx-auto bg-slr-blue-box pb-12 rounded-[24px] text-white">
+    <div class="w-11/12 md:w-3/4 mx-auto bg-slr-blue-box md:pb-12 px-0 rounded-[24px] text-white">
       <img
-        class="pb-12 rounded-t-[24px]"
+        class="pb-12 px-0 rounded-t-[24px]"
         src="../assets/images/tuvalu.jpeg"
         alt="Minister of Tuvalu gives COP26 speech from the sea"
       />
-      <h2 class="text-2xl text-center px-32 pb-12">"Wir gehen unter..."</h2>
-      <p id="roleAnchor" class="text-justify px-32">
+      <h2 class="text-2xl text-center pb-8 md:pb-12md:py-12 px-6 md:px-32">"Wir gehen unter..."</h2>
+      <p id="roleAnchor" class="text-justify md:py-12 px-6 md:px-32">
         ...sind die ersten Worte des Außenministers des Inselstaats Tuvalu bei
         seiner Rede zur Klimakonferenz 2021. Um den Ernst der Lage deutlich zu
         machen, hält Simon Kofe seine Videoansprache aus dem Wasser. Sein
