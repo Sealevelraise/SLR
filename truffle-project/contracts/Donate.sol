@@ -10,7 +10,8 @@ contract Donate {
 
     /// @notice Donate Ether to SeaLevelRaise
     function donateEther() public payable{
-        //TODO hier muss der Bazahlvorgang noch erfolgen
+        //TODO hier muss der Bezahlvorgang noch erfolgen
+
 
         //mapping that this user has donated money to SLR
         userHasDonated[msg.sender] = 1;
