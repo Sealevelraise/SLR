@@ -1,5 +1,4 @@
 const Vote = artifacts.require("./Vote.sol");
-const Donate = artifacts.require("./Donate.sol");
 const AddProject = artifacts.require("./AddProject.sol");
 const truffleAssert = require('truffle-assertions');
 
@@ -8,12 +7,10 @@ contract("Vote", (accounts) => {
     let voteContract;
     let projectOwner;
     let donater;
-    let donateContract;
     let addProjectContract;
     beforeEach('should setup the contract instances and accounts', async () => {
         // Retreive the deployed contract
         voteContract = await Vote.new();
-        donateContract = await Donate.new();
         addProjectContract = await AddProject.new();
         projectOwner = accounts[0];
         donater = accounts[1];
