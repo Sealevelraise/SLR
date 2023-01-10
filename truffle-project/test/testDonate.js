@@ -5,7 +5,7 @@ contract("Donate", (accounts) => {
    //instance for test contract
     let contract;
     let account;
-    beforeEach('should setup the contract instance', async () => {
+    beforeEach('should setup the contract instance and account', async () => {
         // Retreive the deployed contract
         contract = await Donate.new();
         account = accounts[0];
