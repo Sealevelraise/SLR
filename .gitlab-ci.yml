@@ -24,5 +24,7 @@ unit-test-job:   # This job runs in the test stage.
   script:
     - echo "Hier werden spaeter die Tests ausgefuehrt"
     - cd truffle-project
+    - npm install -g truffle
     - npm install truffle-assertions
+    - truffle compile
     - truffle test
