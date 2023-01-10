@@ -47,7 +47,7 @@ contract("AddProject", (accounts) => {
         let state = 'Kap Verde';
         let amount = 100;
         //call addProject()
-        let result = await contract.addProject(name, state, amount, { from: account });
+        await contract.addProject(name, state, amount, { from: account });
        let project = await contract.getProjectDetails(0);
        assert.equal(project.name.toString(), name);
        assert.equal(project.state.toString(), state);

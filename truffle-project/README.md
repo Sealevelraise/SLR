@@ -36,4 +36,4 @@ Mit dem Befehl
     truffle test
 
 werden die Test aus dem Ordner `test` ausgeführt. Truffle benutzt das Mocha Testing Framework für die Erstellung und Ausführung von Unit Test in Javascript.
-Truffle bietet dabei eine Clean-Room Environment mit der die Contracts für die Tests in einer Testumgebung neu deployed werden. 
+Truffle bietet dabei eine Clean-Room Environment mit der die Contracts für die Tests in einer Testumgebung neu compiled werden. 
