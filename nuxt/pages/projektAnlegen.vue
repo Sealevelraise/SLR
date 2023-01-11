@@ -16,6 +16,15 @@
           Your selected state: {{ selection }}
         </p>
       </div>
+
+      <div class="text-center text-black">
+          <p>Bitte Projektnamen eintragen: </p>
+          <input v-model="projectname" placeholder="Projektnamen eintragen">          
+          
+          <p>Welchen Spendenbetrag wollen Sie erhalten? </p>
+          <input v-model="amount" placeholder="Spendensumme eintragen">          
+      </div>
+
     </div>
   </div>
 </template>
