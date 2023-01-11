@@ -10,7 +10,7 @@
 
 <script>
 import Web3 from 'web3'
-import AddProjectJson from '../abi/AddProject.json'
+import AddProjectJson from '../../truffle-project/build/contracts/AddProject.json'
 
 export default {
   name: "ConnectWallet",
@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       connected: false,
-      AddProjectAddr: '0x8Ddc6229042343680a1B85F058f7D2cE74f1E67e',
+      AddProjectAddr: AddProjectJson.networks[5777].address,
       contractResult: '',
       connectedAccounts: '',
       addProject_Name: 'Test Projekt',

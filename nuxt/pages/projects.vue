@@ -1,9 +1,16 @@
 <template>
+  <!-- flex container der alle Elemente untereinanter (in einer Spalte) ausrichtet -->
   <div class="flex flex-col gap-10">
-    <h1 class="">Aktuelle Projekte</h1>
-    <div class="bg-slr-blue-box flex content-box">
-      <div class="px-8 w-2/3 pt-4">
-        <h3>Kiribati, Malediven</h3>
+    <h1>Aktuelle Projekte</h1>
+
+    <!--eigentliche Project Card, wiederum eine flex box
+    
+    
+    -->
+    <div v-for="(project, i) in projectInfos" :key="i" class="bg-slr-blue-box text-white md:w-10/12 flex flex-col mx-auto md:flex-row rounded-[24px]" > <!-- //content-box-->
+      <!--container für den Text, Ausrichtung row + Breite 2/3 ab mittel-großen Bildschirmen-->
+      <div class="px-8 md:w-3/5 pt-4">
+        <h3>{{ project.name }} (in {{ project.state }})</h3>
         <p class="pb-4">
           Noch sind sie nicht anerkannt, die sogenannten Klimaflüchtlinge. Ein
           Mann aus dem bedrohten Kiribati wollte 2013 der erste Klimaflüchtling
@@ -14,41 +21,52 @@
           durch Landaufschüttung und Steinmauern verbessern. Somit können wir
           einen großen Teil zur Rettung der Inseln beitragen.
         </p>
-        <div class="flex justify-between pb-4">
+        <!--flex box für Spendenziel und Betrag-->
+        <div class="flex flex-row justify-between font-bold text-lg md:text-xl pb-4">
           <div class="font-bold">Spendenziel:</div>
-          <div>10.000X</div>
+          <div>{{ project.amount }} Ether</div>
         </div>
       </div>
-      <div class="w-1/3 rounded-[24px]">
+      <!--container für Projekt Bild-->
+      <div class="order-first md:order-last md:w-2/5">
         <img
-          class="object-cover w-auto h-full rounded-[24px]"
+          class="object-cover w-auto h-full rounded-t-[24px] md:rounded-r-[24px]"
           src="../assets/images/kiribati.jpg"
           alt="project-image"
         />
       </div>
+
     </div>
+
+
+    
+<!--
     <div v-for="(project, i) in projectInfos" :key="i">
-      <!-- Render all project properties -->
+       //Render all project properties 
       <h2 >{{ project.name }}</h2>
       <p>State: {{ project.state }}</p>
       <p>Amount: {{ project.amount }}</p>
       <p>Start: {{ new Date(parseInt(project.startDate * 1000)) }}</p>
       <p>End: {{ new Date(parseInt(project.endDate * 1000)) }}</p>
     </div>
+    -->
+
   </div>
+
+
 </template>
 
 <script>
 import Web3 from 'web3'
 // import abi for contracts
-import AddProjectJson from '../abi/AddProject.json'
+import AddProjectJson from '../../truffle-project/build/contracts/AddProject.json'
 
 export default {
   name: 'Projects',
 
   data() {
     return {
-      AddProjectAddr: '0x8Ddc6229042343680a1B85F058f7D2cE74f1E67e',
+      AddProjectAddr: AddProjectJson.networks[5777].address,
       projectInfos: [],
     }
   },
