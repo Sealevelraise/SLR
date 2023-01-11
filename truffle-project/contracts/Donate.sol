@@ -18,4 +18,7 @@ contract Donate {
         //mapping that this user has donated money to SLR
         userHasDonated[msg.sender] = 1;
     }
+    function getContractBalance() public view returns (uint) {
+        return address(this).balance;
+    }
 }

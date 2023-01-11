@@ -29,3 +29,11 @@ Mit dem Befehl
 
 Werden die Contracts kompiliert und zusätzlich werden die Contracts auf die lokale Ganache-Blockchain geschrieben. Die Adressen fuer die Smart Contracts aendern sich dadurch.
 Wenn es eine Änderungen an den Contracts gab und `truffle migrate` ausgeführt wird, müssen die .json-Dateien unter build\contracts in den Ordner vue-web3js-project verschoben werden, damit das Frontend auf die neuen Smart Contracts zufreifen kann.
+
+
+Mit dem Befehl 
+
+    truffle test
+
+werden die Test aus dem Ordner `test` ausgeführt. Truffle benutzt das Mocha Testing Framework für die Erstellung und Ausführung von Unit Test in Javascript.
+Truffle bietet dabei eine Clean-Room Environment mit der die Contracts für die Tests in einer Testumgebung neu compiled werden. 

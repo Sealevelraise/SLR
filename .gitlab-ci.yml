@@ -16,8 +16,15 @@ build-truffle:       # This job runs in the build stage, which runs first.
     - cd truffle-project
     - npm install -g truffle
     - truffle compile
+    
+    
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
   script:
     - echo "Hier werden spaeter die Tests ausgefuehrt"
+    - cd truffle-project
+    - npm install -g truffle
+    - npm install truffle-assertions
+    - truffle compile
+    - truffle test
