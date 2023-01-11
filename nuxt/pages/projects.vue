@@ -27,14 +27,14 @@
         />
       </div>
     </div>
-    <span v-for="(project, i) in projectInfos" :key="i">
+    <div v-for="(project, i) in projectInfos" :key="i">
       <!-- Render all project properties -->
       <h2 >{{ project.name }}</h2>
       <p>State: {{ project.state }}</p>
       <p>Amount: {{ project.amount }}</p>
       <p>Start: {{ new Date(parseInt(project.startDate * 1000)) }}</p>
       <p>End: {{ new Date(parseInt(project.endDate * 1000)) }}</p>
-    </span>
+    </div>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
 
   data() {
     return {
-      AddProjectAddr: '0x15B4D7135Fa9f60a54c40Fd47a151db037601351',
+      AddProjectAddr: '0x8Ddc6229042343680a1B85F058f7D2cE74f1E67e',
       projectInfos: [],
     }
   },

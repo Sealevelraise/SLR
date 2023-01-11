@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       connected: false,
-      AddProjectAddr: '0x15B4D7135Fa9f60a54c40Fd47a151db037601351',
+      AddProjectAddr: '0x8Ddc6229042343680a1B85F058f7D2cE74f1E67e',
       contractResult: '',
       connectedAccounts: '',
       addProject_Name: 'Test Projekt',

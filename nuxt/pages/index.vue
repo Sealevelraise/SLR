@@ -74,7 +74,7 @@
     <div class="w-11/12 overflow-x-auto md:w-3/4 mx-auto text-white flex flex-row gap-8">
       <!-- Card 1: About Us-->
       <div
-        class="grow md:basis-1/3 text-center bg-slr-blue-box py-4 px-8 rounded-[24px]"
+        class="md:basis-1/3 text-center bg-slr-blue-box py-4 px-8 rounded-[24px]" 
       >
         <h2 class="pb-6 text-xl">Wer sind wir?</h2>
         <img
