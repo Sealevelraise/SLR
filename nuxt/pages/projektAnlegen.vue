@@ -1,30 +1,34 @@
 <template>
   <div>
-    <h1>Projekt anmelden</h1>
-    <div class="content-box bg-slr-blue-box">
-      <div class="mx-auto w-1/2 py-10">
+    <h1>Bewerbung</h1>
+    <div class="content-box bg-slr-blue-box">      
+      <div class="mx-auto w-1/2 p-10">
         <Dropdown
           class="mx-auto"
           :options="smallstates"
           :max-item="100"
           :disabled="false"
-          placeholder="please select your state"
+          placeholder="Please select your state"
           @selected="saveSelection($event)"
         >
         </Dropdown>
         <p :key="selection" class="mx-auto pt-4">
           Your selected state: {{ selection }}
         </p>
-      </div>
 
-      <div class="text-center text-black">
-          <p>Bitte Projektnamen eintragen: </p>
-          <input v-model="projectname" placeholder="Projektnamen eintragen">          
+          <p class="mx-auto pt-4">Name des Projekts: {{ projectname }}</p>
+          <input v-model="projectname" placeholder="Projektnamen eintragen" class="input-field">          
           
-          <p>Welchen Spendenbetrag wollen Sie erhalten? </p>
-          <input v-model="amount" placeholder="Spendensumme eintragen">          
-      </div>
+          <p class="mx-auto pt-4">Benötigter Spendenbetrag: {{ amount }} € </p>
+          <input v-model="amount" placeholder="Spendensumme eintragen" class="input-field">
+          
+          <p class="mx-auto pt-4">E-Mail: {{ email }} </p>
+          <input v-model="email" placeholder="your.project@funding.com" class="input-field">
 
+
+          <NuxtLink to="/registered">Anmelden</NuxtLink>
+
+      </div>
     </div>
   </div>
 </template>
