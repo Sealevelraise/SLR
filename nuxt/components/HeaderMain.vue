@@ -4,9 +4,11 @@
             <div class="items-center shrink-0 "> <!-- flex justify-between  -->
                 <span class="text-xl md:text-2xl pr-5 hover:text-blue-400 duration-500 cursor-pointer md:items-center ">
                     <img class="object-cover h-28 inline" src="../assets/images/slrLogo.jpg" alt="logo">
+                    
                     <NuxtLink to="/">
                             SEA LEVEL R(A)ISE
                     </NuxtLink>
+
                 </span>
                 <!----
                                 <span class="cursor-pointer text-3xl mx-2 md:hidden block">
@@ -38,6 +40,10 @@
 
         <li class="hover:text-blue-400 duration-500">
           <NuxtLink to="/about">Über Uns</NuxtLink>
+        </li>
+
+        <li class="hover:text-blue-400 duration-500">
+          <NuxtLink to="/faq">FAQ</NuxtLink>
         </li>
 
         <NuxtLink :to="{ path: '/', hash: '#roleAnchor' }">
@@ -72,5 +78,12 @@
 <script>
 export default {
   name: 'HeaderMain',
+
+  methods: {
+    reloadPage() {
+      window.location.reload();
+    }
+  }
+
 }
 </script>

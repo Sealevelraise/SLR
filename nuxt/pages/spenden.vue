@@ -1,4 +1,5 @@
 <template>
+  
   <div>
     <h1>Spenden</h1>
     <p>Betrag eingeben</p>
