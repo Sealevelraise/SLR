@@ -32,3 +32,12 @@ h3 {
   color: white;
   @apply mx-auto;
 }
+
+.input-field {
+  width: 15em;
+  height: 40px;
+  border-radius: 3px;
+  background-color:#D9D9D9;
+  color: black;
+  text-align: center;
+}
