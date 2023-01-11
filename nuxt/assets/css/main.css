@@ -26,9 +26,14 @@ h3 {
   @apply text-xl pb-4;
 }
 
+/*
+
+// rauskommentiert, da der name bereits für eine Tailwindcss Klasse vergeben ist, plus kein Mehrwert aktuell, nur Verwirrung
+
 .content-box {
   width: 75%;
   border-radius: 24px;
   color: white;
   @apply mx-auto;
 }
+*/
