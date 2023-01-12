@@ -6,6 +6,10 @@ build-nuxt:       # This job runs in the build stage, which runs first.
   stage: build
   image: node:16.19.0-bullseye
   script:
+    - mkdir -p truffle-project/build/contracts
+    - echo "{}" > truffle-project/build/contracts/AddProject.json
+    - echo "{}" > truffle-project/build/contracts/Donate.json
+    - echo "{}" > truffle-project/build/contracts/Vote.json
     - cd nuxt
     - npm install
     - npm run build
