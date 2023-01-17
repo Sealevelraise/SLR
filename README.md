@@ -41,6 +41,7 @@ Für das Ausführen der beiden Projektteile gibt es jeweils eine Anleitung im Un
  ### Benötigte Programme 
     * Ganache
     * Nodejs
+    * optional: Metamask
  
  ### Ablauf
  Zunächst alle Arbeitsschritte im 
@@ -49,6 +50,6 @@ Für das Ausführen der beiden Projektteile gibt es jeweils eine Anleitung im Un
  Im Folgenden wird das Frontend aktiviert. Dazu müssen alle Schritte 
  im [README-nuxt.md](./nuxt/README-nuxt.md#How-to-start-the-nuxt-project-on-your-localhost) ausgeführt werden.
 
-
-
 Das Projekt sollte nun lokal auf dem Rechner laufen. 
+Um die Funktionen zu nutzen und zu testen,
+sollte Metamask im Browser installiert sein.
