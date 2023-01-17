@@ -43,8 +43,10 @@ Für das Ausführen der beiden Projektteile gibt es jeweils eine Anleitung im Un
     * Nodejs
  
  ### Ablauf
- Zunächst alle Arbeitsschritte im [README-truffle.md](./truffle-project/README-truffle.md) unter der Überschrift
- "Smart Contract lokal auf Blockchain ausführen" befolgen.
- Danach müssen alle Schritte im [README-nuxt.md](./nuxt/README-nuxt.md) ausgeführt werden.
+ Zunächst alle Arbeitsschritte im 
+ [README-truffle.md](./truffle-project/README-truffle.md#smart-contract-lokal-auf-blockchain-ausführen)
+ befolgen. Damit sind nun im Backend alle Smart Contracts auf einer lokalen Blockchain hinterlegt. 
+ Im Folgenden wird das Frontend aktiviert. Dazu müssen alle Schritte 
+ im [README-nuxt.md](./nuxt/README-nuxt.md#How-to-start-the-nuxt-project-on-your-localhost) ausgeführt werden.
 
 Das Projekt sollte nun lokal auf dem Rechner laufen. 
