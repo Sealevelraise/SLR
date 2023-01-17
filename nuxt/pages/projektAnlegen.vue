@@ -19,7 +19,10 @@
           @selected="saveSelection($event)"
         >
         </Dropdown>
-        <p class="mx-auto pt-4">Ausgew&auml;hlter Staat: {{ selection }}</p>
+        <p class="mx-auto pt-4">
+          Ausgew&auml;hlter Staat:
+          <span class="font-bold"> {{ selection }} </span>
+        </p>
 
         <p class="mx-auto pt-4">Name des Projekts: {{ projectname }}</p>
         <div class="mx-auto">
