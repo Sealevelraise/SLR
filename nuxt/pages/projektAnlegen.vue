@@ -94,7 +94,7 @@
       class="content-box bg-slr-blue-box flex flex-col justify-center"
     >
       <h2>Projekt erfolgreich eingereicht!</h2>
-      <!--p>
+      <p>
         Projektname: {{ contractResult.events.ProjectAdded.returnValues.name }}
       </p>
       <p>Staat: {{ contractResult.events.ProjectAdded.returnValues.state }}</p>
@@ -105,9 +105,7 @@
       <p>
         Ben&ouml;tigter Betrag:
         {{ contractResult.events.ProjectAdded.returnValues.amount }} &euro;
-      </p-->
-
-      {{ contractResult }}
+      </p>
     </div>
   </div>
 </template>
