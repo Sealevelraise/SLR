@@ -2,7 +2,7 @@
 Das Projekt ist Teil des Moduls _M3 Methoden und Werkzeuge in BUI-Projekten_ im WiSe 2022/2023 des Masters BUI.
 
 Sea Level Raise ist eine Spendenplattform für Projekte in sogenannten Small States, Staaten mit einer kleiner Einwohnerzahl und einer kleinen Landesfläche, die besonders vom Klimawandel betroffen sind.
-Diese Staaten haben aufgrund ihrer geringen Bedeutung im globalen Landerranking bislang ein Problem, gehört zu werden.
+Diese Staaten haben aufgrund ihrer geringen Bedeutung im globalen Länderranking bislang ein Problem, gehört zu werden.
 
 Durch Sea Level Raise wird dieses Problem angegangen, das sind unsere drei Grundsätze:
 
@@ -27,11 +27,37 @@ Durch Sea Level Raise wird dieses Problem angegangen, das sind unsere drei Grund
 
 ## Inhalt des Repositories
 Folgender Inhalt gibt es in diesem Repository:
-* __nuxt:__ "Frontend", Eine Webaplikation, mit dem Framework __Vue__ und dem Metaframework __nuxt__ entwickelt
-* __truffle-project:__ "Backend", Smart Contracts, welche auf eine Etherium-Blockchain migriert werden können.
+* __nuxt:__ "Frontend", Eine Webapplikation, mit dem Framework __Vue__ und dem Metaframework __nuxt__ entwickelt
+* __truffle-project:__ "Backend", Smart Contracts, welche auf eine Ethereum-Blockchain migriert werden können.
 
 Für das Ausführen der beiden Projektteile gibt es jeweils eine Anleitung im Unterordner.
 
 ## Dies ist zu beachten:
 * Solange die Smart Contracts nicht auf einer produktiven Blockchain ausgeführt werden, ist die Adresse mit der ein Smart Contract erreicht werden kann bei jeder Ganache-Instanz unterschiedlich. Deswegen muss im Frontend die Adresse angepasst werden.
 * Wenn die Smart Contracts bearbeitet werden, muss zusätzlich die beim compilieren entstehende `.json`-Datei anschließend im Ordner `abi` im Nuxt Projekt abgespeichert werden. Ansonsten funktioniert der Zugriff auf den Contract vom nuxt Projekt nicht mehr
+
+## Projekt Set-up
+ 
+ ### Benötigte Programme 
+    * Ganache
+    * Nodejs
+    * optional: Metamask
+ 
+ ### Ablauf
+ Zunächst alle Arbeitsschritte im 
+ [README-truffle.md](./truffle-project/README-truffle.md#smart-contract-lokal-auf-blockchain-ausführen)
+ befolgen. Damit sind nun im Backend alle Smart Contracts auf einer lokalen Blockchain hinterlegt. 
+ Im Folgenden wird das Frontend aktiviert. Dazu müssen alle Schritte 
+ im [README-nuxt.md](./nuxt/README-nuxt.md#How-to-start-the-nuxt-project-on-your-localhost) ausgeführt werden.
+
+Das Projekt sollte nun lokal auf dem Rechner laufen. 
+Um die Funktionen zu nutzen und zu testen,
+sollte Metamask im Browser installiert sein.
+
+## mit Metamask und Ganache verbinden
+Metamask in Browser öffnen und sich anmelden. Dann das Localhost 7545 Netzwerk auswählen,
+in der echten oberen Ecke den Kreis (das Account-Symbol) auswählen und 
+bei den Funktionen auf 'Account importieren' klicken. Es wird ein 'Private Key' verlangt. Um 
+diesen zu erhalten, muss in Ganache auf einem Account das 'Show Keys' angeklickt werden 
+und der Private Key kopiert werden. 
+TODO: add method
