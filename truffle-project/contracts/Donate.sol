@@ -9,7 +9,7 @@ contract Donate {
     mapping(address => uint) public userHasDonated;
 
     /// @notice Donate Ether to SeaLevelRaise
-    function donateEther() public payable{
+    receive() external payable{
         //donations of less than 1 finney will be rejected 
         if(msg.value < 1e15) {
             revert();

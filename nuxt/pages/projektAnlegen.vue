@@ -7,6 +7,7 @@
       v-if="connected"
       class="content-box bg-slr-blue-box flex flex-col justify-center"
     >
+      <p>Connected Account: {{ connectedAccounts[0] }}</p>
       <div class="mx-auto w-1/2 p-10">
         <Dropdown
           class="mx-auto"
@@ -36,11 +37,12 @@
         <p class="mx-auto pt-4">
           Projektbeschreibung: {{ projectdescription }}
         </p>
-        <input
+        <textarea
+          rows="8"
           v-model="projectdescription"
           placeholder="Projektbeschreibung eintragen"
-          class="input-field"
-        />
+        >
+        </textarea>
 
         <p class="mx-auto pt-4">Benötigter Spendenbetrag: {{ amount }} €</p>
         <div class="mx-auto">
@@ -204,7 +206,7 @@ export default {
       this.contractResult = await contract.methods
         .addProject(
           this.projectname,
-          'test',
+          this.selection,
           this.projectdescription,
           parseInt(this.amount)
         )

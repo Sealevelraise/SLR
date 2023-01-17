@@ -13,6 +13,10 @@
         <h3>{{ project.name }} (in {{ project.state }})</h3>
         <p class="pb-4">
         </p>
+        <!--flex box für Projektinfos-->
+        <p class="pb-4">
+          {{ project.description }}
+        </p>
         <!--flex box für Spendenziel und Betrag-->
         <div class="flex flex-row justify-between font-bold text-lg md:text-xl pb-4">
           <div class="font-bold">Spendenziel:</div>
