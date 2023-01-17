@@ -25,7 +25,7 @@ contract("AddProject", (accounts) => {
         await truffleAssert.eventEmitted(result, 'ProjectAdded');
     });
 
-    it("test to add a new project when user already has one", async () => {
+    it("user should not be able to add a new project when user already has one", async () => {
         //create new project
         let firstProjectName = 'Project 1';
         let firstProjectState = 'Kap Verde';
@@ -60,7 +60,7 @@ contract("AddProject", (accounts) => {
     });
 
     //@dev Add check for negative number to the require of getProjectDetails()
-    it("test to get project details from existing project with invalid neagtive id", async () => {
+    it("get project details from existing project with invalid neagtive id should fail", async () => {
         //create new project
         let name = 'Project 1';
         let state = 'Kap Verde';
@@ -71,7 +71,7 @@ contract("AddProject", (accounts) => {
         await truffleAssert.fails(contract.getProjectDetails(-1));
     });
 
-    it("test to get project details from existing project with id > length", async () => {
+    it("get project details from existing project with id > length should revert", async () => {
         //create new project
         let name = 'Project 1';
         let state = 'Kap Verde';
@@ -82,11 +82,11 @@ contract("AddProject", (accounts) => {
         await truffleAssert.reverts(contract.getProjectDetails(1), 'project id does not exist');
     });
 
-    it("test to get project details from empty project list with id > length", async () => {
+    it("get project details from empty project list with id > length should revert", async () => {
         await truffleAssert.reverts(contract.getProjectDetails(1), 'project id does not exist');
     });
 
-    it("test to get project details from existing project without id", async () => {
+    it("get project details from existing project without id should fail", async () => {
         //create new project
         let name = 'Project 1';
         let state = 'Kap Verde';
@@ -97,7 +97,7 @@ contract("AddProject", (accounts) => {
         await truffleAssert.fails(contract.getProjectDetails());
     });
 
-    it("test to get project details from existing project with id = null", async () => {
+    it("get project details from existing project with id = null should fail", async () => {
         //create new project
         let name = 'Project 1';
         let state = 'Kap Verde';
@@ -147,7 +147,7 @@ contract("AddProject", (accounts) => {
         await truffleAssert.fails(contract.addProject(name, state,description, amount, { from: account }));
     });
 
-    it("add a project with null as Project name should not be possible", async () => {
+    it("add a project with null as Project parameter should not be possible", async () => {
         //create new project
         let name = null;
         let state = 'Kap Verde';
@@ -157,12 +157,12 @@ contract("AddProject", (accounts) => {
         await truffleAssert.fails(contract.addProject(name, state,description, amount, { from: account }));
     });
 
-    it("get the number of projects with empty list", async () => {
+    it("test to get the number of projects with empty list", async () => {
         let numProjects = await contract.getNumberOfProjects();
         assert.equal(numProjects.toString(), parseInt(0));
     });
 
-    it("get the number of projects with multiple projects in the list", async () => {
+    it("test to get the number of projects with multiple projects in the list", async () => {
         //create new project
         let firstProjectName = 'Project 1';
         let firstProjectState = 'Kap Verde';
