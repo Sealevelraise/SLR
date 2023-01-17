@@ -16,6 +16,7 @@ build-nuxt:       # This job runs in the build stage, which runs first.
 
 build-truffle:       # This job runs in the build stage, which runs first.
   stage: build
+  image: node:16.19.0-bullseye
   script:
     - cd truffle-project
     - npm install -g truffle
@@ -25,8 +26,8 @@ build-truffle:       # This job runs in the build stage, which runs first.
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
+  image: node:16.19.0-bullseye
   script:
-    - echo "Hier werden spaeter die Tests ausgefuehrt"
     - cd truffle-project
     - npm install -g truffle
     - npm install truffle-assertions
