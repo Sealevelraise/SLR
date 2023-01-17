@@ -17,7 +17,8 @@ Zum Ausführen einer lokalen Blockchain wird noch Ganache benötigt.
 Dieses kann hier heruntergeladen werden: https://trufflesuite.com/ganache/
 
 In Ganache muss ein neues Projekt angelegt werden, 
-in welchem die `truffle-config.js` aus diesem Projekt hinterlegt werden muss.
+in welchem die `truffle-config.js` aus diesem Projekt hinterlegt werden muss. 
+Dazu auf Ganache new Workspace createn und dann dort unter 'add Project' die config-Datei auswählen.
 
 Mit dem Befehl
 
