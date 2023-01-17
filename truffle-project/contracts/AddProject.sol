@@ -8,12 +8,13 @@ pragma solidity >=0.4.22 <0.9.0;
 contract AddProject {
 
     //definition of event, will be triggered when new project is added
-    event ProjectAdded(uint id, string name, string state, uint amount, uint startDate, uint endDate);
+    event ProjectAdded(uint id, string name, string state, string description, uint amount, uint startDate, uint endDate);
 
     // timestamps have to be uint256, not able to safe gas in struct
     struct Project {
         string name;
         string state;
+        string description;
         uint32 amount;
         uint startDate;
         uint endDate;
@@ -30,7 +31,7 @@ contract AddProject {
     /// @param _name The name of the Ppoject.
     /// @param _state The state in which the project is located. Check if this state is a small state has to be implemented in the front-end.
     /// @param _amount The amount of Ether the project wants to raise.
-    function addProject(string memory _name, string memory _state, uint32 _amount) public {
+    function addProject(string memory _name, string memory _state, string memory _description, uint32 _amount) public {
         //check whether user(address) has already created a project, if zero, then user can
         //create a new project, otherwise user cannot create new project
         require(ownerProjectCount[msg.sender] == 0);
@@ -38,12 +39,12 @@ contract AddProject {
         uint256 startDate = block.timestamp;
         uint256 endDate = startDate + 12 weeks;
         //add new project to array
-        projects.push(Project(_name, _state, _amount, startDate, endDate));
+        projects.push(Project(_name, _state, _description, _amount, startDate, endDate));
         //add mapping between project and wallet
         projectToOwner[projects.length-1] = msg.sender;
         ownerProjectCount[msg.sender]++;
         //emit event "ProjectAdded"
-        emit ProjectAdded(projects.length-1, _name, _state, _amount, startDate, endDate);
+        emit ProjectAdded(projects.length-1, _name, _state, _description, _amount, startDate, endDate);
     } 
 
     /// @notice get the number of projects currently saved on the blockchain

@@ -12,14 +12,6 @@
       <div class="px-8 md:w-3/5 pt-4">
         <h3>{{ project.name }} (in {{ project.state }})</h3>
         <p class="pb-4">
-          Noch sind sie nicht anerkannt, die sogenannten Klimaflüchtlinge. Ein
-          Mann aus dem bedrohten Kiribati wollte 2013 der erste Klimaflüchtling
-          nach den Vorgaben der UN-Flüchtlingskonvention werden. Sein Asylantrag
-          in Neuseeland wurde abgelehnt. Doch was passiert, wenn es ganze
-          Inselstaaten wegen des steigenden Meeresspiegels bald nicht mehr gibt?
-          In diesem Projekt wollen wir die Küstenbefestigung der Insel Kiribati
-          durch Landaufschüttung und Steinmauern verbessern. Somit können wir
-          einen großen Teil zur Rettung der Inseln beitragen.
         </p>
         <!--flex box für Spendenziel und Betrag-->
         <div class="flex flex-row justify-between font-bold text-lg md:text-xl pb-4">
@@ -45,6 +37,7 @@
        //Render all project properties 
       <h2 >{{ project.name }}</h2>
       <p>State: {{ project.state }}</p>
+      <p>State: {{ project.description }}</p>
       <p>Amount: {{ project.amount }}</p>
       <p>Start: {{ new Date(parseInt(project.startDate * 1000)) }}</p>
       <p>End: {{ new Date(parseInt(project.endDate * 1000)) }}</p>

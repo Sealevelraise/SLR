@@ -1,6 +1,6 @@
 <template>
   <div class="bg-slr-blue h-30">
-    <ConnectWallet class="mt-10 p-2 py-8" />
+    <p>2023, HTW BUI</p>
   </div>
 </template>
 
