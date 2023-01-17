@@ -104,7 +104,7 @@ contract("AddProject", (accounts) => {
         let description = 'Test Project Description';
         let amount = 100;
         //call addProject()
-        let result = await contract.addProject(name, state,description, amount, { from: account });
+        await contract.addProject(name, state,description, amount, { from: account });
         //check if project was created
         await truffleAssert.fails(contract.getProjectDetails(null));
     });
