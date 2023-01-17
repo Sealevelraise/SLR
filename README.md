@@ -53,3 +53,11 @@ Für das Ausführen der beiden Projektteile gibt es jeweils eine Anleitung im Un
 Das Projekt sollte nun lokal auf dem Rechner laufen. 
 Um die Funktionen zu nutzen und zu testen,
 sollte Metamask im Browser installiert sein.
+
+## mit Metamask und Ganache verbinden
+Metamask in Browser öffnen und sich anmelden. Dann das Localhost 7545 Netzwerk auswählen,
+in der echten oberen Ecke den Kreis (das Account-Symbol) auswählen und 
+bei den Funktionen auf 'Account importieren' klicken. Es wird ein 'Private Key' verlangt. Um 
+diesen zu erhalten, muss in Ganache auf einem Account das 'Show Keys' angeklickt werden 
+und der Private Key kopiert werden. 
+TODO: add method
