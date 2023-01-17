@@ -5,14 +5,6 @@
       <div class="px-8 w-2/3 pt-4">
         <h3>Kiribati, Malediven</h3>
         <p class="pb-4">
-          Noch sind sie nicht anerkannt, die sogenannten Klimaflüchtlinge. Ein
-          Mann aus dem bedrohten Kiribati wollte 2013 der erste Klimaflüchtling
-          nach den Vorgaben der UN-Flüchtlingskonvention werden. Sein Asylantrag
-          in Neuseeland wurde abgelehnt. Doch was passiert, wenn es ganze
-          Inselstaaten wegen des steigenden Meeresspiegels bald nicht mehr gibt?
-          In diesem Projekt wollen wir die Küstenbefestigung der Insel Kiribati
-          durch Landaufschüttung und Steinmauern verbessern. Somit können wir
-          einen großen Teil zur Rettung der Inseln beitragen.
         </p>
         <div class="flex justify-between pb-4">
           <div class="font-bold">Spendenziel:</div>
@@ -31,6 +23,7 @@
       <!-- Render all project properties -->
       <h2 >{{ project.name }}</h2>
       <p>State: {{ project.state }}</p>
+      <p>State: {{ project.description }}</p>
       <p>Amount: {{ project.amount }}</p>
       <p>Start: {{ new Date(parseInt(project.startDate * 1000)) }}</p>
       <p>End: {{ new Date(parseInt(project.endDate * 1000)) }}</p>
@@ -41,14 +34,14 @@
 <script>
 import Web3 from 'web3'
 // import abi for contracts
-import AddProjectJson from '../abi/AddProject.json'
+import AddProjectJson from '../../truffle-project/build/contracts/AddProject.json'
 
 export default {
   name: 'Projects',
 
   data() {
     return {
-      AddProjectAddr: '0x15B4D7135Fa9f60a54c40Fd47a151db037601351',
+      AddProjectAddr: AddProjectJson.networks[5777].address,
       projectInfos: [],
     }
   },

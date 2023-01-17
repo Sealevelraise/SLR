@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>Bewerbung</h1>
-    <div class="content-box bg-slr-blue-box">
+    <!-- connect-wallet button is visible if the wallet is not connected -->
+    <button v-if="!connected" @click="connect">Connect wallet</button>
+    <div v-if="connected" class="content-box bg-slr-blue-box">
       <div class="mx-auto w-1/2 p-10">
         <Dropdown
           class="mx-auto"
@@ -23,6 +25,13 @@
           class="input-field"
         />
 
+        <p class="mx-auto pt-4">Projektbeschreibung: {{ projectdescription }}</p>
+        <input
+          v-model="projectdescription"
+          placeholder="Projektbeschreibung eintragen"
+          class="input-field"
+        />
+
         <p class="mx-auto pt-4">Benötigter Spendenbetrag: {{ amount }} €</p>
         <input
           v-model="amount"
@@ -36,17 +45,19 @@
           placeholder="dein.projekt@spenden.de"
           class="input-field"
         />
-
-        <NuxtLink to="/registered">Anmelden</NuxtLink>
+        {{ contractResult }}
+        <button @click="createNewProject">Add new Project</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Web3 from 'web3'
 // import Vue from 'vue'
 import Dropdown from 'vue-simple-search-dropdown'
 // Vue.use(Dropdown)
+import AddProjectJson from '../../truffle-project/build/contracts/AddProject.json'
 
 export default {
   name: 'MyComponent',
@@ -109,8 +120,14 @@ export default {
       ],
       selection: 'test',
       projectname: '',
+      projectdescription: '',
       amount: '',
       email: '',
+      // for connecting the wallet
+      connected: false,
+      AddProjectAddr: AddProjectJson.networks[5777].address,
+      contractResult: '',
+      connectedAccounts: '',
     }
   },
 
@@ -121,6 +138,34 @@ export default {
       // event.preventDefault()
       // event.stopPropagation()
       console.log(this.selection)
+    },
+    connect: async function () {
+      // this connects to the wallet
+      if (window.ethereum) { // first we check if metamask is installed
+        try {
+            // we save the account id(s) to 'connectedAccounts'
+            this.connectedAccounts = await window.ethereum.request({
+                method: "eth_requestAccounts",
+            });
+            this.connected = true
+            console.log(this.connectedAccounts.toString())
+        } catch (error) {
+            console.log(error)
+
+        }
+      }
+    },
+    createNewProject: async function (projectName, country, amount) {
+      // method for adding a new project to the blockchain
+      const web3 = new Web3(window.ethereum);
+      
+      const contract = new web3.eth.Contract(AddProjectJson.abi, this.AddProjectAddr);
+      // the parameters of the contract will be filled with the text in the input-fields
+      console.log(this.projectname)
+      console.log(this.selection)
+      console.log(this.projectdescription)
+      console.log(parseInt(this.amount))
+      this.contractResult = await contract.methods.addProject(this.projectname, "test", this.projectdescription, parseInt(this.amount)).send({from: this.connectedAccounts[0], gas: 6721975});
     },
   },
 }
