@@ -2,42 +2,60 @@
   <div>
     <h1>Bewerbung</h1>
     <div class="content-box bg-slr-blue-box">
-      <div class="mx-auto w-1/2 p-10">
+      <div class="mx-auto w-1/2 p-10 flex flex-col justify-center">
         <Dropdown
           class="mx-auto"
           :options="smallstates"
           :max-item="100"
           :disabled="false"
-          placeholder="Please select your state"
+          placeholder="Staat auswählen"
           id="selection"
           v-model="selection"
           @selected="saveSelection($event)"
         >
         </Dropdown>
-        <p class="mx-auto pt-4">Your selected state: {{ selection }}</p>
+        <p class="mx-auto pt-4">Ausgew&auml;hlter Staat: {{ selection }}</p>
 
         <p class="mx-auto pt-4">Name des Projekts: {{ projectname }}</p>
-        <input
-          v-model="projectname"
-          placeholder="Projektnamen eintragen"
-          class="input-field"
-        />
+        <div class="mx-auto">
+          <input
+            v-model="projectname"
+            placeholder="Projektnamen eintragen"
+            class="input-field"
+          />
+        </div>
 
         <p class="mx-auto pt-4">Benötigter Spendenbetrag: {{ amount }} €</p>
-        <input
-          v-model="amount"
-          placeholder="Spendensumme eintragen"
-          class="input-field"
-        />
+        <div class="mx-auto">
+          <input
+            v-model="amount"
+            placeholder="Spendensumme eintragen"
+            class="input-field"
+          />
+        </div>
 
         <p class="mx-auto pt-4">E-Mail: {{ email }}</p>
-        <input
-          v-model="email"
-          placeholder="dein.projekt@spenden.de"
-          class="input-field"
-        />
-
-        <NuxtLink to="/registered">Anmelden</NuxtLink>
+        <div class="mx-auto">
+          <input
+            v-model="email"
+            placeholder="dein.projekt@spenden.de"
+            class="input-field"
+          />
+        </div>
+        <div class="mx-auto pt-4">
+          <button
+            @click="sendForm()"
+            class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+            style="width: 9rem"
+          >
+            Anmelden
+          </button>
+        </div>
+        <div class="mx-auto pt-4">
+          <p id="alert" class="text-center hidden text-red-300">
+            Bitte alle Felder ausf&uuml;llen!
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -107,7 +125,7 @@ export default {
         { abbr: 'TV', name: 'Tuvalu' },
         { abbr: 'VU', name: 'Vanuatu' },
       ],
-      selection: 'test',
+      selection: '',
       projectname: '',
       amount: '',
       email: '',
@@ -117,10 +135,15 @@ export default {
   mounted() {},
   methods: {
     saveSelection(event) {
-      this.selection = event.name
-      // event.preventDefault()
-      // event.stopPropagation()
-      console.log(this.selection)
+      if (event.name) this.selection = event.name
+    },
+    sendForm() {
+      const p = document.getElementById('alert')
+      if (!this.selection || !this.projectname || !this.amount || !this.email) {
+        p.classList.remove('hidden')
+      } else {
+        p.classList.add('hidden')
+      }
     },
   },
 }
