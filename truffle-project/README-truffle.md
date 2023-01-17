@@ -19,6 +19,14 @@ Dieses kann hier heruntergeladen werden: https://trufflesuite.com/ganache/
 In Ganache muss ein neues Projekt angelegt werden, 
 in welchem die `truffle-config.js` aus diesem Projekt hinterlegt werden muss. 
 Dazu auf Ganache new Workspace createn und dann dort unter 'add Project' die config-Datei auswählen.
+Danach Workspace sichern.
+Der Prozess in Ganache ist damit abgeschlossen. 
+
+Nun in ein Terminal wechseln und mit 
+```
+cd truffle-project
+```
+in das truffle-directory wechseln.
 
 Mit dem Befehl
 
