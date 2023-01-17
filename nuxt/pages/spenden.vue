@@ -2,7 +2,20 @@
   <div>
     <h1>Spenden</h1>
     <!-- connect-wallet button is visible if the wallet is not connected -->
-    <button v-if="!connected" @click="connect">Connect wallet</button>
+    <div
+      v-if="!connected"
+      class="content-box bg-slr-blue-box flex flex-col justify-center"
+    >
+      <div class="p-8 flex justify-center">
+        <button
+          class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+          style="width: 10rem"
+          @click="connect"
+        >
+          Connect wallet
+        </button>
+      </div>
+    </div>
     <div v-if="connected">
       <p>Connected Account: {{ connectedAccounts[0] }}</p>
       <p>Betrag eingeben</p>
@@ -10,7 +23,8 @@
 
       <button
         class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
-        style="width: 9rem" @click="donateEther"
+        style="width: 9rem"
+        @click="donateEther"
       >
         Absenden
       </button>
@@ -19,7 +33,7 @@
 </template>
 
 <script>
-import Web3 from "web3";
+import Web3 from 'web3'
 import DonateJson from '../../truffle-project/build/contracts/Donate.json'
 
 export default {
@@ -32,9 +46,7 @@ export default {
       connected: false,
       connectedAccounts: '',
     }
-
   },
-
 
   methods: {
     connect: async function () {
@@ -55,14 +67,13 @@ export default {
     },
     // Function to Donate Ether
     donateEther: async function () {
-      const web3 = new Web3(window.ethereum);
+      const web3 = new Web3(window.ethereum)
       await web3.eth.sendTransaction({
         from: this.connectedAccounts[0],
         to: this.DonateAddr,
         value: web3.utils.toWei(this.amount, 'ether'),
-      });
-    }
-  }
-
+      })
+    },
+  },
 }
 </script>
