@@ -38,4 +38,13 @@ Für das Ausführen der beiden Projektteile gibt es jeweils eine Anleitung im Un
 
 ## Projekt starten
  
+ ### Benötigte Programme 
+    * Ganache
+    * Nodejs
  
+ ### Ablauf
+ Zunächst alle Arbeitsschritte im [README-truffle.md](./truffle-project/README-truffle.md) unter der Überschrift
+ "Smart Contract lokal auf Blockchain ausführen" befolgen.
+ Danach müssen alle Schritte im [README-nuxt.md](./nuxt/README-nuxt.md) ausgeführt werden.
+
+Das Projekt sollte nun lokal auf dem Rechner laufen. 

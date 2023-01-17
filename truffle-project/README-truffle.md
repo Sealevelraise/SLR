@@ -37,9 +37,15 @@ müssen die .json-Dateien unter build\contracts in den Ordner vue-web3js-project
 verschoben werden, damit das Frontend auf die neuen Smart Contracts zugreifen kann.
 
 
+---
+
 Mit dem Befehl 
 
     truffle test
 
-werden die Test aus dem Ordner `test` ausgeführt. Truffle benutzt das Mocha Testing Framework für die Erstellung und Ausführung von Unit Test in Javascript.
-Truffle bietet dabei eine Clean-Room Environment mit der die Contracts für die Tests in einer Testumgebung neu compiled werden. 
+werden die Tests aus dem Ordner `test` ausgeführt. 
+Truffle benutzt das Mocha Testing Framework für die Erstellung und 
+Ausführung von Unit-Tests in Javascript.
+Truffle bietet dabei eine Clean-Room Environment mit 
+der die Contracts für die Tests in einer Testumgebung 
+neu compiled werden. 
