@@ -1,16 +1,24 @@
 <template>
-    <div>
-        <nav class="bg-slr-blue h-28 shadow md:flex md:items-center md:justify-between font-roboto px-4 text-blue-200">
-            <div class="items-center shrink-0 "> <!-- flex justify-between  -->
-                <span class="text-xl md:text-2xl pr-5 hover:text-blue-400 duration-500 cursor-pointer md:items-center ">
-                    <img class="object-cover h-28 inline" src="../assets/images/slrLogo.jpg" alt="logo">
-                    
-                    <NuxtLink to="/">
-                            SEA LEVEL R(A)ISE
-                    </NuxtLink>
+  <div>
+    <nav
+      class="bg-slr-blue h-28 shadow md:flex md:items-center md:justify-between font-roboto px-4 text-blue-200"
+    >
+      <div class="items-center shrink-0">
+        <!-- flex justify-between  -->
+        <span
+          class="text-xl md:text-2xl pr-5 hover:text-blue-400 duration-500 cursor-pointer md:items-center"
+        >
+          <a href="/">
+            <img
+              class="object-cover h-28 inline"
+              src="../assets/images/slrLogo.jpg"
+              alt="logo"
+            />
+          </a>
 
-                </span>
-                <!----
+          <NuxtLink :to="{ path: '/' }"> SEA LEVEL R(A)ISE </NuxtLink>
+        </span>
+        <!----
                                 <span class="cursor-pointer text-3xl mx-2 md:hidden block">
                     <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Menu</title><path fill="none"
                         stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48" d="M88 152h336M88 256h336M88 360h336"
@@ -46,30 +54,30 @@
           <NuxtLink to="/faq">FAQ</NuxtLink>
         </li>
 
-        <NuxtLink :to="{ path: '/', hash: '#roleAnchor' }">
+        <nuxt-link to="/" id="auswahlButton">
           <button
-            id="auswahlButton"
-            class="bg-slr-page-bg text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+            class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+            style="width: 9rem"
           >
             Rolle wählen
           </button>
-        </NuxtLink>
-        <NuxtLink to="/spenden">
+        </nuxt-link>
+        <nuxt-link to="/spenden" id="spendenButton" class="hidden">
           <button
-            id="spendenButton"
-            class="hidden bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
+            class="bg-red-500 text-sm text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
+            style="width: 9rem"
           >
             Spenden
           </button>
-        </NuxtLink>
-        <NuxtLink to="/projektAnlegen">
+        </nuxt-link>
+        <nuxt-link to="/projektAnlegen" id="projektButton" class="hidden">
           <button
-            id="projektButton"
-            class="hidden bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
+            class="text-sm bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-4 rounded-md"
+            style="width: 9rem"
           >
             Projekt anmelden
-          </button></NuxtLink
-        >
+          </button>
+        </nuxt-link>
       </ul>
     </nav>
   </div>
@@ -81,9 +89,8 @@ export default {
 
   methods: {
     reloadPage() {
-      window.location.reload();
-    }
-  }
-
+      window.location.reload()
+    },
+  },
 }
 </script>

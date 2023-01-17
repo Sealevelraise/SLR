@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Bewerbung</h1>
-    <div class="content-box bg-slr-blue-box">      
+    <div class="content-box bg-slr-blue-box">
       <div class="mx-auto w-1/2 p-10">
         <Dropdown
           class="mx-auto"
@@ -9,25 +9,35 @@
           :max-item="100"
           :disabled="false"
           placeholder="Please select your state"
+          id="selection"
+          v-model="selection"
           @selected="saveSelection($event)"
         >
         </Dropdown>
-        <p :key="selection" class="mx-auto pt-4">
-          Your selected state: {{ selection }}
-        </p>
+        <p class="mx-auto pt-4">Your selected state: {{ selection }}</p>
 
-          <p class="mx-auto pt-4">Name des Projekts: {{ projectname }}</p>
-          <input v-model="projectname" placeholder="Projektnamen eintragen" class="input-field">          
-          
-          <p class="mx-auto pt-4">Benötigter Spendenbetrag: {{ amount }} € </p>
-          <input v-model="amount" placeholder="Spendensumme eintragen" class="input-field">
-          
-          <p class="mx-auto pt-4">E-Mail: {{ email }} </p>
-          <input v-model="email" placeholder="your.project@funding.com" class="input-field">
+        <p class="mx-auto pt-4">Name des Projekts: {{ projectname }}</p>
+        <input
+          v-model="projectname"
+          placeholder="Projektnamen eintragen"
+          class="input-field"
+        />
 
+        <p class="mx-auto pt-4">Benötigter Spendenbetrag: {{ amount }} €</p>
+        <input
+          v-model="amount"
+          placeholder="Spendensumme eintragen"
+          class="input-field"
+        />
 
-          <NuxtLink to="/registered">Anmelden</NuxtLink>
+        <p class="mx-auto pt-4">E-Mail: {{ email }}</p>
+        <input
+          v-model="email"
+          placeholder="dein.projekt@spenden.de"
+          class="input-field"
+        />
 
+        <NuxtLink to="/registered">Anmelden</NuxtLink>
       </div>
     </div>
   </div>
@@ -98,6 +108,9 @@ export default {
         { abbr: 'VU', name: 'Vanuatu' },
       ],
       selection: 'test',
+      projectname: '',
+      amount: '',
+      email: '',
     }
   },
 
