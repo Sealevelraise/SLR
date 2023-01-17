@@ -19,7 +19,7 @@ contract("Donate", (accounts) => {
         // Get the balance after the finney was sent
         let balanceAfter = await contract.getContractBalance();
         // Check if the balance after is equal to the balance before plus 1 finney
-        assert.equal(balanceAfter.toString(), parseInt(balanceBefore.toString()) + 1000000000000000);
+        assert.equal(balanceAfter.toString(), parseInt(balanceBefore.toString()) + 1e15);
     });
     it("user should be correctly set to Donater after successful donation", async () => {
          // Send 1 finney --> use sendTransaction to test the recieve() fallback function
