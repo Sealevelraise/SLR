@@ -43,7 +43,7 @@
         </li>
 
         <li class="hover:text-blue-400 duration-500">
-          <NuxtLink to="/partner">Spendenprozess</NuxtLink>
+          <NuxtLink to="/spendenprozess">Spendenprozess</NuxtLink>
         </li>
 
         <li class="hover:text-blue-400 duration-500">

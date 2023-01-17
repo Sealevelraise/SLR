@@ -4,31 +4,33 @@
   <vsa-list>
   <vsa-item>
     <vsa-heading>
-      My country is not listed. Can I still register my project?
+      Wie gebe ich eine Spende ab?
     </vsa-heading>
 
     <vsa-content>
-      No
+      Der Ablauf des Spendenprozesses wird
+      <nuxt-link to="/spendenprozess">hier</nuxt-link>
+      erklärt.
     </vsa-content>
   </vsa-item>
   
   <vsa-item>
     <vsa-heading>
-      Really?
+      Wie kann ich mein Projekt einreichen?
     </vsa-heading>
 
     <vsa-content>
-      Yes
+      Der Anmeldungsprozess wird hier erklärt.
     </vsa-content>
   </vsa-item>
 
   <vsa-item>
     <vsa-heading>
-      Really?
+      Mein Land ist nicht in der Smallstate-Liste zu sehen. Kann ich trotzdem mein Projekt anmelden?
     </vsa-heading>
 
     <vsa-content>
-      Yes
+      Nein. Nur Projekte aus Ländern, welche als Smallstates definiert sind, können eingereicht werden. Mehr darüber erfährst du hier.
     </vsa-content>
   </vsa-item>
 
