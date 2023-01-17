@@ -28,6 +28,12 @@ cd truffle-project
 ```
 in das truffle-directory wechseln.
 
+Achte auf Execution Policy: 
+Windows
+```
+Set-ExecutionPolicy -ExecutionPolicy ByPass -Scope Process
+```
+
 Mit dem Befehl
 
     truffle compile
@@ -41,6 +47,8 @@ Mit dem Befehl
 
 Werden die Contracts kompiliert und zusätzlich werden die Contracts 
 auf die lokale Ganache-Blockchain geschrieben. Die Adressen für die Smart Contracts ändern sich dadurch.
+
+Für Dev: 
 Wenn es Änderungen an den Contracts gab und `truffle migrate` ausgeführt wird, 
 müssen die .json-Dateien unter build\contracts in den Ordner vue-web3js-project 
 verschoben werden, damit das Frontend auf die neuen Smart Contracts zugreifen kann.
