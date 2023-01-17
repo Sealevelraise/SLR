@@ -28,8 +28,8 @@ contract("Vote", (accounts) => {
         await voteContract.sendTransaction({ value: 1e15, from: donater });
         // vote for project
         await voteContract.voteForProject(0, { from: donater })
-        let voteSatus = await voteContract.getAmountOfVotes(0);
-        assert.equal(voteSatus.toString(), 1);
+        let voteStatus = await voteContract.getAmountOfVotes(0);
+        assert.equal(voteStatus.toString(), 1);
     });
 
 });

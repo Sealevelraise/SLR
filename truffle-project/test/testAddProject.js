@@ -59,7 +59,6 @@ contract("AddProject", (accounts) => {
         assert.equal(project.amount.toString(), amount);
     });
 
-    //@dev Add check for negative number to the require of getProjectDetails()
     it("get project details from existing project with invalid neagtive id should fail", async () => {
         //create new project
         let name = 'Project 1';
