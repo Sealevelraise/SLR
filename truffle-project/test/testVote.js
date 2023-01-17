@@ -18,13 +18,14 @@ contract("Vote", (accounts) => {
 
     it("test if a user can vote for a project after he donated", async () => {
         //create new project
-        let firstProjectName = 'Project 1';
-        let firstProjectState = 'Kap Verde';
-        let firstProjectsAmount = 100;
+        let projectName = 'Project 1';
+        let projectState = 'Kap Verde';
+        let projectDescription = 'Test Project Description';
+        let projectsAmount = 100;
         //call addProject()
-        await addProjectContract.addProject(firstProjectName, firstProjectState, firstProjectsAmount, { from: projectOwner });
-        // donate with second account
-        await voteContract.donateEther({ from: donater, value: 1000000000000000 });
+        await addProjectContract.addProject(projectName, projectState,projectDescription, projectsAmount, { from: projectOwner });
+        // donate with second account --> use sendTransaction to test the recieve() fallback function
+        await voteContract.sendTransaction({ value: 1e15, from: donater });
         // vote for project
         await voteContract.voteForProject(0, { from: donater })
         let voteSatus = await voteContract.getAmountOfVotes(0);
