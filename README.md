@@ -35,3 +35,7 @@ Für das Ausführen der beiden Projektteile gibt es jeweils eine Anleitung im Un
 ## Dies ist zu beachten:
 * Solange die Smart Contracts nicht auf einer produktiven Blockchain ausgeführt werden, ist die Adresse mit der ein Smart Contract erreicht werden kann bei jeder Ganache-Instanz unterschiedlich. Deswegen muss im Frontend die Adresse angepasst werden.
 * Wenn die Smart Contracts bearbeitet werden, muss zusätzlich die beim compilieren entstehende `.json`-Datei anschließend im Ordner `abi` im Nuxt Projekt abgespeichert werden. Ansonsten funktioniert der Zugriff auf den Contract vom nuxt Projekt nicht mehr
+
+## Projekt starten
+ 
+ 
