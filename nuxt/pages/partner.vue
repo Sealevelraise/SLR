@@ -1,14 +1,11 @@
 <template>
-    <div>
-        <h1>Partner Page</h1>
-    </div>
-</template> 
-   
-  
+  <div>
+    <h1>Spendenprozess</h1>
+  </div>
+</template>
+
 <script>
-  
-    export default {
-        name: 'default',
-    
-    }
+export default {
+  name: 'default',
+}
 </script>

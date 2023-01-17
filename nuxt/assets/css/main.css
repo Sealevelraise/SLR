@@ -26,23 +26,27 @@ h3 {
   @apply text-xl pb-4;
 }
 
-/*
-
-// rauskommentiert, da der name bereits für eine Tailwindcss Klasse vergeben ist, plus kein Mehrwert aktuell, nur Verwirrung
-
 .content-box {
   width: 75%;
   border-radius: 24px;
   color: white;
-  @apply mx-auto;
+  @apply mx-auto my-8;
 }
-*/
+
 
 .input-field {
-  width: 15em;
+  width: 20em;
   height: 40px;
   border-radius: 3px;
   background-color:#D9D9D9;
   color: black;
   text-align: center;
+}
+
+.text-area {
+  width: 20em;
+    border-radius: 3px;
+    background-color: #D9D9D9;
+    color: black;
+    text-align: center;
 }

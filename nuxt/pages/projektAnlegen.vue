@@ -2,21 +2,34 @@
   <div>
     <h1>Bewerbung</h1>
     <!-- connect-wallet button is visible if the wallet is not connected -->
-    <button v-if="!connected" @click="connect">Connect wallet</button>
     <div
-      v-if="connected"
+      v-if="!connected"
       class="content-box bg-slr-blue-box flex flex-col justify-center"
     >
-      <p>Connected Account: {{ connectedAccounts[0] }}</p>
+      <div class="p-8 flex justify-center">
+        <button
+          class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+          style="width: 10rem"
+          @click="connect"
+        >
+          Connect wallet
+        </button>
+      </div>
+    </div>
+    <div
+      v-if="connected && !committed"
+      class="content-box bg-slr-blue-box flex flex-col justify-center"
+    >
+      <p class="mx-auto pt-4">Connected Account: {{ connectedAccounts[0] }}</p>
       <div class="mx-auto w-1/2 p-10">
         <Dropdown
+          id="selection"
+          v-model="selection"
           class="mx-auto"
           :options="smallstates"
           :max-item="100"
           :disabled="false"
           placeholder="Staat auswählen"
-          id="selection"
-          v-model="selection"
           @selected="saveSelection($event)"
         >
         </Dropdown>
@@ -34,13 +47,12 @@
           />
         </div>
 
-        <p class="mx-auto pt-4">
-          Projektbeschreibung: {{ projectdescription }}
-        </p>
+        <p class="pt-4">Projektbeschreibung: {{ projectdescription }}</p>
         <textarea
-          rows="8"
           v-model="projectdescription"
+          rows="8"
           placeholder="Projektbeschreibung eintragen"
+          class="text-area"
         >
         </textarea>
 
@@ -63,9 +75,9 @@
         </div>
         <div class="mx-auto pt-4">
           <button
-            @click="sendForm()"
             class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
             style="width: 9rem"
+            @click="sendForm()"
           >
             Anmelden
           </button>
@@ -75,17 +87,35 @@
             Bitte alle Felder ausf&uuml;llen!
           </p>
         </div>
-        {{ contractResult }}
-        <button @click="createNewProject">Add new Project</button>
       </div>
+    </div>
+    <div
+      v-if="committed"
+      class="content-box bg-slr-blue-box flex flex-col justify-center"
+    >
+      <h2>Projekt erfolgreich eingereicht!</h2>
+      <!--p>
+        Projektname: {{ contractResult.events.ProjectAdded.returnValues.name }}
+      </p>
+      <p>Staat: {{ contractResult.events.ProjectAdded.returnValues.state }}</p>
+      <p>
+        Beschreibung:
+        {{ contractResult.events.ProjectAdded.returnValues.description }}
+      </p>
+      <p>
+        Ben&ouml;tigter Betrag:
+        {{ contractResult.events.ProjectAdded.returnValues.amount }} &euro;
+      </p-->
+
+      {{ contractResult }}
     </div>
   </div>
 </template>
 
 <script>
+import Dropdown from 'vue-simple-search-dropdown'
 import Web3 from 'web3'
 // import Vue from 'vue'
-import Dropdown from 'vue-simple-search-dropdown'
 // Vue.use(Dropdown)
 import AddProjectJson from '../../truffle-project/build/contracts/AddProject.json'
 
@@ -158,6 +188,7 @@ export default {
       AddProjectAddr: AddProjectJson.networks[5777].address,
       contractResult: '',
       connectedAccounts: '',
+      committed: false,
     }
   },
 
@@ -172,6 +203,7 @@ export default {
         p.classList.remove('hidden')
       } else {
         p.classList.add('hidden')
+        this.createNewProject()
       }
     },
     connect: async function () {
@@ -190,7 +222,7 @@ export default {
         }
       }
     },
-    createNewProject: async function (projectName, country, amount) {
+    createNewProject: async function () {
       // method for adding a new project to the blockchain
       const web3 = new Web3(window.ethereum)
 
@@ -211,6 +243,7 @@ export default {
           parseInt(this.amount)
         )
         .send({ from: this.connectedAccounts[0], gas: 6721975 })
+      this.committed = true // zeigt an, dass projekt erfolgreich eingereicht wurde und die projektdaten
     },
   },
 }
