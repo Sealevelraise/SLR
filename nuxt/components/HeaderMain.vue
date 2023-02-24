@@ -12,15 +12,7 @@
             alt="logo"
           />
         </a>
-        <nuxt-link to="/" id="auswahlButton">
-          <button
-            class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
-            style="width: 9rem"
-          >
-            Rolle wählen
-          </button>
-        </nuxt-link>
-        <nuxt-link to="/spenden" id="spendenButton" class="hidden">
+        <nuxt-link v-if="store.spender" to="/spenden" id="spendenButton">
           <button
             class="bg-red-500 text-sm text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
             style="width: 9rem"
@@ -28,12 +20,24 @@
             Spenden
           </button>
         </nuxt-link>
-        <nuxt-link to="/projektAnlegen" id="projektButton" class="hidden">
+        <nuxt-link
+          v-else-if="store.projectowner"
+          to="/projektAnlegen"
+          id="projektButton"
+        >
           <button
             class="text-sm bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-4 rounded-md"
             style="width: 9rem"
           >
             Projekt anmelden
+          </button>
+        </nuxt-link>
+        <nuxt-link v-else to="/" id="auswahlButton">
+          <button
+            class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+            style="width: 9rem"
+          >
+            Rolle wählen
           </button>
         </nuxt-link>
         <nuxt-link to="/account">
@@ -97,15 +101,7 @@
         </li>
 
         <div class="hidden md:flex space-x-4 items-center">
-          <nuxt-link to="/" id="auswahlButton">
-            <button
-              class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
-              style="width: 9rem"
-            >
-              Rolle wählen
-            </button>
-          </nuxt-link>
-          <nuxt-link to="/spenden" id="spendenButton" class="hidden">
+          <nuxt-link v-if="store.spender" to="/spenden" id="spendenButton">
             <button
               class="bg-red-500 text-sm text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
               style="width: 9rem"
@@ -113,12 +109,24 @@
               Spenden
             </button>
           </nuxt-link>
-          <nuxt-link to="/projektAnlegen" id="projektButton" class="hidden">
+          <nuxt-link
+            v-else-if="store.projectowner"
+            to="/projektAnlegen"
+            id="projektButton"
+          >
             <button
               class="text-sm bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-4 rounded-md"
               style="width: 9rem"
             >
               Projekt anmelden
+            </button>
+          </nuxt-link>
+          <nuxt-link v-else to="/" id="auswahlButton">
+            <button
+              class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+              style="width: 9rem"
+            >
+              Rolle wählen
             </button>
           </nuxt-link>
           <nuxt-link to="/account">
@@ -131,8 +139,16 @@
 </template>
 
 <script>
+import { store } from '../store/store.js'
+
 export default {
   name: 'HeaderMain',
+
+  data() {
+    return {
+      store,
+    }
+  },
 
   methods: {
     reloadPage() {
