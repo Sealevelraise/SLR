@@ -25,14 +25,12 @@
                 </p>
                 <h3 class="text-center p-6">4. Spendenbetrag wählen</h3>
                 <p class="text-justify">
-                    Nun zum wichtigen Teil: Bevor Du eine Spende tätigen kannst, musst du deine digitale
-                    Geldbörse (Wallet) hinterlegen. Dafür musst Du auf den Knopf "Connect Wallet" drücken und den
-                    Einrichtungsschritten folgen. Die Wallet-Einrichtung erfolgt nur ein Mal - beim nächsten Spenden 
-                    musst Du sie nicht erneut einrichten.
+                    Jetzt kannst Du den Betrag wählen, den Du später spenden möchtest. Dafür trägst Du in das Eingabefeld den Betrag ein und drückst auf "Absenden"
+                    Anschließend stimmst Du für dein Wunsch-Projekt ab und wartest ab. Falls Du deine E-Mail hinterlegt hast, wirst Du über Neuigkeiten zu deinem gewählten Projekt
+                    benachrichtigt und erfährst auch, ob das Projekt gewonnen hat oder nicht.
                 </p>
             </div>
         </div>
-
 
         <div class="w-3/4 mx-auto mt-12 bg-slr-blue-box py-12 px-32 rounded-[24px] text-white">
             <h2 class="text-2xl text-center pb-4 underline solid white">Anmeldeprozess</h2>
