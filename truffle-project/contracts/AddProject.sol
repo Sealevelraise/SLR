@@ -18,11 +18,17 @@ contract AddProject {
         uint32 amount;
         uint startDate;
         uint endDate;
+        string mail;
     }
+
     //Array which contains all projects, saved on the blockchain
     Project[] public projects;
+
     //Mapping a project to the wallet of the person which added this project, saved on the blockchain
     mapping (uint => address) public projectToOwner;
+
+    mapping(address => uint) public OwnerToProject;
+
     //Mapping of the count of how many project the person already has created
     mapping (address => uint) ownerProjectCount;
 
@@ -31,7 +37,7 @@ contract AddProject {
     /// @param _name The name of the Ppoject.
     /// @param _state The state in which the project is located. Check if this state is a small state has to be implemented in the front-end.
     /// @param _amount The amount of Ether the project wants to raise.
-    function addProject(string memory _name, string memory _state, string memory _description, uint32 _amount) public {
+    function addProject(string memory _name, string memory _state, string memory _description, uint32 _amount, string memory _mail) public {
         //check whether user(address) has already created a project, if zero, then user can
         //create a new project, otherwise user cannot create new project
         require(ownerProjectCount[msg.sender] == 0);
@@ -39,7 +45,7 @@ contract AddProject {
         uint256 startDate = block.timestamp;
         uint256 endDate = startDate + 12 weeks;
         //add new project to array
-        projects.push(Project(_name, _state, _description, _amount, startDate, endDate));
+        projects.push(Project(_name, _state, _description, _amount, startDate, endDate, _mail));
         //add mapping between project and wallet
         projectToOwner[projects.length-1] = msg.sender;
         ownerProjectCount[msg.sender]++;
@@ -64,5 +70,11 @@ contract AddProject {
             revert('project id does not exist');
         }
     }
+
+    function getProjectOwner() public view returns(Project memory){
+        if(ownerProjectCount[msg.sender] == 1){
+            return projects[]
+        }
+    } 
 
 }
