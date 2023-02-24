@@ -1,6 +1,6 @@
 <template>
-    <div>
-      <!--page to display project info, entered at "projektAnlegen"-->
+    <div v-if="connected">
+<!-- information of procejtowner displayed, if procet was registered -->
       <h2>Angemeldet als: Projektowner</h2>
       <div class="content-box bg-slr-blue-box">
         <div class="mx-auto text-center p-10">
@@ -17,6 +17,18 @@
         </div>
       </div>
     </div>
+
+    <!-- if wallet connected but no action done (nicht gespendet / kein Projekt angelegt) this shows -->
+  
+    <div v-else>
+      <h2>Noch keine Rolle ausgewählt!</h2>
+      <P>
+        Sie haben noch keine Rolle ausgewählt. Mit dem Knopf "Rolle wählen" können Sie entscheiden, ein Projket anzumelden oder
+        Geld an ein eingereichtes Projekt spenden.
+      </P>
+      <h3>Jetzt auf "Rolle wählen" und dabei sein!</h3>
+    </div>
+  
   </template>
   
   <script>
@@ -24,7 +36,7 @@
   import DonateJson from '../../truffle-project/build/contracts/Donate.json'
   
   export default {
-    name: 'defaultD',
+    name: 'AccountProjekt',
   
     data() {
       return {
@@ -64,5 +76,3 @@
     },
   }
   </script>
-  
-  
