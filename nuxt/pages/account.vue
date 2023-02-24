@@ -5,6 +5,7 @@
     <div
       class="w-11/12 md:w-3/4 mx-auto bg-slr-blue-box py-10 md:py-12 px-6 md:px-32 rounded-[24px] text-white"
     >
+      <!-- TODO: donatorConnected und pConnected auf true setzen nachdem gespendet bzw projekt angelegt -->
       <div v-if="store.donatorConnected">
         <accountSpenden />
       </div>
@@ -22,6 +23,7 @@
           Abstimmungen einsehen (als Spender) oder ein Projekt anlegen bzw. dein
           angelegtes Projekt ansehen (als Projektinhaber).
         </p>
+        <!-- TODO: Nach klick auf connect wallet hier checken ob person spender oder projektowner ist und dementsprechend die store variablen anpassen (donatorConnected und pConnected) -->
         <ConnectWallet class="mx-auto text-center mt-4" />
       </div>
     </div>
