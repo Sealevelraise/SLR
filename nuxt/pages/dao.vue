@@ -66,7 +66,7 @@
     </div>
     <p class="p-6"></p>
     <h2 class="text-2xl text-center p-4">
-      Projekte der letzten Auswahl<br />(Verlierer)
+      Projekte der letzten Auswahl<br />
     </h2>
     <div
       class="bg-slr-blue-box text-white md:w-10/12 flex flex-col mx-auto md:flex-row rounded-[24px]"
