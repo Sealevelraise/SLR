@@ -99,8 +99,15 @@ export default {
           to: this.DonateAddr,
           value: web3.utils.toWei(this.amount, 'ether'),
         })
+        this.createDonater();
         // todo: redirect
       }
+    },
+    createDonater: async function () {
+      // methode to add a new Donater
+      const web3 = new Web3(window.ethereum);
+      const contract = new web3.eth.Contract(DonateJson.abi, this.DonateAddr);
+      await contract.methods.updateDonatedAmount(this.mail, this.amount).call();
     },
   },
 }

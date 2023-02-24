@@ -11,4 +11,6 @@ export const store = reactive({
     this.spender = false
     this.projectowner = true
   },
+  donaterConnected: false,
+  pConnected: false,
 })

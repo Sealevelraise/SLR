@@ -11,6 +11,7 @@ contract Donate {
     uint donatedAmount;
    }
 
+    event DonaterAdded(string mail, uint donatedAmount);
     Donater[] private donaters;
     mapping (address => uint) public idToOwner;
 
@@ -44,6 +45,7 @@ contract Donate {
             if(tempEmptyStringTest.length != 0) {
                 _addMailToDonater(_mail);
             }
+            emit DonaterAdded(_mail, _amount);
                
         }else {
             uint id = idToOwner[msg.sender];
