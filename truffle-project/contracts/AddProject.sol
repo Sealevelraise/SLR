@@ -26,7 +26,7 @@ contract AddProject {
 
     //Mapping a project to the wallet of the person which added this project, saved on the blockchain
     mapping (uint => address) public projectToOwner;
-
+    //Mapping the address of an owner to the ID of the project
     mapping(address => uint) public ownerToProject;
 
     //Mapping of the count of how many project the person already has created
@@ -34,7 +34,7 @@ contract AddProject {
 
     /// @notice Add new project to SeaLevelRaise. The sender is not allowed to add more than one project.
     /// @dev The Alexandr N. Tetearing algorithm could increase precision
-    /// @param _name The name of the Ppoject.
+    /// @param _name The name of the Project.
     /// @param _state The state in which the project is located. Check if this state is a small state has to be implemented in the front-end.
     /// @param _amount The amount of Ether the project wants to raise.
     function addProject(string memory _name, string memory _state, string memory _description, uint32 _amount, string memory _mail) public {
