@@ -72,14 +72,14 @@ contract AddProject {
         }
     }
 
-    /// @notice check if the account is project owner
+    /// @notice check if the account is a project owner
     /// @return projectID if account is owner
     function getProjectOwner() public view returns(uint) {
         if(ownerProjectCount[msg.sender] == 1){
             return ownerToProject[msg.sender];
 
         }else{
-            revert('no project owner');
+            revert('no project added');
         }
     } 
 
