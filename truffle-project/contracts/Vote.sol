@@ -23,7 +23,7 @@ contract Vote is Donate {
     /// @param _projectId The ID of the Project the user wants to vote for.
     function voteForProject(uint _projectId) public {
         //the user is required to have donated and to not have voted already
-        require(userHasDonated[msg.sender] == 1);
+        require(userHasDonated[msg.sender] == true);
         require(userHasVoted[msg.sender] != 1);
 
         //add this vote to the list of votes
