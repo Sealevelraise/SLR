@@ -113,17 +113,15 @@ export default {
           to: this.DonateAddr,
           value: web3.utils.toWei(this.amount, 'ether'),
         })
+        const contract = new web3.eth.Contract(DonateJson.abi, this.DonateAddr)
+        // todo: check if can be send without second transaction in metamask
+        await contract.methods.updateDonatedAmount(this.mail, parseInt(this.amount)).send({ from: this.connectedAccounts[0], gas: 6721975 })
+
         this.spendenDone = true
-        this.createDonater()
         // todo: redirect
       }
     },
-    createDonater: async function () {
-      // methode to add a new Donater
-      const web3 = new Web3(window.ethereum)
-      const contract = new web3.eth.Contract(DonateJson.abi, this.DonateAddr)
-      await contract.methods.updateDonatedAmount(this.mail, this.amount).call()
-    },
+   
   },
 }
 </script>

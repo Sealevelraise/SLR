@@ -24,8 +24,22 @@ contract("Donate", (accounts) => {
     it("user should be correctly set to Donater after successful donation", async () => {
          // Send 1 finney --> use sendTransaction to test the recieve() fallback function
         await contract.sendTransaction({ value: 1e15, from: account });
-        let userStatus = await contract.userHasDonated(account);
-        assert.equal(userStatus.toString(), parseInt(1));   
+        await contract.sendTransaction({ value: 1e15, from: accounts[1] });
+        let amount = 1e15;
+        let mail = 'test@mail.com';
+        await contract.updateDonatedAmount(mail, amount, { from: account });
+        await contract.updateDonatedAmount(mail, amount, { from: accounts[1] });
+        let numberOfDonaters = await contract.getNumberOfDonaters();
+        let id = await contract.idToOwner(accounts[1]);
+        let donater = await contract.getDonaterDetails({ from: accounts[1] })
+        console.log(numberOfDonaters.toString());
+        console.log(id.toString());
+        console.log(donater.toString())
+        /*
+        let donater = await contract.getDonaterDetails();
+        assert.equal(donater.amount.toString(), parseInt(1)); 
+        */
+       assert.equal(numberOfDonaters.toString(), parseInt(2));
     }); 
     
     it("donate function should not work with null value", async () => {
