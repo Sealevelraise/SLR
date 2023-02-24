@@ -87,7 +87,7 @@
     >
       <!-- Card 1: About Us-->
       <div
-        class="md:basis-1/3 text-center bg-slr-blue-box py-4 px-8 rounded-[24px]" 
+        class="md:basis-1/3 text-center bg-slr-blue-box py-4 px-8 rounded-[24px]"
       >
         <h2 class="pb-6 text-xl">Wer sind wir?</h2>
         <nuxt-link to="/about">
@@ -148,11 +148,23 @@
 </template>
 
 <script>
+import { store } from '../store/store.js'
+
 export default {
   name: 'default',
+  data() {
+    return {
+      store,
+    }
+  },
   methods: {
     selectRole(role) {
-      const auswahlButton = document.getElementById('auswahlButton')
+      if (role === 'spender') {
+        store.spenderSelected()
+      } else if (role === 'projektinhaber') {
+        store.projectownerSelected()
+      }
+      /* const auswahlButton = document.getElementById('auswahlButton')
       const spendenButton = document.getElementById('spendenButton')
       const projektButton = document.getElementById('projektButton')
 
@@ -168,7 +180,7 @@ export default {
         if (!spendenButton.classList.contains('hidden')) {
           spendenButton.classList.add('hidden')
         }
-      }
+      } */
     },
   },
 }
