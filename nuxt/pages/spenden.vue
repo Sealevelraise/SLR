@@ -23,7 +23,7 @@
       <input v-model="amount" placeholder="Spendenbetrag" />
       
       <!-- if wanted, e-mail input from user -->
-      <p>Betrag eingeben</p>
+      <p>E-Mail eingeben</p>
       <input v-model="mail" placeholder="E-Mail" />
 
 
