@@ -27,7 +27,7 @@ contract AddProject {
     //Mapping a project to the wallet of the person which added this project, saved on the blockchain
     mapping (uint => address) public projectToOwner;
 
-    mapping(address => uint) public OwnerToProject;
+    mapping(address => uint) public ownerToProject;
 
     //Mapping of the count of how many project the person already has created
     mapping (address => uint) ownerProjectCount;
@@ -48,6 +48,7 @@ contract AddProject {
         projects.push(Project(_name, _state, _description, _amount, startDate, endDate, _mail));
         //add mapping between project and wallet
         projectToOwner[projects.length-1] = msg.sender;
+        ownerToProject[msg.sender] = projects.length-1;
         ownerProjectCount[msg.sender]++;
         //emit event "ProjectAdded"
         emit ProjectAdded(projects.length-1, _name, _state, _description, _amount, startDate, endDate);
@@ -71,9 +72,14 @@ contract AddProject {
         }
     }
 
-    function getProjectOwner() public view returns(Project memory){
+    /// @notice check if the account is project owner
+    /// @return projectID if account is owner
+    function getProjectOwner() public view returns(uint) {
         if(ownerProjectCount[msg.sender] == 1){
-            return projects[]
+            return ownerToProject[msg.sender];
+
+        }else{
+            revert('no project owner');
         }
     } 
 
