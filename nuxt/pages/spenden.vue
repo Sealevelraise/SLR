@@ -2,10 +2,6 @@
   <div>
     <h1>Spenden</h1>
     <div v-if="!spendenDone">
-      <p>
-        Hinweis: Du kannst mehrmals Spenden, aber nur ein mal pro Zyklus an der
-        Abstimmung teilnehmen!
-      </p>
       <!-- connect-wallet button is visible if the wallet is not connected -->
       <div
         v-if="!connected"
@@ -25,6 +21,10 @@
         v-if="connected"
         class="content-box bg-slr-blue-box flex flex-col justify-center p-8 items-center"
       >
+        <p class="py-2">
+          Hinweis: Du kannst mehrmals Spenden, aber nur ein mal pro Zyklus an
+          der Abstimmung teilnehmen!
+        </p>
         <p class="py-2">Connected Account: {{ connectedAccounts[0] }}</p>
         <!-- input field for amout to be donated -->
         <p class="py-2">Betrag eingeben (ETH)</p>
@@ -114,15 +114,15 @@ export default {
           value: web3.utils.toWei(this.amount, 'ether'),
         })
         this.spendenDone = true
-        this.createDonater();
+        this.createDonater()
         // todo: redirect
       }
     },
     createDonater: async function () {
       // methode to add a new Donater
-      const web3 = new Web3(window.ethereum);
-      const contract = new web3.eth.Contract(DonateJson.abi, this.DonateAddr);
-      await contract.methods.updateDonatedAmount(this.mail, this.amount).call();
+      const web3 = new Web3(window.ethereum)
+      const contract = new web3.eth.Contract(DonateJson.abi, this.DonateAddr)
+      await contract.methods.updateDonatedAmount(this.mail, this.amount).call()
     },
   },
 }
