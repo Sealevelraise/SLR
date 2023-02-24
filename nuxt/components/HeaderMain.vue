@@ -29,7 +29,7 @@
       </div>
       <!---->
       <ul
-        class="text-xl hidden md:flex lg:opacity-100 opacity-0 space-x-4 pl-10 md:items-center"
+        class="text-lg hidden md:flex lg:opacity-100 opacity-0 space-x-4 pl-10 md:items-center"
       >
         <!--   my-6 md:my-0 z-[-1]
             md:z-auto md:static absolute bg-slr-blue w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7
@@ -77,6 +77,9 @@
           >
             Projekt anmelden
           </button>
+        </nuxt-link>
+        <nuxt-link to="/account">
+          <img src="../assets/images/accounticon.png" alt="Account" />
         </nuxt-link>
       </ul>
     </nav>
