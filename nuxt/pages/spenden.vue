@@ -18,8 +18,14 @@
     </div>
     <div v-if="connected">
       <p>Connected Account: {{ connectedAccounts[0] }}</p>
+      <!-- input field for amout to be donated -->
       <p>Betrag eingeben</p>
       <input v-model="amount" placeholder="Spendenbetrag" />
+      
+      <!-- if wanted, e-mail input from user -->
+      <p>Betrag eingeben</p>
+      <input v-model="mail" placeholder="E-Mail" />
+
 
       <button
         class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
@@ -45,6 +51,7 @@ export default {
       amount: '',
       connected: false,
       connectedAccounts: '',
+      mail: '',
     }
   },
 
