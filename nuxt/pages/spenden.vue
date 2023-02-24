@@ -16,19 +16,30 @@
         </button>
       </div>
     </div>
-    <div v-if="connected">
-      <p>Connected Account: {{ connectedAccounts[0] }}</p>
+    <div
+      v-if="connected"
+      class="content-box bg-slr-blue-box flex flex-col justify-center p-8 items-center"
+    >
+      <p class="py-2">Connected Account: {{ connectedAccounts[0] }}</p>
       <!-- input field for amout to be donated -->
-      <p>Betrag eingeben</p>
-      <input v-model="amount" placeholder="Spendenbetrag" />
-      
-      <!-- if wanted, e-mail input from user -->
-      <p>E-Mail eingeben</p>
-      <input v-model="mail" placeholder="E-Mail" />
+      <p class="py-2">Betrag eingeben (ETH)</p>
+      <input
+        class="text-slr-blue"
+        v-model="amount"
+        placeholder="Spendenbetrag in ETH"
+      />
+      <div class="mx-auto pt-4">
+        <p id="betragAlert" class="text-center hidden text-red-300">
+          Bitte Betrag angeben!
+        </p>
+      </div>
 
+      <!-- if wanted, e-mail input from user -->
+      <p class="py-2">Newsletter Anmeldung: E-Mail eingeben (optional)</p>
+      <input class="text-slr-blue" v-model="mail" placeholder="E-Mail" />
 
       <button
-        class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+        class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md mt-4"
         style="width: 9rem"
         @click="donateEther"
       >
@@ -74,12 +85,22 @@ export default {
     },
     // Function to Donate Ether
     donateEther: async function () {
-      const web3 = new Web3(window.ethereum)
-      await web3.eth.sendTransaction({
-        from: this.connectedAccounts[0],
-        to: this.DonateAddr,
-        value: web3.utils.toWei(this.amount, 'ether'),
-      })
+      const p = document.getElementById('betragAlert')
+
+      if (!this.amount) {
+        // wenn nichts bei betrag eingegeben wurde
+        console.log('Bitte Betrag eingeben!')
+        p.classList.remove('hidden')
+      } else {
+        p.classList.add('hidden')
+        const web3 = new Web3(window.ethereum)
+        await web3.eth.sendTransaction({
+          from: this.connectedAccounts[0],
+          to: this.DonateAddr,
+          value: web3.utils.toWei(this.amount, 'ether'),
+        })
+        // todo: redirect
+      }
     },
   },
 }
