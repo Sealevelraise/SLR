@@ -2,6 +2,10 @@
   <div>
     <h1>Spenden</h1>
     <div v-if="!spendenDone">
+      <p>
+        Hinweis: Du kannst mehrmals Spenden, aber nur ein mal pro Zyklus an der
+        Abstimmung teilnehmen!
+      </p>
       <!-- connect-wallet button is visible if the wallet is not connected -->
       <div
         v-if="!connected"
