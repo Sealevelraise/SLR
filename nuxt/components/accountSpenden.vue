@@ -1,7 +1,7 @@
 <template>
   <!-- TODO: Infos der abgegebenen Spende(n) hier anzeigen und für welches Projekt abgestimmt wurde? -->
   <div v-if="connected">
-    <!-- information of procejtowner displayed, if procet was registered -->
+    <!-- information of projectowner displayed, if project was registered -->
     <h1>Angemeldet als: Spender</h1>
     <div class="content-box bg-slr-blue-box">
       <div class="mx-auto p-10">
@@ -24,7 +24,7 @@
       Sie entscheiden, ein Projket anzumelden oder Geld an ein eingereichtes
       Projekt spenden.
     </P>
-    <h3>Jetzt auf "Rolle wählen" und dabei sein!</h3>
+    <h3>Jetzt auf "Rolle wählen" klicken und dabei sein!</h3>
   </div>
 </template>
 

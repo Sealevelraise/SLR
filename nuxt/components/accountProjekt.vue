@@ -26,7 +26,7 @@
       Sie entscheiden, ein Projket anzumelden oder Geld an ein eingereichtes
       Projekt spenden.
     </P>
-    <h3>Jetzt auf "Rolle wählen" und dabei sein!</h3>
+    <h3>Jetzt auf "Rolle wählen" klicken und dabei sein!</h3>
   </div>
 </template>
 

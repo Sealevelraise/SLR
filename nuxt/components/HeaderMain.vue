@@ -48,6 +48,8 @@
           />
         </nuxt-link>
       </div>
+
+
       <!-- DESKTOP -->
       <div class="hidden md:block items-center shrink-0">
         <!-- flex justify-between  -->
@@ -62,7 +64,7 @@
             />
           </a>
 
-          <NuxtLink :to="{ path: '/' }" class=""> SEA LEVEL R(A)ISE </NuxtLink>
+          <NuxtLink :to="{ path: '/' }"> SEA LEVEL R(A)ISE </NuxtLink>
         </span>
         <!----
                                 <span class="cursor-pointer text-3xl mx-2 md:hidden block">
