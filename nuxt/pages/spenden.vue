@@ -107,12 +107,12 @@ export default {
     // Function to Donate Ether
     donateEther: async function () {
       const p = document.getElementById('betragAlert')
-
+      this.connect()
       if (!this.amount) {
         // wenn nichts bei betrag eingegeben wurde
         console.log('Bitte Betrag eingeben!')
         p.classList.remove('hidden')
-      } else if (this.connectedAccounts[0] == null){
+      } else if (this.connectedAccounts.length){
         p.classList.add('hidden')
         const web3 = new Web3(window.ethereum)
         await web3.eth.sendTransaction({

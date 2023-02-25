@@ -21,6 +21,13 @@
       class="content-box bg-slr-blue-box flex flex-col justify-center"
     >
       <p class="mx-auto pt-4">Connected Account: {{ connectedAccounts[0] }}</p>
+      <button
+        class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+        style="width: 20rem"
+        @click="connect"
+      >
+        Connect diffenrent account
+      </button>
       <div class="mx-auto w-1/2 p-10">
         <Dropdown
           id="selection"
@@ -223,26 +230,31 @@ export default {
     createNewProject: async function () {
       // method for adding a new project to the blockchain
       const web3 = new Web3(window.ethereum)
-
+      this.connect()
       const contract = new web3.eth.Contract(
         AddProjectJson.abi,
         this.AddProjectAddr
       )
-      // the parameters of the contract will be filled with the text in the input-fields
-      console.log(this.projectname)
-      console.log(this.selection)
-      console.log(this.projectdescription)
-      console.log(parseInt(this.amount))
-      this.contractResult = await contract.methods
-        .addProject(
-          this.projectname,
-          this.selection,
-          this.projectdescription,
-          parseInt(this.amount),
-          this.email
-        )
-        .send({ from: this.connectedAccounts[0], gas: 6721975 })
-      this.committed = true // zeigt an, dass projekt erfolgreich eingereicht wurde und die projektdaten
+      if (this.connectedAccounts.length){
+        // the parameters of the contract will be filled with the text in the input-fields
+        console.log(this.projectname)
+        console.log(this.selection)
+        console.log(this.projectdescription)
+        console.log(parseInt(this.amount))
+        this.contractResult = await contract.methods
+          .addProject(
+            this.projectname,
+            this.selection,
+            this.projectdescription,
+            parseInt(this.amount),
+            this.email
+          )
+          .send({ from: this.connectedAccounts[0], gas: 6721975 })
+        this.committed = true // zeigt an, dass projekt erfolgreich eingereicht wurde und die projektdaten
+      }
+      else {
+        console.log('No account connected to wallet')
+      }
     },
   },
 }
