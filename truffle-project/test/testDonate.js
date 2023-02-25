@@ -22,24 +22,25 @@ contract("Donate", (accounts) => {
         assert.equal(balanceAfter.toString(), parseInt(balanceBefore.toString()) + 1e15);
     });
     it("user should be correctly set to Donater after successful donation", async () => {
-         // Send 1 finney --> use sendTransaction to test the recieve() fallback function
-        await contract.sendTransaction({ value: 1e15, from: account });
-        await contract.sendTransaction({ value: 1e15, from: accounts[1] });
         let amount = 1e15;
         let mail = 'test@mail.com';
-        await contract.updateDonatedAmount(mail, amount, { from: account });
-        await contract.updateDonatedAmount(mail, amount, { from: accounts[1] });
+        let balanceBefore = await contract.getContractBalance();
+        // Send 1 finney --> use sendTransaction to test the recieve() fallback function
+        await contract.donateEther(mail, amount, { value: 1e15, from: account });
+        await contract.donateEther(mail, amount, { value: 1e15, from: accounts[1] });
+        let balanceAfter = await contract.getContractBalance();
         let numberOfDonaters = await contract.getNumberOfDonaters();
         let id = await contract.idToOwner(accounts[1]);
         let donater = await contract.getDonaterDetails({ from: accounts[1] })
         console.log(numberOfDonaters.toString());
         console.log(id.toString());
-        console.log(donater.toString())
+        console.log(balanceAfter.toString());
         /*
         let donater = await contract.getDonaterDetails();
         assert.equal(donater.amount.toString(), parseInt(1)); 
         */
        assert.equal(numberOfDonaters.toString(), parseInt(2));
+       assert.equal(balanceAfter.toString(), parseInt(balanceBefore.toString()) + 2e15);
     }); 
     
     it("donate function should not work with null value", async () => {

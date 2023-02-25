@@ -108,14 +108,10 @@ export default {
       } else {
         p.classList.add('hidden')
         const web3 = new Web3(window.ethereum)
-        await web3.eth.sendTransaction({
-          from: this.connectedAccounts[0],
-          to: this.DonateAddr,
-          value: web3.utils.toWei(this.amount, 'ether'),
-        })
         const contract = new web3.eth.Contract(DonateJson.abi, this.DonateAddr)
+        let eth = web3.utils.toWei(this.amount, 'ether')
         // todo: check if can be send without second transaction in metamask
-        await contract.methods.updateDonatedAmount(this.mail, parseInt(this.amount)).send({ from: this.connectedAccounts[0], gas: 6721975 })
+        await contract.methods.donateEther(this.mail, parseInt(this.amount)).send({ value: eth, from: this.connectedAccounts[0], gas: 6721975 })
 
         this.spendenDone = true
         // todo: redirect
