@@ -91,7 +91,7 @@
     </div>
     <div
       v-if="committed"
-      class="content-box bg-slr-blue-box flex flex-col justify-center"
+      class="content-box bg-slr-blue-box flex flex-col justify-center p-8"
     >
       <h2>Projekt erfolgreich eingereicht!</h2>
       <p>
@@ -238,7 +238,8 @@ export default {
           this.projectname,
           this.selection,
           this.projectdescription,
-          parseInt(this.amount)
+          parseInt(this.amount),
+          this.email
         )
         .send({ from: this.connectedAccounts[0], gas: 6721975 })
       this.committed = true // zeigt an, dass projekt erfolgreich eingereicht wurde und die projektdaten
