@@ -3,11 +3,13 @@ pragma solidity >=0.4.22 <0.9.0;
 
 import "./Donate.sol";
 
+
 /// @title Vote for the project the user wants to donate the money to
 /// @author Josua Benz
 /// @notice With this contract, you can vote for the project you want to donate the money to
 /// @dev uses the userHasVoted mapping from Donate.sol
-contract Vote is Donate {
+contract Vote{
+    
     //mapping if a user has voted for a project, saved  on the blockchain
     mapping(address => uint) public userHasVoted;
 
@@ -17,13 +19,20 @@ contract Vote is Donate {
     }
     //list with all the votes, saved  on the blockchain
     VoteForProject[] public votes;
+
+    function readUserHasDonated(address _donateContract) public  view returns(uint){
+        Donate d = Donate(_donateContract);
+        uint donated = d.getUserHasDonated(msg.sender);
+        return donated;
+    }
     
     /// @notice Vote for a project in SeaLevelRaise. The user is not allowed to vote more than one time and only if they have donated.
     /// @dev uses userHasDonated from Contract Donate.sol
     /// @param _projectId The ID of the Project the user wants to vote for.
-    function voteForProject(uint _projectId) public {
+    function voteForProject(uint _projectId, address _donateContract) public {
         //the user is required to have donated and to not have voted already
-        require(userHasDonated[msg.sender] == 1);
+        uint userHasDonated = readUserHasDonated(_donateContract);
+        require(userHasDonated == 1);
         require(userHasVoted[msg.sender] != 1);
 
         //add this vote to the list of votes

@@ -20,6 +20,11 @@ contract Donate {
     //mapping if user has donated money
     mapping(address => uint) public userHasDonated;
 
+    function getUserHasDonated(address _sender) external view returns (uint){
+        return userHasDonated[_sender];
+    }
+
+
     /// @notice Donate Ether to SeaLevelRaise
     function donateEther(string memory _mail, uint _amount) public payable{
         //donations of less than 1 finney will be rejected 
