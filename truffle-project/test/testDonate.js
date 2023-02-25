@@ -14,8 +14,10 @@ contract("Donate", (accounts) => {
     it("test balance of the contract after successful donation", async () => {
         // Get the balance before the operation
         let balanceBefore = await contract.getContractBalance();
+        let amount = 1e15;
+        let mail = 'test@mail.com';
         // Send 1 finney --> use sendTransaction to test the recieve() fallback function
-        await contract.sendTransaction({ value: 1e15, from: account });
+        await contract.donateEther(mail, amount, { value: 1e15, from: account });
         // Get the balance after the finney was sent
         let balanceAfter = await contract.getContractBalance();
         // Check if the balance after is equal to the balance before plus 1 finney

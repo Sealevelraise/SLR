@@ -25,12 +25,12 @@ contract("Vote", (accounts) => {
         //call addProject()
         await addProjectContract.addProject(projectName, projectState,projectDescription, projectsAmount, { from: projectOwner });
         // donate with second account --> use sendTransaction to test the recieve() fallback function
-        await voteContract.sendTransaction({ value: 1e15, from: donater });
         let amount = 1e15;
         let mail = 'test@mail.com';
-        await voteContract.updateDonatedAmount(mail, amount, { from: donater });
+        // Send 1 finney --> use sendTransaction to test the recieve() fallback function
+        await voteContract.donateEther(mail, amount, { value: 1e15, from: donater });
         // vote for project
-        await voteContract.voteForProject(0, { from: donater })
+        await voteContract.voteForProject(0, { from: donater });
         let voteStatus = await voteContract.getAmountOfVotes(0);
         assert.equal(voteStatus.toString(), 1);
     });
