@@ -19,6 +19,7 @@ contract AddProject {
         uint startDate;
         uint endDate;
         string mail;
+        uint votes;
     }
 
     //Array which contains all projects, saved on the blockchain
@@ -45,7 +46,7 @@ contract AddProject {
         uint256 startDate = block.timestamp;
         uint256 endDate = startDate + 12 weeks;
         //add new project to array
-        projects.push(Project(_name, _state, _description, _amount, startDate, endDate, _mail));
+        projects.push(Project(_name, _state, _description, _amount, startDate, endDate, _mail, 0));
         //add mapping between project and wallet
         projectToOwner[projects.length-1] = msg.sender;
         ownerToProject[msg.sender] = projects.length-1;
@@ -82,5 +83,39 @@ contract AddProject {
             revert('no project added');
         }
     } 
+
+    function setProjectVote(uint _projectId) public {
+        if( _projectId < projects.length){
+            projects[_projectId].votes ++;
+        }
+        else {
+            revert('project id does not exist');
+        }
+    }
+
+
+    /// @notice Get the amount of votes of one project
+    /// @param _projectId The ID of the project
+    /// @return _votesForThisProject amount of votes for this project
+    function getAmountOfVotes(uint _projectId) public view returns (uint) {
+        //count the amount of votes for this project
+        uint _votesForThisProject=0;
+        for(uint i=0; i<projects.length; i++) {
+            _votesForThisProject = projects[_projectId].votes;
+        }
+        return _votesForThisProject;
+    }
+
+    function declareWinner() public view returns(uint){
+        uint winner = 0;
+        for(uint i=0; i<projects.length; i++) {
+            uint tempWinner = 0;
+            if(projects[i].votes > projects[tempWinner].votes){
+                tempWinner = i;
+            }
+        }
+        return winner;
+    }
+
 
 }

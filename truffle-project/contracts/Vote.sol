@@ -2,6 +2,7 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 import "./Donate.sol";
+import "./AddProject.sol";
 
 
 /// @title Vote for the project the user wants to donate the money to
@@ -25,11 +26,18 @@ contract Vote{
         uint donated = d.getUserHasDonated(msg.sender);
         return donated;
     }
+
+    function sendProjectVote(address _addProjectContract, uint _projectId) public {
+        AddProject a = AddProject(_addProjectContract);
+        a.setProjectVote(_projectId);
+    }
+
+
     
     /// @notice Vote for a project in SeaLevelRaise. The user is not allowed to vote more than one time and only if they have donated.
     /// @dev uses userHasDonated from Contract Donate.sol
     /// @param _projectId The ID of the Project the user wants to vote for.
-    function voteForProject(uint _projectId, address _donateContract) public {
+    function voteForProject(uint _projectId, address _donateContract,address _addProjectContract) public {
         //the user is required to have donated and to not have voted already
         uint userHasDonated = readUserHasDonated(_donateContract);
         require(userHasDonated == 1);
@@ -37,22 +45,9 @@ contract Vote{
 
         //add this vote to the list of votes
         votes.push(VoteForProject(msg.sender, _projectId));
-
+        sendProjectVote(_addProjectContract, _projectId);
         //mapping, that this user has voted
         userHasVoted[msg.sender] = 1;
     }
 
-    /// @notice Get the amount of votes of one project
-    /// @param _projectId The ID of the project
-    /// @return _votesForThisProject amount of votes for this project
-    function getAmountOfVotes(uint _projectId) public view returns (uint) {
-        //count the amount of votes for this project
-        uint _votesForThisProject=0;
-        for(uint i=0; i<votes.length; i++) {
-            if(votes[i].projectId == _projectId) {
-                _votesForThisProject++;
-            }
-        }
-        return _votesForThisProject;
-    }
 }
