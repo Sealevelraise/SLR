@@ -22,7 +22,7 @@
     >
       <p class="mx-auto pt-4">Connected Account: {{ connectedAccounts[0] }}</p>
       <button
-        class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+        class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 mx-auto rounded-md"
         style="width: 20rem"
         @click="connect"
       >
