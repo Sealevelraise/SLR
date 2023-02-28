@@ -1,12 +1,60 @@
 <template>
   <div>
     <nav
-      class="bg-slr-blue h-28 shadow md:flex md:items-center md:justify-between font-roboto px-4 text-blue-200"
+      class="bg-slr-blue md:h-28 shadow flex flex-col md:flex-row md:items-center md:justify-between font-roboto px-4 text-blue-200"
     >
-      <div class="items-center shrink-0">
+      <!-- MOBILE -->
+      <div class="md:hidden flex flex-row justify-between items-center">
+        <a href="/">
+          <img
+            class="object-cover h-14 inline"
+            src="../assets/images/slrLogo.jpg"
+            alt="logo"
+          />
+        </a>
+        <nuxt-link v-if="store.spender" to="/spenden" id="spendenButton">
+          <button
+            class="bg-red-500 text-sm text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
+            style="width: 9rem"
+          >
+            Spenden
+          </button>
+        </nuxt-link>
+        <nuxt-link
+          v-else-if="store.projectowner"
+          to="/projektAnlegen"
+          id="projektButton"
+        >
+          <button
+            class="text-sm bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-4 rounded-md"
+            style="width: 9rem"
+          >
+            Projekt anmelden
+          </button>
+        </nuxt-link>
+        <nuxt-link v-else to="/" id="auswahlButton">
+          <button
+            class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+            style="width: 9rem"
+          >
+            Rolle wählen
+          </button>
+        </nuxt-link>
+        <nuxt-link to="/account">
+          <img
+            src="../assets/images/accounticon.png"
+            alt="Account"
+            class="h-10"
+          />
+        </nuxt-link>
+      </div>
+
+
+      <!-- DESKTOP -->
+      <div class="hidden md:block items-center shrink-0">
         <!-- flex justify-between  -->
         <span
-          class="text-xl md:text-2xl pr-5 hover:text-blue-400 duration-500 cursor-pointer md:items-center"
+          class="text-xl md:text-2xl pr-5 hover:text-blue-400 duration-500 cursor-pointer md:items-center flex flex-row"
         >
           <a href="/">
             <img
@@ -29,7 +77,7 @@
       </div>
       <!---->
       <ul
-        class="text-lg hidden md:flex lg:opacity-100 opacity-0 space-x-4 pl-10 md:items-center"
+        class="text-center text-lg flex flex-col md:flex-row md:flex-nowrap md:space-x-4 md:pl-10 md:items-center mb-4 md:mb-0"
       >
         <!--   my-6 md:my-0 z-[-1]
             md:z-auto md:static absolute bg-slr-blue w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7
@@ -54,41 +102,29 @@
           <NuxtLink to="/faq">FAQ</NuxtLink>
         </li>
 
-        <nuxt-link to="/" id="auswahlButton">
-          <button
-            class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
-            style="width: 9rem"
-          >
-            Rolle wählen
-          </button>
-        </nuxt-link>
-        <nuxt-link to="/spenden" id="spendenButton" class="hidden">
-          <button
-            class="bg-red-500 text-sm text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
-            style="width: 9rem"
-          >
-            Spenden
-          </button>
-        </nuxt-link>
-        <nuxt-link to="/projektAnlegen" id="projektButton" class="hidden">
-          <button
-            class="text-sm bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-4 rounded-md"
-            style="width: 9rem"
-          >
-            Projekt anmelden
-          </button>
-        </nuxt-link>
-        <nuxt-link to="/account">
-          <img src="../assets/images/accounticon.png" alt="Account" />
-        </nuxt-link>
+        <div class="hidden md:flex space-x-4 items-center">
+
+
+          <nuxt-link to="/account">
+            <img src="../assets/images/accounticon.png" alt="Account" />
+          </nuxt-link>
+        </div>
       </ul>
     </nav>
   </div>
 </template>
 
 <script>
+import { store } from '../store/store.js'
+
 export default {
   name: 'HeaderMain',
+
+  data() {
+    return {
+      store,
+    }
+  },
 
   methods: {
     reloadPage() {

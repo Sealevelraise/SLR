@@ -26,6 +26,9 @@ contract("Vote", (accounts) => {
         await addProjectContract.addProject(projectName, projectState,projectDescription, projectsAmount, { from: projectOwner });
         // donate with second account --> use sendTransaction to test the recieve() fallback function
         await voteContract.sendTransaction({ value: 1e15, from: donater });
+        let amount = 1e15;
+        let mail = 'test@mail.com';
+        await voteContract.updateDonatedAmount(mail, amount, { from: donater });
         // vote for project
         await voteContract.voteForProject(0, { from: donater })
         let voteStatus = await voteContract.getAmountOfVotes(0);

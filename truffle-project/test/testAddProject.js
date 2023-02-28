@@ -167,16 +167,18 @@ contract("AddProject", (accounts) => {
         let firstProjectState = 'Kap Verde';
         let firstProjectDescription = 'Test Project Description';
         let firstProjectsAmount = 100;
+        let firstProjectMail = 'test@mail.com'
         //call addProject() for the first project
-        await contract.addProject(firstProjectName, firstProjectState,firstProjectDescription, firstProjectsAmount, { from: account });
+        await contract.addProject(firstProjectName, firstProjectState,firstProjectDescription, firstProjectsAmount, firstProjectMail, { from: account });
 
         //create second project
         let secondProjectName = 'Project 2';
         let secondProjectState = 'Kap Verde';
         let secondProjectDescription = 'Test Project Description';
         let secondProjectAmount = 200;
+        let secondProjectMail = 'test@mail.com'
         //call add Project() for the second project
-        await contract.addProject(secondProjectName, secondProjectState,secondProjectDescription, secondProjectAmount, { from: accounts[1] });
+        await contract.addProject(secondProjectName, secondProjectState,secondProjectDescription, secondProjectAmount,secondProjectMail, { from: accounts[1] });
         //check if project was created
         let numProjects = await contract.getNumberOfProjects();
         assert.equal(numProjects.toString(), parseInt(2));
