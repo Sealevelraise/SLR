@@ -23,7 +23,7 @@
     <h2>Noch keine Rolle ausgewählt!</h2>
     <P>
       Sie haben noch keine Rolle ausgewählt. Mit dem Knopf "Rolle wählen" können
-      Sie entscheiden, ein Projket anzumelden oder Geld an ein eingereichtes
+      Sie entscheiden, ein Projekt anzumelden oder Geld an ein eingereichtes
       Projekt spenden.
     </P>
     <h3>Jetzt auf "Rolle wählen" und dabei sein!</h3>
