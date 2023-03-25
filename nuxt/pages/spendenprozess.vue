@@ -41,35 +41,32 @@
       </h2>
       <h3 class="text-center p-6">1. Select your desired role</h3>
       <p class="text-justify">
-        Wenn Du ein Projekt anmelden willst, musst Du zuerst deine Rolle wählen.
-        Dafür wählst Du den Knopf <em>"Spenden erhalten"</em>. Anschließend
-        gelangst Du auf die Seite zur Projektanmeldung.
+        If you want to register a project, you must first choose your role.
+        To do this, select the <em>"Receive donations"</em> button.
+        You will then be taken to the project registration page.
       </p>
       <h3 class="text-center p-6">2. Connect your wallet</h3>
       <p class="text-justify">
-        Nun zum wichtigen Teil: Bevor Du dein Projekt anmelden kannst, musst du
-        deine digitale Geldbörse (Wallet) hinterlegen. Dafür musst Du auf den
-        Knopf <em>"Connect Wallet"</em> drücken und den Einrichtungsschritten
-        folgen. Die Wallet-Einrichtung erfolgt nur ein Mal - beim nächsten
-        Spenden musst Du sie nicht erneut einrichten.
-      </p>
+        Now to the important part: before you can make a donation, you need to connect
+          your digital wallet. To do this, press the <em>"Connect Wallet"</em> button and follow the setup steps.
+          The wallet setup is done only once - you don't need to set it up again the next time.
       <h3 class="text-center p-6">3. Project information</h3>
       <p class="text-justify">
-        Anschließend musst Du deine Projektinformationen eintragen. Befolge
-        dabei folgende Schritte:
+        Then you need to enter your project information.
+        Follow the following steps:
       </p>
       <div class="text-center p-4">
         <p>
-          1. Smallstate aus Liste aussuschen<br />
-          2. Projektnamen eingeben<br />
-          3. Projektbeschreibung eingeben<br />
-          4. Gewünschten Spendenbetrag eingeben<br />
-          5. E-Mail hinterlegen<br />
+          1. Select Smallstate from list<br />
+          2. Enter project name<br />
+          3. Enter project description<br />
+          4. Chose donation amount<br />
+          5. Enter your E-Mail address<br />
         </p>
       </div>
       <p class="text-justify">
-        Anschließend drückst Du auf den Knopf <em>Anmelden</em> und dein Projekt
-        ist erfolgreich hinterlegt!
+        Afterwards press the button <em>Subscribe</em> and your project
+        is successfully submitted!
       </p>
     </div>
   </div>
