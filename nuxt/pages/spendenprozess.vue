@@ -4,37 +4,31 @@
       class="md:w-3/4 mx-auto mt-12 bg-slr-blue-box py-12 px-8 md:px-32 rounded-[24px] text-white"
     >
       <h2 class="text-2xl text-center pb-4 underline solid white">
-        Spendenprozess
+        Donation Process and Project Registration
       </h2>
       <div>
-        <h3 class="text-center p-6">1. Projekte ansehen</h3>
+        <h3 class="text-center p-6">1. View Projects</h3>
         <p class="text-justify">
-          In der Projektübersicht unter “Projekte” kannst Du angemeldete
-          Projekte einsehen. Hier findest Du die wichtigsten Informationen zu
-          den angemeldeten Projekten, wie z.B. die Projektbeschreibung, das
-          Antragsland und den gewünschten Spendenbetrag.
+          In the project overview under "Projects" you can view the registered
+          projects. Here you will find the most important information about
+          the current projects.
         </p>
-        <h3 class="text-center p-6">2. Rolle wählen</h3>
+        <h3 class="text-center p-6">2. Select your role</h3>
         <p class="text-justify">
-          Hast Du dir die angemeldeten Projekte angesehen, kannst Du dich
-          entscheiden, eine Spende beizusteuern. Dafür drückst Du auf der
-          Startseite den Knopf <em>"Spenden und abstimmen"</em>.
+          Once you have viewed the registered projects, you can decide to make a donation.
+          To do so, press the "Donate and Vote" button on the home page.
         </p>
-        <h3 class="text-center p-6">3. Digitale Geldbörse hinterlegen</h3>
+        <h3 class="text-center p-6">3. Conecct your Wallet</h3>
         <p class="text-justify">
-          Nun zum wichtigen Teil: Bevor Du eine Spende tätigen kannst, musst du
-          deine digitale Geldbörse (Wallet) hinterlegen. Dafür musst Du auf den
-          Knopf "Connect Wallet" drücken und den Einrichtungsschritten folgen.
-          Die Wallet-Einrichtung erfolgt nur ein Mal - beim nächsten Spenden
-          musst Du sie nicht erneut einrichten.
+          Now to the important part: before you can make a donation, you need to connect
+          your digital wallet. To do this, press the "Connect Wallet" button and follow the setup steps.
+          The wallet setup is done only once - you don't need to set it up again the next time.
         </p>
-        <h3 class="text-center p-6">4. Spendenbetrag wählen</h3>
+        <h3 class="text-center p-6">4. Choose donation amount</h3>
         <p class="text-justify">
-          Nun zum wichtigen Teil: Bevor Du eine Spende tätigen kannst, musst du
-          deine digitale Geldbörse (Wallet) hinterlegen. Dafür musst Du auf den
-          Knopf "Connect Wallet" drücken und den Einrichtungsschritten folgen.
-          Die Wallet-Einrichtung erfolgt nur ein Mal - beim nächsten Spenden
-          musst Du sie nicht erneut einrichten.
+          Finally you enter your desired donation amount and confirm your donation!
+          If you want to check your donor status or change your role, you can press
+          the account button (top right).
         </p>
       </div>
     </div>
@@ -43,15 +37,15 @@
       class="md:w-3/4 mx-auto mt-12 bg-slr-blue-box py-12 px-8 md:px-32 rounded-[24px] text-white"
     >
       <h2 class="text-2xl text-center pb-4 underline solid white">
-        Anmeldeprozess
+        Project Registration
       </h2>
-      <h3 class="text-center p-6">1. Anmeldeseite aufrufen</h3>
+      <h3 class="text-center p-6">1. Select your desired role</h3>
       <p class="text-justify">
         Wenn Du ein Projekt anmelden willst, musst Du zuerst deine Rolle wählen.
         Dafür wählst Du den Knopf <em>"Spenden erhalten"</em>. Anschließend
         gelangst Du auf die Seite zur Projektanmeldung.
       </p>
-      <h3 class="text-center p-6">2. Digitale Geldbörse hinterlegen</h3>
+      <h3 class="text-center p-6">2. Connect your wallet</h3>
       <p class="text-justify">
         Nun zum wichtigen Teil: Bevor Du dein Projekt anmelden kannst, musst du
         deine digitale Geldbörse (Wallet) hinterlegen. Dafür musst Du auf den
@@ -59,7 +53,7 @@
         folgen. Die Wallet-Einrichtung erfolgt nur ein Mal - beim nächsten
         Spenden musst Du sie nicht erneut einrichten.
       </p>
-      <h3 class="text-center p-6">3. Projektinformationen hinterlegen</h3>
+      <h3 class="text-center p-6">3. Project information</h3>
       <p class="text-justify">
         Anschließend musst Du deine Projektinformationen eintragen. Befolge
         dabei folgende Schritte:
