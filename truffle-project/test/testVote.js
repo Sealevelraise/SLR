@@ -33,12 +33,11 @@ contract("Vote", (accounts) => {
         // Send 1 finney --> use sendTransaction to test the recieve() fallback function
         await donateContract.donateEther(mail, amount, { value: 1e15, from: donater });
         let donateAddress = await donateContract.address;
-        let addProjectAdress = await addProject.address;
-        console.log(address.toString());
-        let userHasDonated = await voteContract.readUserHasDonated(address, {from: donater});
+        let addProjectAdress = await addProjectContract.address;
+        let userHasDonated = await voteContract.readUserHasDonated(donateAddress, {from: donater});
         console.log(userHasDonated.toString());
-        await voteContract.voteForProject(0,address, {from: donater });
-        let voteStatus = await voteContract.getAmountOfVotes(0);
+        await voteContract.voteForProject(0, donateAddress, addProjectAdress, {from: donater });
+        let voteStatus = await addProjectContract.getAmountOfVotes(0);
         assert.equal(voteStatus.toString(), 1);
     });
 
