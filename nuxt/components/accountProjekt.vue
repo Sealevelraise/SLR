@@ -1,54 +1,56 @@
 <template>
-  <!-- TODO: Infos des eingereichten Projektes anzeigen (später ggf Status: akzeptiert für nächsten Zyklus od. abgelehnt) -->
-  <div v-if="connected">
-    <!-- information of procejtowner displayed, if procet was registered -->
-    <h2>Angemeldet als: Projektowner</h2>
+  <div>
     <div class="content-box bg-slr-blue-box">
       <div class="mx-auto text-center p-10">
-        <h3>Hier finden Sie die Angaben zu Ihrem Account</h3>
+        <h1>Hier finden Sie die Angaben zu Ihrem Account als Projektowner</h1>
       </div>
       <div>
-        <p>Angemeldetes Projekt:</p>
+        <p>Connected Account: {{ connectedAccounts[0] }}</p>
 
-        <div v-if="connected">
-          <p>Connected Account: {{ connectedAccounts[0] }}</p>
+        <div v-if="projectDetails">
+          <h2>Angemeldetes Projekt:</h2>
+
+          <p>Projektinfos: {{ projectDetails.name }}</p>
+          <p>State: {{ projectDetails.state }}</p>
+          <p>Description: {{ projectDetails.description }}</p>
+          <p>Amount: {{ projectDetails.amount }}</p>
+          <p>Mail: {{ projectDetails.mail }}</p>
+          <p>State: {{ projectDetails.state }}</p>
         </div>
+        <div v-if="!projectDetails">
+          <p>noch kein Projekt angelegt. Sie koennen mit Ihrem Account ein Projekt anlegen.</p>
+        </div>
+        
       </div>
     </div>
-  </div>
 
-  <!-- if wallet connected but no action done (nicht gespendet / kein Projekt angelegt) this shows -->
-
-  <div v-else>
-    <h2>Noch keine Rolle ausgewählt!</h2>
-    <P>
-      Sie haben noch keine Rolle ausgewählt. Mit dem Knopf "Rolle wählen" können
-      Sie entscheiden, ein Projket anzumelden oder Geld an ein eingereichtes
-      Projekt spenden.
-    </P>
-    <h3>Jetzt auf "Rolle wählen" und dabei sein!</h3>
+    <!-- if wallet connected but no action done (nicht gespendet / kein Projekt angelegt) this shows -->
   </div>
 </template>
 
 <script>
 import Web3 from 'web3'
-import DonateJson from '../../truffle-project/build/contracts/Donate.json'
+import AddProjectJson from '../../truffle-project/build/contracts/AddProject.json'
 
 export default {
   name: 'AccountProjekt',
 
   data() {
     return {
-      DonateAddr: DonateJson.networks[5777].address,
+      AddProjectAddr: AddProjectJson.networks[5777].address,
       amount: '',
       connected: false,
       connectedAccounts: '',
+      projectDetails: false,
     }
   },
 
+  created() {
+    this.getProject();
+  },
+
   methods: {
-    connect: async function () {
-      // this connects to the wallet
+    getProject: async function () {
       if (window.ethereum) {
         // first we check if metamask is installed
         try {
@@ -61,16 +63,21 @@ export default {
         } catch (error) {
           console.log(error)
         }
+        // first we check if metamask is installed
+        console.log("getProject ausfuehren")
+        try {
+          const web3 = new Web3(window.ethereum)
+          console.log("web3")
+          const contract = new web3.eth.Contract(AddProjectJson.abi, this.AddProjectAddr);
+          console.log("contract")
+          const projectID = await contract.methods.getProjectOwner().call();
+          console.log(projectID)
+          this.projectDetails = await contract.methods.getProjectDetails(projectID).call();
+          console.log("projectDetails")
+        } catch (error) {
+          console.log(error)
+        }
       }
-    },
-    // Function to Donate Ether
-    donateEther: async function () {
-      const web3 = new Web3(window.ethereum)
-      await web3.eth.sendTransaction({
-        from: this.connectedAccounts[0],
-        to: this.DonateAddr,
-        value: web3.utils.toWei(this.amount, 'ether'),
-      })
     },
   },
 }
