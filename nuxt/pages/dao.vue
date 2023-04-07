@@ -13,6 +13,7 @@
           öffentlichen Blockchain bereitgestellt sind und dezentral verwaltet
           werden.
         </p>
+        <h1>{{ $t('hello')}}</h1>
         <p class="p-2">
           Durch dieses Prinzip ist es möglich SeaLevelR(a)ise ohne ein zentrales
           Verwaltungsorgan zu funktionieren und sich selbst zu steuern.
