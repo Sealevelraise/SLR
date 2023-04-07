@@ -5,17 +5,13 @@
     <h1>Angemeldet als: Spender</h1>
     <div class="content-box bg-slr-blue-box">
       <div class="mx-auto p-10">
-        <h2>Hier finden Sie die Angaben zu Ihrem Account</h2>
-        <div>
-          <div v-if="connected">
-            <p>Connected Account: {{ connectedAccounts[0] }}</p>
-          </div>
-        </div>
+        <h1>Hier finden Sie die Angaben zu Ihrem Account als Spender</h1>
       </div>
-    </div>
-  </div>
+      <div>
+        <p>Connected Account: {{ connectedAccounts[0] }}</p>
 
-  <!-- if wallet connected but no action done (nicht gespendet / kein Projekt angelegt) this shows -->
+        <div v-if="donatorDetails">
+          <h2>Spendenuebersicht:</h2>
 
   <div v-else>
     <h2>Noch keine Rolle ausgewählt!</h2>
@@ -41,12 +37,16 @@ export default {
       amount: '',
       connected: false,
       connectedAccounts: '',
+      donatorDetails: false,
     }
   },
 
+  created() {
+    this.getDonations();
+  },
+
   methods: {
-    connect: async function () {
-      // this connects to the wallet
+    getDonations: async function () {
       if (window.ethereum) {
         // first we check if metamask is installed
         try {
@@ -59,16 +59,19 @@ export default {
         } catch (error) {
           console.log(error)
         }
+        // first we check if metamask is installed
+        console.log("getDonation ausfuehren")
+        try {
+          const web3 = new Web3(window.ethereum)
+          console.log("web3")
+          const contract = new web3.eth.Contract(DonateJson.abi, this.DonateAddr);
+          console.log("contract")
+          this.donatorDetails = await contract.methods.getDonaterDetails().call();
+          console.log("donatorDetails")
+        } catch (error) {
+          console.log(error)
+        }
       }
-    },
-    // Function to Donate Ether
-    donateEther: async function () {
-      const web3 = new Web3(window.ethereum)
-      await web3.eth.sendTransaction({
-        from: this.connectedAccounts[0],
-        to: this.DonateAddr,
-        value: web3.utils.toWei(this.amount, 'ether'),
-      })
     },
   },
 }

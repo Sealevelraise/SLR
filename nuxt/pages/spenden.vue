@@ -26,11 +26,18 @@
           der Abstimmung teilnehmen!
         </p>
         <p class="py-2">Connected Account: {{ connectedAccounts[0] }}</p>
+        <button
+          class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+          style="width: 20rem"
+          @click="connect"
+        >
+          Connect diffenrent account
+        </button>
         <!-- input field for amout to be donated -->
         <p class="py-2">Betrag eingeben (ETH)</p>
         <input
-          class="text-slr-blue"
           v-model="amount"
+          class="text-slr-blue"
           placeholder="Spendenbetrag in ETH"
         />
         <div class="mx-auto pt-4">
@@ -41,7 +48,7 @@
 
         <!-- if wanted, e-mail input from user -->
         <p class="py-2">Newsletter Anmeldung: E-Mail eingeben (optional)</p>
-        <input class="text-slr-blue" v-model="mail" placeholder="E-Mail" />
+        <input v-model="mail" class="text-slr-blue" placeholder="E-Mail" />
 
         <button
           class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md mt-4"
@@ -67,7 +74,7 @@ import Web3 from 'web3'
 import DonateJson from '../../truffle-project/build/contracts/Donate.json'
 
 export default {
-  name: 'default',
+  name: 'Spenden',
 
   data() {
     return {
@@ -100,12 +107,12 @@ export default {
     // Function to Donate Ether
     donateEther: async function () {
       const p = document.getElementById('betragAlert')
-
+      this.connect()
       if (!this.amount) {
         // wenn nichts bei betrag eingegeben wurde
         console.log('Bitte Betrag eingeben!')
         p.classList.remove('hidden')
-      } else {
+      } else if (this.connectedAccounts.length){
         p.classList.add('hidden')
         const web3 = new Web3(window.ethereum)
         await web3.eth.sendTransaction({
@@ -119,6 +126,8 @@ export default {
 
         this.spendenDone = true
         // todo: redirect
+      } else {
+        console.log('No account connected to wallet')
       }
     },
    
