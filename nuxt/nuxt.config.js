@@ -1,5 +1,4 @@
-
-
+import i18n from './config/i18n'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -54,7 +53,20 @@ export default {
 
   //i18n modul
   i18n: {
-    /* module options */
+    vueI18nLoader: true,
+    defaultLocale: 'de',
+    locales: [
+      {
+        code: 'en',
+        name: 'English'
+      },
+      {
+        code: 'de',
+        name: 'Deutsch'
+      }
+    ],
+
+    vueI18n: i18n
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
