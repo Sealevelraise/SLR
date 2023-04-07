@@ -20,7 +20,7 @@ export default {
   ssr: true,
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [    
+  css: [
     '@/assets/css/main.css',
   ],
 
@@ -43,12 +43,18 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/i18n'
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+// Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
+  },
+
+  //i18n modul
+  i18n: {
+    /* module options */
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
