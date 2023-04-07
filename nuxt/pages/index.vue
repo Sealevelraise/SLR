@@ -18,14 +18,15 @@
           class="w-11/12 md:w-2/5 bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
           @click="selectRole('spender')"
         >
-          Spenden und abstimmen
+          <NuxtLink to="/spenden">Spenden und abstimmen</NuxtLink>
+
         </button>
         <p class="text-center py-4">oder</p>
         <button
           class="w-11/12 md:w-2/5 bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
           @click="selectRole('projektinhaber')"
         >
-          Spenden erhalten
+        <NuxtLink to="/projektAnlegen">Spenden erhalten</NuxtLink>
         </button>
       </div>
     </div>

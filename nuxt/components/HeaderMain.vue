@@ -48,6 +48,8 @@
           />
         </nuxt-link>
       </div>
+
+
       <!-- DESKTOP -->
       <div class="hidden md:block items-center shrink-0">
         <!-- flex justify-between  -->
@@ -62,7 +64,7 @@
             />
           </a>
 
-          <NuxtLink :to="{ path: '/' }" class=""> SEA LEVEL R(A)ISE </NuxtLink>
+          <NuxtLink :to="{ path: '/' }"> SEA LEVEL R(A)ISE </NuxtLink>
         </span>
         <!----
                                 <span class="cursor-pointer text-3xl mx-2 md:hidden block">
@@ -101,34 +103,8 @@
         </li>
 
         <div class="hidden md:flex space-x-4 items-center">
-          <nuxt-link v-if="store.spender" to="/spenden" id="spendenButton">
-            <button
-              class="bg-red-500 text-sm text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
-              style="width: 9rem"
-            >
-              Spenden
-            </button>
-          </nuxt-link>
-          <nuxt-link
-            v-else-if="store.projectowner"
-            to="/projektAnlegen"
-            id="projektButton"
-          >
-            <button
-              class="text-sm bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-4 rounded-md"
-              style="width: 9rem"
-            >
-              Projekt anmelden
-            </button>
-          </nuxt-link>
-          <nuxt-link v-else to="/" id="auswahlButton">
-            <button
-              class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
-              style="width: 9rem"
-            >
-              Rolle wählen
-            </button>
-          </nuxt-link>
+
+
           <nuxt-link to="/account">
             <img src="../assets/images/accounticon.png" alt="Account" />
           </nuxt-link>
