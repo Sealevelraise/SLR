@@ -102,12 +102,15 @@
           <NuxtLink to="/faq">FAQ</NuxtLink>
         </li>
 
+        <LanguageInput />
+
         <div class="hidden md:flex space-x-4 items-center">
 
 
           <nuxt-link to="/account">
             <img src="../assets/images/accounticon.png" alt="Account" />
           </nuxt-link>
+
         </div>
       </ul>
     </nav>
