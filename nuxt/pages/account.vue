@@ -5,8 +5,52 @@
     <div
       class="w-11/12 md:w-3/4 mx-auto bg-slr-blue-box py-10 md:py-12 px-6 md:px-32 rounded-[24px] text-white"
     >
+    <div class="mx-auto p-10">
+        <h1>Hier finden Sie die Angaben zu Ihrem Account als:</h1>
+        <h1 class="text-white">Spender</h1>
+      </div>
+      <div>
+        <p>Connected Account: {{ connectedAccounts[0] }}</p>
+
+        <div v-if="donatorDetails">
+          <h2>Spendenuebersicht:</h2>
+
+          <p>Spendensumme: {{ donatorDetails.donatedAmount }}</p>
+          <p>Mail: {{ donatorDetails.mail }}</p>
+        </div>
+        <div v-if="!donatorDetails">
+          <p>noch keine Spende abgegeben.</p>
+        </div>
+        
+      </div>
+
+      <div class="mx-auto text-center p-10">
+        <h1>Hier finden Sie die Angaben zu Ihrem Account als:</h1>
+        <h1 class="text-white">Projektowner</h1>
+
+      </div>
+      <div>
+        <p>Connected Account: {{ connectedAccounts[0] }}</p>
+
+        <div v-if="projectDetails">
+          <h2>Angemeldetes Projekt:</h2>
+
+          <p>Projektinfos: {{ projectDetails.name }}</p>
+          <p>State: {{ projectDetails.state }}</p>
+          <p>Description: {{ projectDetails.description }}</p>
+          <p>Amount: {{ projectDetails.amount }}</p>
+          <p>Mail: {{ projectDetails.mail }}</p>
+          <p>State: {{ projectDetails.state }}</p>
+        </div>
+
+        <div v-if="!projectDetails">
+          <p>noch kein Projekt angelegt. Sie koennen mit Ihrem Account ein Projekt anlegen.</p>
+        </div>
+        
+      </div>
+
       <!-- TODO: donatorConnected und pConnected auf true setzen nachdem gespendet bzw projekt angelegt -->
-      <div v-if="store.donatorConnected">
+      <!-- <div v-if="store.donatorConnected">
         <accountSpenden />
       </div>
       <div v-else-if="store.pConnected">
@@ -22,26 +66,105 @@
           verbinden kannst Du spenden und abstimmen oder deine Spenden und
           Abstimmungen einsehen (als Spender) oder ein Projekt anlegen bzw. dein
           angelegtes Projekt ansehen (als Projektinhaber).
-        </p>
+        </p> -->
         <!-- TODO: Nach klick auf connect wallet hier checken ob person spender oder projektowner ist und dementsprechend die store variablen anpassen (donatorConnected und pConnected) -->
-        <ConnectWallet class="mx-auto text-center mt-4" />
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>
 
 <script>
-import ConnectWallet from '../components/ConnectWallet.vue'
-import { store } from '../store/store.js'
+import Web3 from 'web3'
+import AddProjectJson from '../../truffle-project/build/contracts/AddProject.json'
+import DonateJson from '../../truffle-project/build/contracts/Donate.json'
 
 export default {
-  components: { ConnectWallet },
-  name: 'default',
+  name: 'Account',
   data() {
     return {
-      store,
+      DonateAddr: DonateJson.networks[5777].address,
+      AddProjectAddr: AddProjectJson.networks[5777].address,
+      projectDetails: false,
+      connected: false,
+      connectedAccounts: '',
+      donatorDetails: false,
     }
   },
-  methods: {},
+  created() {
+    this.getProject();
+    this.getDonations();
+  },
+  methods: {
+    getProject: async function () {
+      if (window.ethereum) {
+        // first we check if metamask is installed
+        try {
+          // we save the account id(s) to 'connectedAccounts'
+          this.connectedAccounts = await window.ethereum.request({
+            method: 'eth_requestAccounts',
+          })
+          this.connected = true
+          console.log(this.connectedAccounts.toString())
+        } catch (error) {
+          console.log(error)
+        }
+        // first we check if metamask is installed
+        console.log("getProject ausfuehren")
+        try {
+          const web3 = new Web3(window.ethereum)
+          console.log("web3")
+          const contract = new web3.eth.Contract(AddProjectJson.abi, this.AddProjectAddr);
+          console.log("contract")
+          const projectID = await contract.methods.getProjectOwner().call();
+          console.log(projectID)
+          this.projectDetails = await contract.methods.getProjectDetails(projectID).call();
+          console.log("projectDetails")
+        } catch (error) {
+          console.log(error)
+        }
+      }
+    },
+
+    getProjectInformation: async function() {
+      // methode for getting infos of all the projects currently saved on the blockchain
+      const web3 = new Web3(window.ethereum);
+      const contract = new web3.eth.Contract(AddProjectJson.abi, this.AddProjectAddr);
+      // get the number of projects to iterate over every project in the next step
+      const numberOfProjects = await contract.methods.getNumberOfProjects().call();
+
+      this.projectInfos = [];
+      for(let i=0; i<numberOfProjects; i++){
+        this.projectInfos.push(await contract.methods.getProjectDetails(i).call());
+      }
+    },
+
+    getDonations: async function () {
+      if (window.ethereum) {
+        // first we check if metamask is installed
+        try {
+          // we save the account id(s) to 'connectedAccounts'
+          this.connectedAccounts = await window.ethereum.request({
+            method: 'eth_requestAccounts',
+          })
+          this.connected = true
+          console.log(this.connectedAccounts.toString())
+        } catch (error) {
+          console.log(error)
+        }
+        // first we check if metamask is installed
+        console.log("getDonation ausfuehren")
+        try {
+          const web3 = new Web3(window.ethereum)
+          console.log("web3")
+          const contract = new web3.eth.Contract(DonateJson.abi, this.DonateAddr);
+          console.log("contract")
+          this.donatorDetails = await contract.methods.getDonaterDetails().call();
+          console.log("donatorDetails")
+        } catch (error) {
+          console.log(error)
+        }
+      }
+    },
+  },
 }
 </script>

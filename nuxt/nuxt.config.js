@@ -1,8 +1,9 @@
-import i18n from './config/i18n'
+
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'sea-level-raise',
+    title: 'SEA LEVEL R(A)ISE',
     htmlAttrs: {
       lang: 'en',
     },
@@ -19,7 +20,7 @@ export default {
   ssr: true,
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
+  css: [    
     '@/assets/css/main.css',
   ],
 
@@ -34,7 +35,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
-    //'@nuxtjs/tailwindcss',
+    // '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
   ],
 
@@ -42,31 +43,12 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/i18n'
   ],
 
-// Axios module configuration: https://go.nuxtjs.dev/config-axios
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
-  },
-
-  //i18n modul
-  i18n: {
-    vueI18nLoader: true,
-    defaultLocale: 'en',
-    locales: [
-      {
-        code: 'en',
-        name: 'English'
-      },
-      {
-        code: 'de',
-        name: 'Deutsch'
-      }
-    ],
-
-    vueI18n: i18n
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
