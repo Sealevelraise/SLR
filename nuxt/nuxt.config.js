@@ -1,4 +1,6 @@
 
+import i18n from "./config/i18n"
+
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -37,6 +39,25 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     // '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
+    // language change module
+    [
+      'nuxt-i18n',
+      {
+        vueI18nLoader: true,
+        defaultLocale: 'en',
+         locales: [
+          {
+             code: 'en',
+             name: 'EN'
+          },
+          {
+             code: 'de',
+             name: 'DE'
+          }
+        ],
+        vueI18n: i18n
+      }
+     ]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
