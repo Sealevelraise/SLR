@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col gap-10">
     <h1 class="text-2xl md:text-3xl uppercase text-center">
-      Herzlich Willkommen <br />
-      bei Sea Level R(a)ise
+      {{ $t('welcome')}}<br />
+      {{ $t('at SEA LEVEL R(A)ISE')}}
     </h1>
 
     <div
@@ -152,7 +152,7 @@
 import { store } from '../store/store.js'
 
 export default {
-  name: 'default',
+  name: 'Default',
   data() {
     return {
       store,
