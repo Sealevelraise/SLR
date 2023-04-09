@@ -50,6 +50,7 @@
         Now to the important part: before you can make a donation, you need to connect
           your digital wallet. To do this, press the <em>"Connect Wallet"</em> button and follow the setup steps.
           The wallet setup is done only once - you don't need to set it up again the next time.
+      </p>
       <h3 class="text-center p-6">3. Project information</h3>
       <p class="text-justify">
         Then you need to enter your project information.
@@ -74,6 +75,6 @@
 
 <script>
 export default {
-  name: 'default',
+  name: 'Default',
 }
 </script>

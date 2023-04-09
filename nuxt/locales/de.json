@@ -1,3 +1,61 @@
 {
-  "hello": "Hallo"
+
+  "Donation Process and Project Registration":
+  "Spendenprozess und Projektregistrierung",
+
+
+  "View Projects":
+  "Projekte ansehen",
+  "In the project overview under Projects you can view the registered projects. Here you will find the most important information about the current projects.":
+  "In der Projektübersicht unter “Projekte” kannst Du angemeldete Projekte einsehen. Hier findest Du die wichtigsten Informationen zu den angemeldeten Projekten, wie z.B. die Projektbeschreibung, das Antragsland und den gewünschten Spendenbetrag.",
+
+  "Select your role":
+  "Wähle Deine Rolle aus",
+  "Once you have viewed the registered projects, you can decide to make a donation. To do so, press the Donate and Vote button on the home page.":
+  "Hast Du dir die angemeldeten Projekte angesehen, kannst Du dich entscheiden, eine Spende beizusteuern. Dafür drückst Du auf der Startseite den Knopf <em>Spenden und abstimmen</em>.",
+
+  "Conecct your Wallet":
+  "Wallet verbinden",
+  "Now to the important part: before you can make a donation, you need to connect your digital wallet. To do this, press the <em>Connect Wallet</em> button and follow the setup steps. The wallet setup is done only once - you don't need to set it up again the next time.":
+  "Nun zum wichtigen Teil: Bevor Du eine Spende tätigen kannst, musst du deine digitale Geldbörse (Wallet) hinterlegen. Dafür musst Du auf den Knopf <em>Connect Wallet</em> drücken und den Einrichtungsschritten folgen. Die Wallet-Einrichtung erfolgt nur ein Mal - beim nächsten Spenden musst Du sie nicht erneut einrichten.",
+
+  "Choose donation amount":
+  "Wähle Deinen Spendenbetrag",
+  "Finally you enter your desired donation amount and confirm your donation! If you want to check your donor status or change your role, you can press the account button (top right)." :
+  "Zum Schluss gibst Du noch deinen Spendenbetrag ein und bestätigst die Spende. Um den Spendenstatus zu überprüfen oder Deine Rolle wächseln, kannst Du dies über die Account-Seite (Account-Knopf oben rechts) tun.",
+
+
+
+
+
+  "Project registration":
+  "Projektanmeldung",
+
+  "Select your desired role":
+  "Wählen Sie Ihre Rolle",
+  "If you want to register a project, you must first choose your role. To do this, select the <em>Receive donations</em> button. You will then be taken to the project registration page.":
+  "Wenn Du ein Projekt anmelden willst, musst Du zuerst deine Rolle wählen. Dafür wählst Du den Knopf <em>Spenden erhalten</em>. Anschließend elangst Du auf die Seite zur Projektanmeldung.",
+
+  "Enter project information":
+  "Projektinformationen eingeben",
+  "Then you need to enter your project information. Follow the following steps:":
+  "Anschließend musst Du deine Projektinformationen eingeben. Befolge dabei folgende Schritte:",
+
+  "Select Smallstate from list":
+  "Wählen Sie Ihren Smallstate aus der Liste",
+
+  "Enter project name":
+  "Projektname eingeben",
+
+  "Enter project description":
+  "Projektbeschreibung eingeben",
+
+  "Chose donation amount":
+  "Wähle Deinen Spendenbetrag",
+
+  "Enter your email address":
+  "Geben Sie Ihre E-Mail-Adresse ein",
+
+  "Afterwards press the button <em>Subscribe</em> and your project is successfully submitted!":
+  "Nachdem Du den Knopf <em>Abonnieren</em> drückst ist Dein Projekt erfolgreich eingereicht!"
 }
