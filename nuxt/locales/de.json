@@ -1,61 +1,87 @@
 {
 
-  "Donation Process and Project Registration":
+  "donation and registration":
   "Spendenprozess und Projektregistrierung",
 
 
-  "View Projects":
+  "view projects":
   "Projekte ansehen",
-  "In the project overview under Projects you can view the registered projects. Here you will find the most important information about the current projects.":
+  "overview to view registered projects; find important info of projects":
   "In der Projektübersicht unter “Projekte” kannst Du angemeldete Projekte einsehen. Hier findest Du die wichtigsten Informationen zu den angemeldeten Projekten, wie z.B. die Projektbeschreibung, das Antragsland und den gewünschten Spendenbetrag.",
 
-  "Select your role":
+  "select your role":
   "Wähle Deine Rolle aus",
-  "Once you have viewed the registered projects, you can decide to make a donation. To do so, press the Donate and Vote button on the home page.":
+  "once viewed projects, make donation; press donate and vote button on homepage":
   "Hast Du dir die angemeldeten Projekte angesehen, kannst Du dich entscheiden, eine Spende beizusteuern. Dafür drückst Du auf der Startseite den Knopf <em>Spenden und abstimmen</em>.",
 
-  "Conecct your Wallet":
+  "conecct your wallet":
   "Wallet verbinden",
-  "Now to the important part: before you can make a donation, you need to connect your digital wallet. To do this, press the <em>Connect Wallet</em> button and follow the setup steps. The wallet setup is done only once - you don't need to set it up again the next time.":
+  "important part: connect digital wallet: press connect wallet button and follow the setup steps: wallet setup required only once":
   "Nun zum wichtigen Teil: Bevor Du eine Spende tätigen kannst, musst du deine digitale Geldbörse (Wallet) hinterlegen. Dafür musst Du auf den Knopf <em>Connect Wallet</em> drücken und den Einrichtungsschritten folgen. Die Wallet-Einrichtung erfolgt nur ein Mal - beim nächsten Spenden musst Du sie nicht erneut einrichten.",
 
-  "Choose donation amount":
+  "choose donation amount":
   "Wähle Deinen Spendenbetrag",
-  "Finally you enter your desired donation amount and confirm your donation! If you want to check your donor status or change your role, you can press the account button (top right)." :
+  "enter donation amount and donate: check donation status with account button" :
   "Zum Schluss gibst Du noch deinen Spendenbetrag ein und bestätigst die Spende. Um den Spendenstatus zu überprüfen oder Deine Rolle wächseln, kannst Du dies über die Account-Seite (Account-Knopf oben rechts) tun.",
 
 
 
 
-
-  "Project registration":
+  "project registration":
   "Projektanmeldung",
 
-  "Select your desired role":
+  "select your desired role":
   "Wählen Sie Ihre Rolle",
-  "If you want to register a project, you must first choose your role. To do this, select the <em>Receive donations</em> button. You will then be taken to the project registration page.":
+  "want to register project, select role; recieve donations button; project registration page":
   "Wenn Du ein Projekt anmelden willst, musst Du zuerst deine Rolle wählen. Dafür wählst Du den Knopf <em>Spenden erhalten</em>. Anschließend elangst Du auf die Seite zur Projektanmeldung.",
 
-  "Enter project information":
+  "enter project information":
   "Projektinformationen eingeben",
-  "Then you need to enter your project information. Follow the following steps:":
+  "enter project information; follow these steps:":
   "Anschließend musst Du deine Projektinformationen eingeben. Befolge dabei folgende Schritte:",
 
-  "Select Smallstate from list":
+  "select smallstate":
   "Wählen Sie Ihren Smallstate aus der Liste",
 
-  "Enter project name":
+  "enter project name":
   "Projektname eingeben",
 
-  "Enter project description":
+  "enter project description":
   "Projektbeschreibung eingeben",
 
-  "Chose donation amount":
-  "Wähle Deinen Spendenbetrag",
-
-  "Enter your email address":
+  "enter email":
   "Geben Sie Ihre E-Mail-Adresse ein",
 
-  "Afterwards press the button <em>Subscribe</em> and your project is successfully submitted!":
-  "Nachdem Du den Knopf <em>Abonnieren</em> drückst ist Dein Projekt erfolgreich eingereicht!"
+  "subscribe button; successfull submitted":
+  "Nachdem Du den Knopf Abonnieren drückst ist Dein Projekt erfolgreich eingereicht!",
+
+
+
+  "donate":
+  "Spenden",
+
+  "attention: donate only once per cycle":
+  "Hinweis: Du kannst mehrmals Spenden, aber nur ein mal pro Zyklus an der Abstimmung teilnehmen!",
+
+  "connected account":
+  "Angemeldeter Account",
+
+  "enter donation amount":
+  "Spendenbetrag eingeben",
+
+  "(warning) enter donation amount":
+  "Bitte Spendenbetrag eingeben",
+
+  "newsletter subscription: enter your email address":
+  "Newsletter Anmeldung: E-Mail eingeben",
+
+  "thank you! your donation was successful":
+  "Danke, Deine Spende war erfolgreich",
+
+
+  "welcome":
+  "Herzlich Willkommen",
+
+  "at sea level r(a)ise":
+  "bei SEA LEVEL R(A)ISE"
 }

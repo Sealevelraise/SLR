@@ -13,7 +13,7 @@
             style="width: 10rem"
             @click="connect"
           >
-            Connect wallet
+            Connect your wallet
           </button>
         </div>
       </div>
@@ -22,26 +22,25 @@
         class="content-box bg-slr-blue-box flex flex-col justify-center p-8 items-center"
       >
         <p class="py-2">
-          Hinweis: Du kannst mehrmals Spenden, aber nur ein mal pro Zyklus an
-          der Abstimmung teilnehmen!
+          Attention: You can donate multiple times but only once per donation cycle!
         </p>
-        <p class="py-2">Connected Account: {{ connectedAccounts[0] }}</p>
+        <p class="py-2">Connected account: {{ connectedAccounts[0] }}</p>
         <!-- input field for amout to be donated -->
-        <p class="py-2">Betrag eingeben (ETH)</p>
+        <p class="py-2">Enter donation amount (ETH)</p>
         <input
-          class="text-slr-blue"
           v-model="amount"
+          class="text-slr-blue"
           placeholder="Spendenbetrag in ETH"
         />
         <div class="mx-auto pt-4">
           <p id="betragAlert" class="text-center hidden text-red-300">
-            Bitte Betrag angeben!
+            Please enter a donation amount!
           </p>
         </div>
 
         <!-- if wanted, e-mail input from user -->
         <p class="py-2">Newsletter Anmeldung: E-Mail eingeben (optional)</p>
-        <input class="text-slr-blue" v-model="mail" placeholder="E-Mail" />
+        <input v-model="mail" class="text-slr-blue" placeholder="E-Mail" />
 
         <button
           class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md mt-4"
@@ -56,7 +55,7 @@
       v-else-if="spendenDone"
       class="content-box bg-slr-blue-box flex flex-col justify-center p-8 items-center"
     >
-      <p>Danke, Deine Spende war erfolgreich!</p>
+      <p>Tank you! Your donation was successful!</p>
       <!-- TODO: Weiterleitung zu Projektabstimmung, falls es die erste Spende im Quartal war -->
     </div>
   </div>
@@ -67,7 +66,7 @@ import Web3 from 'web3'
 import DonateJson from '../../truffle-project/build/contracts/Donate.json'
 
 export default {
-  name: 'default',
+  name: 'Default',
 
   data() {
     return {
