@@ -51,7 +51,7 @@
           your digital wallet. To do this, press the <em>"Connect Wallet"</em> button and follow the setup steps.
           The wallet setup is done only once - you don't need to set it up again the next time.
       </p>
-      <h3 class="text-center p-6">3. Project information</h3>
+      <h3 class="text-center p-6">3. Enter project information</h3>
       <p class="text-justify">
         Then you need to enter your project information.
         Follow the following steps:
