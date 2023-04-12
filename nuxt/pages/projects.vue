@@ -1,11 +1,11 @@
 <template>
-  <!-- flex container der alle Elemente untereinanter (in einer Spalte) ausrichtet -->
+  <!-- flex container der alle Elemente untereinander (in einer Spalte) ausrichtet -->
   <div class="flex flex-col gap-10">
     <h1>Aktuelle Projekte</h1>
 
     <!--eigentliche Project Card, wiederum eine flex box
-    
-    
+
+
     -->
     <div v-for="(project, i) in projectInfos" :key="i" class="bg-slr-blue-box text-white md:w-10/12 flex flex-col mx-auto md:flex-row rounded-[24px]" > <!-- //content-box-->
       <!--container für den Text, Ausrichtung row + Breite 2/3 ab mittel-großen Bildschirmen-->
@@ -35,10 +35,10 @@
     </div>
 
 
-    
+
 <!--
     <div v-for="(project, i) in projectInfos" :key="i">
-       //Render all project properties 
+       //Render all project properties
       <h2 >{{ project.name }}</h2>
       <p>State: {{ project.state }}</p>
       <p>State: {{ project.description }}</p>
@@ -73,7 +73,7 @@ export default {
   },
 
   methods: {
-    
+
     getProjectInformation: async function() {
       // methode for getting infos of all the projects currently saved on the blockchain
       const web3 = new Web3(window.ethereum);
