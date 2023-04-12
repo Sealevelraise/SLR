@@ -57,7 +57,7 @@
     >
       <img
         class="pb-8 md:pb-12 px-0 rounded-t-[24px]"
-        src="../assets/images/tuvalu.jpeg"
+        src="../assets/images/fidji_fields.jpg"
         alt="Minister of Tuvalu gives COP26 speech from the sea"
       />
       <h2 class="text-2xl text-center pb-4 md:pb-12 md:py-12 px-6 md:px-32">
@@ -94,7 +94,7 @@
         <nuxt-link to="/about">
           <img
             class="pb-8 rounded-md object-scale-down h-56 mx-auto"
-            src="../assets/images/slrLogo.jpg"
+            src="../assets/images/slrLogoRund.jpg"
             alt="Minister of Tuvalu gives COP26 speech from the sea"
         /></nuxt-link>
         <p class="text-justify pb-8">
@@ -113,7 +113,7 @@
         <nuxt-link to="/projects">
           <img
             class="pb-8 rounded-md object-cover h-56 mx-auto"
-            src="../assets/images/demo_project_1.jpg"
+            src="../assets/images/fidji_fields.jpg"
             alt="Minister of Tuvalu gives COP26 speech from the sea"
         /></nuxt-link>
         <p class="text-justify pb-8">
