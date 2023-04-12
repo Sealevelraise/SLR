@@ -14,16 +14,14 @@ Durch Sea Level Raise wird dieses Problem angegangen, das sind unsere drei Grund
 
 ## Entwicklerteam:
 * __UX-Managerin:__ Franziska Schicks
-* __Integration:__ Jonas Just
+* __Dokumentation und Integration:__ Jonas Just
 * __Architekt, Integration, Developer:__ Josua Benz
 * __Developerin & Assistentin PM:__ Charlotte Lau
 * __Developer:__ Benjamin Loncarevic
 * __Developer:__ Nicolas von der Ahe
-* __Tester:__ Fardin Khan
-* __Testerin:__ Saskia Heller
 * __Projektmanagerin und Developerin:__ Laura Schoenherr
 * __Trainer:__ Frank
-* __Scrum Master:__ Phillip
+
 
 ## Inhalt des Repositories
 Folgender Inhalt gibt es in diesem Repository:
