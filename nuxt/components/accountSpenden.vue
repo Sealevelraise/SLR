@@ -12,16 +12,11 @@
 
         <div v-if="donatorDetails">
           <h2>Spendenuebersicht:</h2>
-
-  <div v-else>
-    <h2>Noch keine Rolle ausgewählt!</h2>
-    <P>
-      Sie haben noch keine Rolle ausgewählt. Mit dem Knopf "Rolle wählen" können
-      Sie entscheiden, ein Projket anzumelden oder Geld an ein eingereichtes
-      Projekt spenden.
-    </P>
-    <h3>Jetzt auf "Rolle wählen" klicken und dabei sein!</h3>
+      </div>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script>
