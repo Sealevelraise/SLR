@@ -124,20 +124,6 @@ export default {
         }
       }
     },
-
-    getProjectInformation: async function() {
-      // methode for getting infos of all the projects currently saved on the blockchain
-      const web3 = new Web3(window.ethereum);
-      const contract = new web3.eth.Contract(AddProjectJson.abi, this.AddProjectAddr);
-      // get the number of projects to iterate over every project in the next step
-      const numberOfProjects = await contract.methods.getNumberOfProjects().call();
-
-      this.projectInfos = [];
-      for(let i=0; i<numberOfProjects; i++){
-        this.projectInfos.push(await contract.methods.getProjectDetails(i).call());
-      }
-    },
-
     getDonations: async function () {
       if (window.ethereum) {
         // first we check if metamask is installed

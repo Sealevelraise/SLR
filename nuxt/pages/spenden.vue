@@ -24,7 +24,14 @@
         <p class="py-2">
           Attention: You can donate multiple times but only once per donation cycle!
         </p>
-        <p class="py-2">Connected account: {{ connectedAccounts[0] }}</p>
+        <p class="py-2">Connected Account: {{ connectedAccounts[0] }}</p>
+        <button
+          class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
+          style="width: 20rem"
+          @click="connect"
+        >
+          Connect diffenrent account
+        </button>
         <!-- input field for amout to be donated -->
         <p class="py-2">Enter donation amount (ETH)</p>
         <input
@@ -66,7 +73,7 @@ import Web3 from 'web3'
 import DonateJson from '../../truffle-project/build/contracts/Donate.json'
 
 export default {
-  name: 'Default',
+  name: 'Spenden',
 
   data() {
     return {
@@ -99,12 +106,12 @@ export default {
     // Function to Donate Ether
     donateEther: async function () {
       const p = document.getElementById('betragAlert')
-
+      this.connect()
       if (!this.amount) {
         // wenn nichts bei betrag eingegeben wurde
         console.log('Bitte Betrag eingeben!')
         p.classList.remove('hidden')
-      } else {
+      } else if (this.connectedAccounts.length){
         p.classList.add('hidden')
         const web3 = new Web3(window.ethereum)
         await web3.eth.sendTransaction({
@@ -118,6 +125,8 @@ export default {
 
         this.spendenDone = true
         // todo: redirect
+      } else {
+        console.log('No account connected to wallet')
       }
     },
    
