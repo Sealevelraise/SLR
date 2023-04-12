@@ -1,9 +1,11 @@
 
+import i18n from "./config/i18n"
+
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'sea-level-raise',
+    title: 'SEA LEVEL R(A)ISE',
     htmlAttrs: {
       lang: 'en',
     },
@@ -35,8 +37,27 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
-    //'@nuxtjs/tailwindcss',
+    // '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
+    // language change module
+    [
+      'nuxt-i18n',
+      {
+        vueI18nLoader: true,
+        defaultLocale: 'en',
+         locales: [
+          {
+             code: 'en',
+             name: 'EN'
+          },
+          {
+             code: 'de',
+             name: 'DE'
+          }
+        ],
+        vueI18n: i18n
+      }
+     ]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

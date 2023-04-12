@@ -13,7 +13,7 @@
             style="width: 10rem"
             @click="connect"
           >
-            Connect wallet
+            Connect your wallet
           </button>
         </div>
       </div>
@@ -22,8 +22,7 @@
         class="content-box bg-slr-blue-box flex flex-col justify-center p-8 items-center"
       >
         <p class="py-2">
-          Hinweis: Du kannst mehrmals Spenden, aber nur ein mal pro Zyklus an
-          der Abstimmung teilnehmen!
+          Attention: You can donate multiple times but only once per donation cycle!
         </p>
         <p class="py-2">Connected Account: {{ connectedAccounts[0] }}</p>
         <button
@@ -34,7 +33,7 @@
           Connect diffenrent account
         </button>
         <!-- input field for amout to be donated -->
-        <p class="py-2">Betrag eingeben (ETH)</p>
+        <p class="py-2">Enter donation amount (ETH)</p>
         <input
           v-model="amount"
           class="text-slr-blue"
@@ -42,7 +41,7 @@
         />
         <div class="mx-auto pt-4">
           <p id="betragAlert" class="text-center hidden text-red-300">
-            Bitte Betrag angeben!
+            Please enter a donation amount!
           </p>
         </div>
 
@@ -63,7 +62,7 @@
       v-else-if="spendenDone"
       class="content-box bg-slr-blue-box flex flex-col justify-center p-8 items-center"
     >
-      <p>Danke, Deine Spende war erfolgreich!</p>
+      <p>Tank you! Your donation was successful!</p>
       <!-- TODO: Weiterleitung zu Projektabstimmung, falls es die erste Spende im Quartal war -->
     </div>
   </div>

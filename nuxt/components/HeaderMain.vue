@@ -12,7 +12,7 @@
             alt="logo"
           />
         </a>
-        <nuxt-link v-if="store.spender" to="/spenden" id="spendenButton">
+        <nuxt-link v-if="store.spender" id="spendenButton" to="/spenden">
           <button
             class="bg-red-500 text-sm text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
             style="width: 9rem"
@@ -22,8 +22,8 @@
         </nuxt-link>
         <nuxt-link
           v-else-if="store.projectowner"
-          to="/projektAnlegen"
           id="projektButton"
+          to="/projektAnlegen"
         >
           <button
             class="text-sm bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-4 rounded-md"
@@ -32,7 +32,7 @@
             Projekt anmelden
           </button>
         </nuxt-link>
-        <nuxt-link v-else to="/" id="auswahlButton">
+        <nuxt-link v-else id="auswahlButton" to="/">
           <button
             class="bg-slr-page-bg text-sm text-slr-blue hover:bg-blue-200 duration-500 py-2 px-6 rounded-md"
             style="width: 9rem"
@@ -102,12 +102,16 @@
           <NuxtLink to="/faq">FAQ</NuxtLink>
         </li>
 
+
+        <LanguageInput />
+
         <div class="hidden md:flex space-x-4 items-center">
 
 
           <nuxt-link to="/account">
             <img src="../assets/images/accounticon.png" alt="Account" />
           </nuxt-link>
+
         </div>
       </ul>
     </nav>
@@ -115,7 +119,7 @@
 </template>
 
 <script>
-import { store } from '../store/store.js'
+import { store } from '../store/store.js';
 
 export default {
   name: 'HeaderMain',

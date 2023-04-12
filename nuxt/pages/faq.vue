@@ -3,30 +3,31 @@
     <h1 class="mb-8">FAQ</h1>
     <vsa-list class="mx-auto text-center">
       <vsa-item>
-        <vsa-heading> Wie gebe ich eine Spende ab? </vsa-heading>
+        <vsa-heading>How does the donation process work?</vsa-heading>
 
         <vsa-content>
-          Der Ablauf des Spendenprozesses wird
-          <nuxt-link to="/spendenprozess">hier</nuxt-link>
-          erklärt.
+          In order to donate, you need to follow the steps described
+          <nuxt-link to="/spendenprozess"><em>here</em></nuxt-link>.
         </vsa-content>
       </vsa-item>
 
       <vsa-item>
-        <vsa-heading> Wie kann ich mein Projekt einreichen? </vsa-heading>
+        <vsa-heading>How can i register a new project?</vsa-heading>
 
-        <vsa-content> Der Anmeldungsprozess wird hier erklärt. </vsa-content>
+        <vsa-content>The project registration process is described
+          <nuxt-link to="/spendenprozess"><em>here</em></nuxt-link>.
+        </vsa-content>
       </vsa-item>
 
       <vsa-item>
         <vsa-heading>
-          Mein Land ist nicht in der Smallstate-Liste zu sehen. Kann ich
-          trotzdem mein Projekt anmelden?
+          My country is not listed. Can I still register my project?
         </vsa-heading>
 
         <vsa-content>
-          Nein. Nur Projekte aus Ländern, welche als Smallstates definiert sind,
-          können eingereicht werden. Mehr darüber erfährst du hier.
+          Only projects in the so called "Smallstates" are allowed to be registered.
+          Detailed information about the "Smallstates" can be found
+          <a href="https://data.worldbank.org/country/S1" target="_blank"><em>here</em></a>.
         </vsa-content>
       </vsa-item>
 

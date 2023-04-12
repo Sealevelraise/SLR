@@ -1,0 +1,87 @@
+{
+
+  "donation and registration":
+  "Donation Process and Project Registration",
+
+
+  "view projects":
+  "View Projects",
+  "overview to view registered projects; find important info of projects":
+  "In the project overview under Projects you can view the registered projects. Here you will find the most important information about the current projects",
+
+  "select your role":
+  "Select your role",
+  "once viewed projects, make donation; press donate and vote button on homepage":
+  "Once you have viewed the registered projects, you can decide to make a donation. To do so, press the Donate and Vote button on the home page",
+
+  "conecct your wallet":
+  "Conecct your Wallet",
+  "important part: connect digital wallet: press connect wallet button and follow the setup steps: wallet setup required only once":
+  "Now to the important part: before you can make a donation, you need to connect your digital wallet. To do this, press the <em>Connect Wallet</em> button and follow the setup steps. The wallet setup is done only once - you don't need to set it up again the next time",
+
+  "choose donation amount":
+  "Choose donation amount",
+  "enter donation amount and donate: check donation status with account button" :
+  "Finally you enter your desired donation amount and confirm your donation! If you want to check your donor status or change your role, you can press the account button (top right)",
+
+
+
+
+  "project registration":
+  "PProject registration",
+
+  "select desired role":
+  "Select your desired role",
+  "want to register project, select role; recieve donations button; project registration page":
+  "If you want to register a project, you must first choose your role. To do this, select the <em>Receive donations</em> button. You will then be taken to the project registration page",
+
+  "enter project information":
+  "Enter project information",
+  "enter project information; follow these steps":
+  "Then you need to enter your project information. Follow these steps:",
+
+  "select smallstate":
+  "Select Smallstate from list",
+
+  "enter project name":
+  "Enter project name",
+
+  "enter project description":
+  "Enter project description",
+
+  "enter email":
+  "Enter your email address",
+
+  "subscribe button; successfull submitted":
+  "Afterwards press the button Subscribe and your project is successfully submitted",
+
+
+
+  "donate":
+  "Donate",
+
+  "attention: donate only once per cycle":
+  "Attention: You can donate multiple times but only once per donation cycle!",
+
+  "connected account":
+  "Connected account",
+
+  "enter donation amount":
+  "Enter donation amount",
+
+  "(warning) enter donation amount":
+  "Please enter a donation amount",
+
+  "newsletter subscription: enter your email address":
+  "Newsletter subscription: Enter your email address",
+
+  "thank you! your donation was successful":
+  "Thank you! Your donation was successful",
+
+
+  "welcome":
+  "Welcome",
+
+  "at sea level r(a)ise":
+  "bei SEA LEVEL R(A)ISE"
+}

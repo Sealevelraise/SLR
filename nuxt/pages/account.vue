@@ -6,7 +6,8 @@
       class="w-11/12 md:w-3/4 mx-auto bg-slr-blue-box py-10 md:py-12 px-6 md:px-32 rounded-[24px] text-white"
     >
     <div class="mx-auto p-10">
-        <h1>Hier finden Sie die Angaben zu Ihrem Account als Spender</h1>
+        <h1>Hier finden Sie die Angaben zu Ihrem Account als:</h1>
+        <h1 class="text-white">Spender</h1>
       </div>
       <div>
         <p>Connected Account: {{ connectedAccounts[0] }}</p>
@@ -24,7 +25,9 @@
       </div>
 
       <div class="mx-auto text-center p-10">
-        <h1>Hier finden Sie die Angaben zu Ihrem Account als Projektowner</h1>
+        <h1>Hier finden Sie die Angaben zu Ihrem Account als:</h1>
+        <h1 class="text-white">Projektowner</h1>
+
       </div>
       <div>
         <p>Connected Account: {{ connectedAccounts[0] }}</p>
@@ -39,6 +42,7 @@
           <p>Mail: {{ projectDetails.mail }}</p>
           <p>State: {{ projectDetails.state }}</p>
         </div>
+
         <div v-if="!projectDetails">
           <p>noch kein Projekt angelegt. Sie koennen mit Ihrem Account ein Projekt anlegen.</p>
         </div>
@@ -71,8 +75,8 @@
 
 <script>
 import Web3 from 'web3'
-import DonateJson from '../../truffle-project/build/contracts/Donate.json'
 import AddProjectJson from '../../truffle-project/build/contracts/AddProject.json'
+import DonateJson from '../../truffle-project/build/contracts/Donate.json'
 
 export default {
   name: 'Account',

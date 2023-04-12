@@ -20,13 +20,15 @@
         <div v-if="!projectDetails">
           <p>noch kein Projekt angelegt. Sie koennen mit Ihrem Account ein Projekt anlegen.</p>
         </div>
-        
+        </div>
+
       </div>
     </div>
 
+
   <!-- if wallet connected but no action done (nicht gespendet / kein Projekt angelegt) this shows -->
 
-  <div v-else>
+  <!-- <div v-else>
     <h2>Noch keine Rolle ausgewählt!</h2>
     <P>
       Sie haben noch keine Rolle ausgewählt. Mit dem Knopf "Rolle wählen" können
@@ -34,7 +36,7 @@
       Projekt spenden.
     </P>
     <h3>Jetzt auf "Rolle wählen" klicken und dabei sein!</h3>
-  </div>
+  </div> -->
 </template>
 
 <script>

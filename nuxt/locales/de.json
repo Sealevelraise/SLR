@@ -1,0 +1,87 @@
+{
+
+  "donation and registration":
+  "Spendenprozess und Projektregistrierung",
+
+
+  "view projects":
+  "Projekte ansehen",
+  "overview to view registered projects; find important info of projects":
+  "In der Projektübersicht unter “Projekte” kannst Du angemeldete Projekte einsehen. Hier findest Du die wichtigsten Informationen zu den angemeldeten Projekten, wie z.B. die Projektbeschreibung, das Antragsland und den gewünschten Spendenbetrag.",
+
+  "select your role":
+  "Wähle Deine Rolle aus",
+  "once viewed projects, make donation; press donate and vote button on homepage":
+  "Hast Du dir die angemeldeten Projekte angesehen, kannst Du dich entscheiden, eine Spende beizusteuern. Dafür drückst Du auf der Startseite den Knopf <em>Spenden und abstimmen</em>.",
+
+  "conecct your wallet":
+  "Wallet verbinden",
+  "important part: connect digital wallet: press connect wallet button and follow the setup steps: wallet setup required only once":
+  "Nun zum wichtigen Teil: Bevor Du eine Spende tätigen kannst, musst du deine digitale Geldbörse (Wallet) hinterlegen. Dafür musst Du auf den Knopf <em>Connect Wallet</em> drücken und den Einrichtungsschritten folgen. Die Wallet-Einrichtung erfolgt nur ein Mal - beim nächsten Spenden musst Du sie nicht erneut einrichten.",
+
+  "choose donation amount":
+  "Wähle Deinen Spendenbetrag",
+  "enter donation amount and donate: check donation status with account button" :
+  "Zum Schluss gibst Du noch deinen Spendenbetrag ein und bestätigst die Spende. Um den Spendenstatus zu überprüfen oder Deine Rolle wächseln, kannst Du dies über die Account-Seite (Account-Knopf oben rechts) tun.",
+
+
+
+
+  "project registration":
+  "Projektanmeldung",
+
+  "select your desired role":
+  "Wählen Sie Ihre Rolle",
+  "want to register project, select role; recieve donations button; project registration page":
+  "Wenn Du ein Projekt anmelden willst, musst Du zuerst deine Rolle wählen. Dafür wählst Du den Knopf <em>Spenden erhalten</em>. Anschließend elangst Du auf die Seite zur Projektanmeldung.",
+
+  "enter project information":
+  "Projektinformationen eingeben",
+  "enter project information; follow these steps:":
+  "Anschließend musst Du deine Projektinformationen eingeben. Befolge dabei folgende Schritte:",
+
+  "select smallstate":
+  "Wählen Sie Ihren Smallstate aus der Liste",
+
+  "enter project name":
+  "Projektname eingeben",
+
+  "enter project description":
+  "Projektbeschreibung eingeben",
+
+  "enter email":
+  "Geben Sie Ihre E-Mail-Adresse ein",
+
+  "subscribe button; successfull submitted":
+  "Nachdem Du den Knopf Abonnieren drückst ist Dein Projekt erfolgreich eingereicht!",
+
+
+
+  "donate":
+  "Spenden",
+
+  "attention: donate only once per cycle":
+  "Hinweis: Du kannst mehrmals Spenden, aber nur ein mal pro Zyklus an der Abstimmung teilnehmen!",
+
+  "connected account":
+  "Angemeldeter Account",
+
+  "enter donation amount":
+  "Spendenbetrag eingeben",
+
+  "(warning) enter donation amount":
+  "Bitte Spendenbetrag eingeben",
+
+  "newsletter subscription: enter your email address":
+  "Newsletter Anmeldung: E-Mail eingeben",
+
+  "thank you! your donation was successful":
+  "Danke, Deine Spende war erfolgreich",
+
+
+  "welcome":
+  "Herzlich Willkommen",
+
+  "at sea level r(a)ise":
+  "bei SEA LEVEL R(A)ISE"
+}
