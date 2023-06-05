@@ -8,8 +8,8 @@
     <div
       class="w-11/12 md:w-3/4 mx-auto bg-slr-blue-box py-10 md:py-12 px-6 md:px-32 rounded-[24px] text-white"
     >
-      <h2 class="text-2xl text-center pb-4 md:pb-8">Werde Teil von SLR!</h2>
-      <p class="text-center pb-4">Ich möchte...</p>
+      <h2 class="text-2xl text-center pb-4 md:pb-8">{{ $t('become part of SLR')}}</h2>
+      <p class="text-center pb-4">{{ $t('choose role')}}</p>
 
       <div
         class="flex flex-col items-center md:flex-row md:place-content-between"
@@ -18,15 +18,15 @@
           class="w-11/12 md:w-2/5 bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
           @click="selectRole('spender')"
         >
-          <NuxtLink to="/spenden">Spenden und abstimmen</NuxtLink>
+          <NuxtLink to="/spenden">{{ $t('donate vote')}}</NuxtLink>
 
         </button>
-        <p class="text-center py-4">oder</p>
+        <p class="text-center py-4">{{ $t('or')}}</p>
         <button
           class="w-11/12 md:w-2/5 bg-red-500 text-white hover:bg-red-800 duration-500 py-2 px-6 rounded-md"
           @click="selectRole('projektinhaber')"
         >
-        <NuxtLink to="/projektAnlegen">Spenden erhalten</NuxtLink>
+        <NuxtLink to="/projektAnlegen">{{ $t('register project')}}</NuxtLink>
         </button>
       </div>
     </div>
@@ -35,20 +35,10 @@
       class="w-11/12 md:w-3/4 mx-auto bg-slr-blue-box py-10 md:py-12 px-6 md:px-32 rounded-[24px] text-white"
     >
       <h2 class="text-2xl text-center pb-4 md:pb-12">
-        Was ist Sea Level R(a)ise
+        {{ $t('what is SLR')}}
       </h2>
       <p class="text-justify">
-        Was ist SLR? ... Whereas disregard and contempt for human rights have
-        resulted Everyone has the right to freedom of thought, conscience and
-        religion; this right includes freedom to change his religion or belief,
-        and freedom, either alone or in community with others and in public or
-        private, to manifest his religion or belief in teaching, practice,
-        worship and observance. Everyone has the right to freedom of opinion and
-        expression; this right includes freedom to hold opinions without
-        interference and to seek, receive and impart information and ideas
-        through any media and regardless of frontiers. Everyone has the right to
-        rest and leisure, including reasonable limitation of working hours and
-        periodic holidays with pay.
+        {{ $t('SLR exlpanation text')}}
       </p>
     </div>
 
@@ -67,7 +57,7 @@
         id="roleAnchor"
         class="text-justify md:py-12 px-6 md:px-32 pb-8 md:pb-12"
       >
-        ...sind die ersten Worte des Außenministers des Inselstaats Tuvalu bei
+        ...sind die ersten Worte des Außenministerrus des Inselstaats Tuvalu bei
         seiner Rede zur Klimakonferenz 2021. Um den Ernst der Lage deutlich zu
         machen, hält Simon Kofe seine Videoansprache aus dem Wasser. Sein
         eindringlicher Appel: "Wir gehen unter, aber das tun alle anderen auch."
